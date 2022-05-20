@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* FRIENDS 메인 페이지 css - main.css */
+
+/* 공통사용 외부 css 파일 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/* 구현중 공사중 외곽선 표시 */
+body * {
+  outline: 1px dashed lime;
+}
+
+/* 컨텐츠 영역 최상위 부모 */
+body {
+  /* background: 색이반고윙/크; */
+  background: url(../images/bg_main.jpg) no-repeat fixed center/cover;
+}
+
+
+/******** 2. 메인영역 *********/
+/* 컨텐츠 속박스 */
+.cont {
+  /* 상단패딩 설정 */
+  padding-top: 400px;
+  /* 기본height크기가 800px로 설정되어있으므로 그 높이값은 컨텐츠영역의 높이다.
+  따라서 패딩이나 보더는 그 크기에 더해진다.
+  그래서 높이값 크기를 800px로 유지하려면 계산해서 height값을 350px로 변경하거나 
+  box-sizing: border-box; 로 설정하여 보더와 패딩이 지정한 크기 내부에 포함되도록 한다  */
+
+  /* 보더,패딩 포함설정 - 기본값은 content-box */
+  box-sizing: border-box;
+
+  
+}
+
+/* 캐릭터 부모박스 */
+#cbx {
+  width: 95%;
+  margin: 0 auto;
+  outline: 4px dotted yellow;
+}
+
+/* 가상요소로 clear 설정하기 */
+/* ::after로 맨뒤에 가상요소 추가(태그가 없지만 가상으로 요소가 자식으로 생기는데 맨 뒤에 생김) */
+#cbx::after {
+  content: ''; /* 반드시 써야 함 */
+  display: block; 
+  /* div와 비슷해짐 - 안쓰면 span과 비슷해짐 */
+  clear: both;
+  /* 주의: block 요소에만 적용됨! */
+}
+
+/* 캐릭터박스 공통 */
+.cat {
+  /* 6등분 가로크기는 몇? 16.66% */
+  width: 14.66%;
+  /* 16.66%- 양쪽마진합(2%) = 14.66% */
+
+  /* 이미지 사이 간격 위해 양쪽마진을 %값으로 세팅 */
+  margin: 1%;
+
+  /* 블록박스 옆으로 흐르게 설정 */
+  float: left; /* fll */
+
+}
+
+/* 캐릭터 이미지박스 */
+.ci {
+  outline: 1px dashed red;
+  margin: 0 auto;
+  width: 100%;
+  /* height: 100%; */
+  margin-bottom: 20px;
+  /* 색이반고윙/크 */
+  background: url(../images/bg_char.jpg) no-repeat center/800%;
+  border-radius: 50%;
+
+  /* 트랜지션: 속시이지 */
+  transition: margin-top .4s ease-out;
+  
+}
+
+.ci::before{
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.cat:hover .ci {
+  /* 마진탑값 마이너스이면 위쪽으로 올라감! 
+  - 이미지 비율에 맞게 마진탑도 px 아닌 %로 설정 */
+  margin-top: -100%;
+}
+
+
+/* 각 캐릭터 이미지 넣기 */
+/* 조이 */
+#cbx .cat:first-child .ci{
+  background-position: 98% 13%;
+}
+
+/* 모니카 */
+#cbx .cat:nth-child(2) .ci {
+  background-position: 41% 17%;
+}
+/* 챈들러 */
+#cbx .cat:nth-child(3) .ci {
+  background-position: 59% 11%;
+}
+/* 피비 */
+#cbx .cat:nth-child(4) .ci {
+  background-position: 79% 13%;
+}
+/* 레이첼 */
+#cbx .cat:nth-child(5) .ci {
+  background-position: 19% 18%;
+}
+/* 로스 */
+#cbx .cat:last-child .ci {
+  background-position: 8% 7%;
+}
+
+
+
+
+
+/* 캐릭터 설명박스 */
+.cd {
+  height: 0;
+  background: url(../images/eachBg.jpg) no-repeat center/cover;
+  box-shadow: 0 0 20px 5px #cecece, 
+  inset 0 0 20px 10px #cecece;
+  
+  /* 요소의 넘치는 콘텐츠 y축을 스크롤 처리 */
+  overflow-y: scroll;
+  margin-top: 2%;
+}
+
+/* 캐릭터박스(.cat)에 마우스 오버 시 설명박스(.cd) 보이기  */
+.cat:hover .cd{
+  height: 250px;
+}
+
+/* 캐릭터 설명 타이틀 */
+/* core.css 파일 @import url 아래 써둔 폰트 내용 */
+.cd h3 {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 24px;
+  /* 패딩: 위 양쪽 아래 */
+  padding: 5px 10px 0;
+  text-align: center;
+  color: #fff;
+}
+
+/* 캐릭터 타이틀 호버시 색상변경 */
+
+
+
+
+
+/* 캐릭터 설명 텍스트 */
+.cd p {
+  color: #222;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  line-height: 25px;
+  text-align: justify;
+  word-break: break-all;
+  text-shadow: 1px 1px 3px #111;
+
+}
