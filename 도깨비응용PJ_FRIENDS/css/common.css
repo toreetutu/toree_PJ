@@ -10,6 +10,7 @@ body {
 
 /**************** 1. 상단영역 *****************/
 .top {
+  /* 높이값 */
   height: 120px;
 }
 
@@ -38,17 +39,36 @@ body {
   top: -80px;
   right: 0;
   /* 부모는? .gnb */
+
+  /* 가로크기 */
+  width: 650px;
+
+  /* 마영오- 블록요소 가로중앙정렬
+  margin: 0 auto; */
+
+  outline: 2px dotted blue;
+}
+
+/* 가상요소로 clear 설정하기 */
+/* ul에 overflow: hidden 해버리면 서브메뉴가 아래로 보이지 않음, 그래서 가상요소로 float을 끊어줘야함 */
+.gnb ul::after {
+  content: ''; /* ct */
+  display: block; /* db */
+  clear: both; /* clb */
 }
 
 /* li 리스트요소 */
 .gnb li {
   /* 블록요소 옆으로 흐르게 */
   float: left;
+  height: 35px;
   padding: 0 20px;
   margin: 0 10px;
 
   border: 1px solid transparent;
   border-radius: 30px;
+
+  outline: 2px dotted aqua;
 }
 
 .gnb li:hover {
@@ -73,13 +93,72 @@ body {
   border-bottom: 1px dotted #fff;
 }
 
+
+/* 서브메뉴 */
+.smenu {
+  position: absolute;
+  /* 젠틀앱솔루트!!
+  -> li 박스안에 그대로 있고 위에 있는 형제 a요소도 존중해서 그 아래에 그대로 위치하고 있다 */
+  z-index: 1;
+  /* 배경가상요소보다 바로 위: 프로그램소개 서브메뉴들이 배경가상요소 위로 올라와서 보이도록 함 */
+
+  /* 가로크기설정: 부모박스 크기에 영향이 안가도록, 프로그램소개 서브메뉴에서 크기 찾음 */
+  width: 100px;
+  /* 노랩박스 만들기: 공백속성 싸지마! 박스가 좁아도 박스 안 글자가 밑으로 안 떨어지게(프로그램 소개 서브메뉴가 길어서 밑으로 떨어지니까) */
+  white-space: nowrap;
+  /* 서브메뉴 숨김장치
+    -> 높이값0 + 넘치는 자식요소 숨기기(오버플로우 히든으로)
+      주의) 위아래방향 패딩 없어야 함! */
+  height: 0;
+  overflow: hidden; /* oh */
+  background-color: #fff;
+  /* 상단마진조정 */
+  margin-top: 4px;
+  /* 트랜지션: 속시이지-속성을 하나하나 다 지정해줄 수 있기 때문에 정확히 콕 집어서 height라고 지정해 높이만 만져줌  
+  안쓰면 전체가 모두 선택됨 */
+  transition: height .4s ease-out;
+  /* outline: 2px dotted red; */
+}
+
+/* 상위메뉴 li에 마우스 오버 시 
+    하위메뉴박스 높이값 복원하기(트랜지션) */
+/* 2번째메뉴(About):3개 - 늘어나는 길이가 다르기 때문에 각각 지정 */
+.gnb>ul>li:nth-child(2):hover .smenu {
+  height: 90px;
+  /* 40*3개 */
+}
+
+/* 3번째메뉴(동영상):10개  */
+.gnb>ul>li:nth-child(3):hover .smenu {
+  height: 400px;
+  /* 40*10개 */
+}
+
+/* 서브메뉴 a요소 */
+.smenu a {
+  color: #333;
+  text-decoration: none;
+  /* 블록으로 변경 */
+  display: block;
+  /* text-align: center; */
+  font-size: 0.8rem; /* 14px / 10px = 1.4rem */
+  line-height: 1.5rem; /* 20px/10px = 4rem */
+  /* 트랜지션: 속시이지 */
+  transition: .3s;
+}
+
+
+
+
 /**************** 2. 메인영역 *****************/
 .cont {
-  /* 높이값 */
+  /* 높이값 : 높이값을 안에있는 .cont에 주면 겉에 있는 #cont가 자동으로 밀리므로(height가 auto인 상태) 안에 높이값을 줌
+  겉의 박스에 높이값 주면 안쪽에 100%로 높이값 줘야 하므로 불편 */
   height: 700px;;
 }
 /**************** 3. 하단영역 *****************/
 .info {
+  /* 높이값 */
   height: 200px;
   position: relative;
   /* 부모자격 */
