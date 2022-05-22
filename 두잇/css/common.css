@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* css를 별도 작성하여 외부css로 가져올 때는 여기의 포맷팅을 따로 읽어 html에 적용하므로 캐릭터 셋을 별도로 해주어야 함
+자바스크립트는 html파일 안에 집어넣어 돌아가기 때문에 깨지지 않음 */
+
+/* 두잇 공통디자인 css - common.css */
+/* 상단영역, 하단영역 등 공통디자인 */
+
+
+/* 공통 글씨체 */
+body {
+  font-family: 'Questrial','KoPubDotum','Apple SD Gothic Neo', 'Malgun Gothic','Nanum Gothic', 'Noto Sans','sans-serif';
+  color: #404040;
+  font-size: 14px;
+  line-height: 1.9;
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/**************** 1. 상단영역 *****************/
+.top {
+  /* 높이값 */
+  height: 100px;
+}
+
+
+
+/**************** 2. 메인영역 *****************/
+.cont {
+  /* 높이값 */
+  height: 2340px;
+}
+
+
+
+/**************** 3. 하단영역 *****************/
+.info {
+  /* 높이값 */
+  height: 315px;
+}
