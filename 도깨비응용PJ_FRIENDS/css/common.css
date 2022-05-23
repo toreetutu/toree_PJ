@@ -26,6 +26,7 @@ body {
 
 /* 1-1. 메인로고  */
 #logo {
+  position: absolute;
   padding: 50px;
 }
 
@@ -40,29 +41,37 @@ body {
 
 /* 1-2. GNB메뉴 */
 .gnb {
-  position: relative;
-  /* 부모자격 */
-}
-
-.gnb ul {
-  position: absolute;
-  top: -80px;
-  right: 0;
-  /* 부모는? .gnb */
-
+  
   /* 가로크기 */
   width: 711px;
+  /* position: relative; */
+  /* 부모자격 */
+  float: right;
+  margin-top: 53px;
+  margin-right: 50px;
+}
+
+/* .gnb ul {
+  /* position: absolute;
+  top: -80px;
+  right: 0; */
+  /* 부모는? .gnb */
+
 
   /* 마영오- 블록요소 가로중앙정렬
   margin: 0 auto; */
 
-  /* outline: 2px dotted blue; */
-}
+  /* outline: 2px dotted blue;
+} */
 
 /* 가상요소로 clear 설정하기 */
 /* ul에 overflow: hidden 해버리면 서브메뉴가 아래로 보이지 않음, 그래서 가상요소로 float을 끊어줘야함 */
 
-
+.gnb ul::after{
+  content: '';
+  display: block;
+  clear: both;
+}
 /* li 리스트요소 */
 .gnb li {
   /* 블록요소 옆으로 흐르게 */
@@ -71,6 +80,7 @@ body {
   /* 부모박스에 세로값35px를 주면 고정되므로 서브메뉴가 아래로 감 */
   padding: 0 20px;
   margin: 0 20px;
+  border: 1px dashed transparent;
   
 
   /* border: 1px solid transparent;
@@ -102,20 +112,22 @@ body {
   height: 0;
   
   /* top부분 미세위치 조정은 마진탑으로: top값은 젠틀하므로 값을 줘버리면 디자인이 다 망가지므로 줄 수 없음 */
-  margin-top: 30px;
+  margin-top: 20px;
   /* 트랜지션: 속시이지-속성을 하나하나 다 지정해줄 수 있기 때문에 정확히 콕 집어서 height라고 지정해 높이만 만져줌  
   안쓰면 전체가 모두 선택됨 
   => .smenu와 동일 */
-  transition: height .3s ease-out;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* 첫번째 li오버시 가상요소배경(반투명검은색) 보이기  */
 .gnb>ul>li.m1:hover::after {
-  height: 111px;
+  height: 90px;
+  transition: height .4s ease-out;
 }
 /* 세번째 li오버시 가상요소배경(반투명검은색) 보이기  */
 .gnb>ul>li.m2:hover::after {
-  height: 70px;
+  height: 280px;
+  transition: height .4s ease-out;
 }
 
 
@@ -131,7 +143,7 @@ body {
 }
 
 /* GNB메뉴 호버시 */
-.gnb>ul>li>a:hover {
+.gnb>ul>li:hover>a {
   color: #fff;
   /* border-bottom: 1px dotted #fff; */
 }
@@ -155,12 +167,11 @@ body {
   height: 0;
   overflow: hidden; /* oh */
   line-height: 35px;
-  background-color: rgb(0, 0, 0, .3);
+  /* background-color: rgb(0, 0, 0, .3); */
   /* 상단마진조정 */
-  margin-top: 20px;
+  padding-top: 20px;
   /* 트랜지션: 속시이지-속성을 하나하나 다 지정해줄 수 있기 때문에 정확히 콕 집어서 height라고 지정해 높이만 만져줌  
   안쓰면 전체가 모두 선택됨 */
-  transition: height .4s ease-out;
   /* outline: 2px dotted red; */
 }
 
@@ -168,20 +179,22 @@ body {
     하위메뉴박스 높이값 복원하기(트랜지션) */
 /* 2번째메뉴(About):3개 - 늘어나는 길이가 다르기 때문에 각각 지정 */
 .gnb>ul>li:nth-child(2):hover .smenu {
-  height:75px;
+  height: 90px;
+  transition: height .4s ease-out;
   /* 25*3개 */
 }
 
 /* 3번째메뉴(동영상):10개  */
 .gnb>ul>li:nth-child(3):hover .smenu {
-  height: 250px;
+  height: 280px;
+  transition: height .4s ease-out;
   /* 25*10개 */
 }
 
 /* 서브메뉴 ol요소  */
-.smenu ol {
+/* .smenu ol {
   padding-left: 5px;
-}
+} */
 
 /* 서브메뉴를 위 GNB메뉴에 맞춰 왼쪽정렬 */
 .gnb .smenu li {
@@ -201,7 +214,12 @@ body {
   line-height: 25px; /* 미디어쿼리 적용 시 본래 35px / 10px = 3.5rem */
   /* 인라인요소a의 위아래 줄간격은 line-height로 설정(세로정렬은 vertical-align) */
   /* 트랜지션: 속시이지 */
-  transition: .3s;
+  transition: .4s;
+}
+
+.smenu a:hover {
+  color: #fff;
+  border-bottom: 1px dotted #fff;
 }
 
 
@@ -262,6 +280,7 @@ body {
   text-align: center;
   line-height: 15;
   padding-top: 100px;
+  font-size: 15px;
 
 }
 
@@ -273,7 +292,7 @@ body {
 
   width: 10%;
   height: 50px;
-  outline: 1px dashed red;
+  /* outline: 1px dashed red; */
   
   /* 아이콘이미지 */
   background: url(../images/ftlogo.png) no-repeat;
