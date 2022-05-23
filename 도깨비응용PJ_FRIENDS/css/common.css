@@ -56,7 +56,7 @@ body {
   /* 마영오- 블록요소 가로중앙정렬
   margin: 0 auto; */
 
-  outline: 2px dotted blue;
+  /* outline: 2px dotted blue; */
 }
 
 /* 가상요소로 clear 설정하기 */
@@ -67,14 +67,14 @@ body {
 .gnb li {
   /* 블록요소 옆으로 흐르게 */
   float: left;
-  height: 35px;
+  height: 25px;
   /* 부모박스에 세로값35px를 주면 고정되므로 서브메뉴가 아래로 감 */
   padding: 0 20px;
   margin: 0 20px;
   
 
-  border: 1px solid transparent;
-  border-radius: 30px;
+  /* border: 1px solid transparent;
+  border-radius: 30px; */
 
   /* outline: 2px dotted aqua; */
 }
@@ -109,11 +109,11 @@ body {
   transition: height .3s ease-out;
 }
 
-/* 첫번째 li오버시 가상요소배경(하얀색) 보이기  */
+/* 첫번째 li오버시 가상요소배경(반투명검은색) 보이기  */
 .gnb>ul>li.m1:hover::after {
   height: 111px;
 }
-/* 세번째 li오버시 가상요소배경(하얀색) 보이기  */
+/* 세번째 li오버시 가상요소배경(반투명검은색) 보이기  */
 .gnb>ul>li.m2:hover::after {
   height: 70px;
 }
@@ -124,7 +124,7 @@ body {
   font-family: 'Shadows Into Light', cursive;
   font-size: 18px;
   font-weight: bold;
-  line-height: 36px; /* 인라인요소a의 위아래간격은 line-height로 설정 */
+  line-height: 26px; /* 인라인요소a의 위아래간격은 line-height로 설정 */
   letter-spacing: 1px;
   text-decoration: none;
   color: #222;
@@ -157,7 +157,7 @@ body {
   line-height: 35px;
   background-color: rgb(0, 0, 0, .3);
   /* 상단마진조정 */
-  margin-top: 30px;
+  margin-top: 40px;
   /* 트랜지션: 속시이지-속성을 하나하나 다 지정해줄 수 있기 때문에 정확히 콕 집어서 height라고 지정해 높이만 만져줌  
   안쓰면 전체가 모두 선택됨 */
   transition: height .4s ease-out;
@@ -174,8 +174,8 @@ body {
 
 /* 3번째메뉴(동영상):10개  */
 .gnb>ul>li:nth-child(3):hover .smenu {
-  height: 370px;
-  /* 37*10개 */
+  height: 270px;
+  /* 27*10개 */
 }
 
 /* 서브메뉴 ol요소 - 디자인상 없앰 */
@@ -211,7 +211,7 @@ body {
 .cont {
   /* 높이값 : 높이값을 안에있는 .cont에 주면 겉에 있는 #cont가 자동으로 밀리므로(height가 auto인 상태) 안에 높이값을 줌
   겉의 박스에 높이값 주면 안쪽에 100%로 높이값 줘야 하므로 불편 */
-  height: 1000px;;
+  height: 750px;
 }
 /**************** 3. 하단영역 *****************/
 .info {
@@ -261,7 +261,7 @@ body {
   color: #fff;
   text-align: center;
   line-height: 15;
-  padding-top: 10px;
+  padding-top: 100px;
 
 }
 
@@ -279,4 +279,5 @@ body {
   background: url(../images/ftlogo.png) no-repeat;
   /* background-position: 53% -45%; */
   background-size: 100%;
+  background-position: bottom;
 }
