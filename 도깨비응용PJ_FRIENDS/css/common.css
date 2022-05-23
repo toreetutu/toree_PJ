@@ -79,7 +79,7 @@ body {
   /* outline: 2px dotted aqua; */
 }
 
-.gnb li:hover {
+.gnb>ul> li:hover {
   color: #fff;
   border: 1px dashed #fff;
   border-radius: 20px;
@@ -124,7 +124,7 @@ body {
   font-family: 'Shadows Into Light', cursive;
   font-size: 18px;
   font-weight: bold;
-  line-height: 26px; /* 인라인요소a의 위아래간격은 line-height로 설정 */
+  line-height: 26px; /* 인라인요소a의 위아래 줄간격은 line-height로 설정(세로정렬은 vertical-align) */
   letter-spacing: 1px;
   text-decoration: none;
   color: #222;
@@ -146,7 +146,7 @@ body {
   /* 배경가상요소보다 바로 위: 프로그램소개 서브메뉴들이 배경가상요소 위로 올라와서 보이도록 함 */
 
   /* 가로크기설정: 부모박스 크기에 영향이 안가도록, 프로그램소개 서브메뉴에서 크기 찾음 */
-  width: 70px;
+  width: 90px;
   /* 노랩박스 만들기: 공백속성 싸지마! 박스가 좁아도 박스 안 글자가 밑으로 안 떨어지게(프로그램 소개 서브메뉴가 길어서 밑으로 떨어지니까) */
   white-space: nowrap;
   /* 서브메뉴 숨김장치
@@ -157,7 +157,7 @@ body {
   line-height: 35px;
   background-color: rgb(0, 0, 0, .3);
   /* 상단마진조정 */
-  margin-top: 40px;
+  margin-top: 20px;
   /* 트랜지션: 속시이지-속성을 하나하나 다 지정해줄 수 있기 때문에 정확히 콕 집어서 height라고 지정해 높이만 만져줌  
   안쓰면 전체가 모두 선택됨 */
   transition: height .4s ease-out;
@@ -168,20 +168,20 @@ body {
     하위메뉴박스 높이값 복원하기(트랜지션) */
 /* 2번째메뉴(About):3개 - 늘어나는 길이가 다르기 때문에 각각 지정 */
 .gnb>ul>li:nth-child(2):hover .smenu {
-  height:111px;
-  /* 37*3개 */
+  height:75px;
+  /* 25*3개 */
 }
 
 /* 3번째메뉴(동영상):10개  */
 .gnb>ul>li:nth-child(3):hover .smenu {
-  height: 270px;
-  /* 27*10개 */
+  height: 250px;
+  /* 25*10개 */
 }
 
-/* 서브메뉴 ol요소 - 디자인상 없앰 */
-/* .smenu ol {
-  padding: -5px;
-} */
+/* 서브메뉴 ol요소  */
+.smenu ol {
+  padding-left: 5px;
+}
 
 /* 서브메뉴를 위 GNB메뉴에 맞춰 왼쪽정렬 */
 .gnb .smenu li {
@@ -198,8 +198,8 @@ body {
   display: block;
   /* text-align: center; */
   font-size: 1.4rem; /* 미디어쿼리 적용 시 본래 14px / 10px = 1.4rem */
-  line-height: 35px; /* 미디어쿼리 적용 시 본래 35px / 10px = 3.5rem */
-  /* 인라인요소a의 위아래간격은 line-height로 설정 */
+  line-height: 25px; /* 미디어쿼리 적용 시 본래 35px / 10px = 3.5rem */
+  /* 인라인요소a의 위아래 줄간격은 line-height로 설정(세로정렬은 vertical-align) */
   /* 트랜지션: 속시이지 */
   transition: .3s;
 }
