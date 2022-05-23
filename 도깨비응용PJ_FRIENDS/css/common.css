@@ -280,23 +280,29 @@ body {
   text-align: center;
   line-height: 15;
   padding-top: 100px;
-  font-size: 15px;
+  font-size: 1vw;
 
 }
 
 /* 사이트정보 앞쪽에 가상요소로 아이콘넣기 */
-.cpr::before {
-  content: '';
+.cpr a {
   display: inline-block;
-  vertical-align: -2px;
 
-  width: 10%;
-  height: 50px;
-  /* outline: 1px dashed red; */
+  width: 10vw;
+  padding-top: 10%;
+  vertical-align: middle;
   
   /* 아이콘이미지 */
   background: url(../images/ftlogo.png) no-repeat;
   /* background-position: 53% -45%; */
   background-size: 100%;
-  background-position: bottom;
+  background-position: center;
+  /* outline: 1px dashed red; */
+}
+.bb{
+  display: block;
+  
+  line-height: 50px;
+  white-space: nowrap;
+  /* outline: 1px dashed red; */
 }
