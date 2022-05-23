@@ -158,7 +158,7 @@ body {
   margin-top: 10%;
 
   /* 트랜지션 애니메이션: 속시이지 */
-  transition: height .3s ease-out .2s;
+  transition: height .3s ease-out;
   /* 세로값만 0.3초움직여 끝날때 천천히 0.2초기다렸다작동해 */
   /* 여기서 height는 안써도 전체 다 적용되지만, 속성값을 보여주기 위해서 사용 */
 }

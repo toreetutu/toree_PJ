@@ -127,7 +127,7 @@ body {
   line-height: 36px; /* 인라인요소a의 위아래간격은 line-height로 설정 */
   letter-spacing: 1px;
   text-decoration: none;
-  
+  color: #222;
 }
 
 /* GNB메뉴 호버시 */
