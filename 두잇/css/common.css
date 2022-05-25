@@ -8,7 +8,7 @@
 
 /* 공통 글씨체 */
 body {
-  font-family: 'Questrial','KoPubDotum','Apple SD Gothic Neo', 'Malgun Gothic','Nanum Gothic', 'Noto Sans','sans-serif';
+  font-family: 'Questrial', 'KoPubDotum', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Nanum Gothic', 'Noto Sans', 'sans-serif';
   color: #404040;
   font-size: 14px;
   line-height: 1.9;
@@ -18,33 +18,16 @@ body {
 
 
 /**************** 1. 상단영역 *****************/
+/* 상단부모박스 */
+#top {
+  height: 100%;
+}
+
+/* GNB메뉴박스 */
 .top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 12px;
+  background-color: #218cff;
 }
 
-/* 1-1. 메인로고  */
-/* .logo {
-    padding: 20px 50px;
-} */
-
-/* 로고이미지 */
-.logo img {
-  width: 89px;
-  vertical-align: bottom;
-  /* a요소나 div등으로 이미지를 싸면 하단에 4px공백이 들어감.(인라인요소 세팅때문에 생기는 자연스러운 디폴트 현상)
-  이걸 없애려면 vertical-align값을 설정하면 해결됨 
-  값으로 top/middle/bottom 뭘 써도 됨 */
-}
-
-/* 1-2. GNB메뉴 */
-.gnb {
-  display: flex;
-  
- 
-}
 
 
 
@@ -55,6 +38,8 @@ body {
 .cont {
   /* 높이값 */
   height: 2340px;
+
+  background-color: #fdfccf
 }
 
 

@@ -1,219 +1,125 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <title>두잇두잇</title>
-    <style>
-      /* 초기화 */
-      html,
-      body,
-      ul,
-      ol {
-        margin: 0;
-        padding: 0;
-      }
-      /* ul,ol초기화 */
-      ul,
-      ol {
-        /* 리스트박스 기본3無
-            - 마진0, 패딩0, 리스트스타일없음 */
-        list-style: none;
-      }
-      h1 {
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>두잇두잇</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- 외부css 하나만 불러도 main.css에서 import 하고있는 3개의 기본css가 같이 들어옴  -->
+</head>
 
-      /* GNB메뉴박스 */
-      .gnb {
-        background-color: #218cff;
-      }
-      /* ul 초기화 */
-      .gnb ul {
-        /* 플렉스박스 */
-        display: flex;
-        /* 수평방향 중앙정렬 */
-        justify-content: center;
-        /* 특정가로크기, 마영오 등 설정 불필요함 */
-      }
-      /* 가상요소로 clear설정하기 -flex는 불필요함! */
-      /* .gnb ul::after {
-        content: "";
-        display: block;
-        clear: both;
-      } */
-      /* li 리스트요소 */
-      .gnb > ul > li {
-        /* 블록요소 옆으로 흐르게 */
-        /* float: left; -flex는 불필요함! */
-        height: 50px;
-      }
-      /* li 하위 a요소 */
-      .gnb > ul > li > a {
-        /* 글자색 */
-        color: #fff;
-        /* 밑줄없앰 */
-        text-decoration: none;
-        /* 글자크기 */
-        font-size: 17px;
+<body>
+  <!-- 1.상단영역 -->
+  <div id="top">
+    <header class="inbox top">
+      <!-- 1-1.메인로고 -->
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="./images/logo.png" alt="두잇로고">
+        </a>
+      </h1>
+      <!-- 1-2.GNB메뉴 -->
+      <nav class="gnb">
+        <ul>
+          <li class="bgbx m1">
+            <a href="#">about us</a>
+            <!-- 서브메뉴 -->
+            <div class="smenu">
+              <ol>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ol>
+            </div>
+          </li>
+          <li class="bgbx m2">
+            <a href="#">shop</a>
+            <!-- 서브메뉴 -->
+            <div class="smenu">
+              <ol>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ol>
+            </div>
+          </li>
+          <li class="bgbx m3">
+            <a href="#">community</a>
+            <!-- 서브메뉴 -->
+            <div class="smenu">
+              <ol>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ol>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- 1-3. 탑메뉴 -->
+      <aside class="tmenu">
+        <ul class="clb">
+          <li>
+            <a href="#">로그인</a>
+          </li>
+          <li>
+            <a href="#">회원가입</a>
+          </li>
+          <li>
+            <a href="#">장바구니</a>
+          </li>
+        </ul>
+      </aside>
+    </header>
+  </div>
 
-        /* 디자인적용위해 블록변경! */
-        display: block;
-        width: 200px;
-        text-align: center;
-        line-height: 50px;
-        /* 트랜지션: 속시이지 */
-        transition: all 0.3s;
-      }
-      /* 부모li에 마우스 오버시 상위메뉴 a요소 변경 */
-      .gnb > ul > li:hover > a {
-        background-color: #c3e3ff;
-        color: #000;
-      }
+  <!-- 2.메인영역 -->
+  <div id="cont">
+    <main class="inbox cont">
 
-      /* 서브메뉴 */
-      .smenu {
-        position: absolute;
-        /* 젠틀앱솔루트: 위에있는 a요소를 존중하여 아래에 위치함 */
-        /* 판타롱스타킹 앱솔루트*/
-        z-index: 1; /* 배경보다 위! */
+    </main>
+  </div>
 
+  <!-- 3.하단영역 -->
+  <div id="info">
+    <footer class="inbox info">
 
-        /* 서브메뉴 숨김장치
-            -> 높이값0 + 넘치는자식요소 숨기기 
-            주의) 위아래방향 패딩 없어야함! */
-        height: 0; /* h0 */
-        overflow: hidden; /* oh */
-        /* 배경색 */
-        background-color: #c3e3ff;
-        /* 트랜지션: 속시이지 */
-        transition: height 0.4s ease-out;
-        /* outline: 2px dotted blue; */
-      }
-      /* 상위메뉴 li에 마우스 오버시
-        하위메뉴박스 높이값 복원하기(트랜지션) */
-      .gnb > ul > li:hover .smenu {
-        height: 50px;
-      }
+    </footer>
+  </div>
+</body>
 
-      /* 상위메뉴 li에 가상요소로 서브배경바 만들기 */
-      /* .sm은 서브메뉴가 있는 li임! */
-      .gnb>ul>li.sm::after {
-        content: '';
-        display: block;
-        position: absolute;
-        /* top에 대하여 젠틀! 위로 안 움직임 */
-        left: 0;
-        /* left의 부모는? */
-        width: 100%;
-        height: 0;
-        background-color: #c3e3ff;
-        /* 트랜지션: 속시이지 */
-        transition: height 0.4s ease-out;
-      }
-      /* 상위li에 오버시 서브 배경내려옴 */
-      .gnb>ul>li.sm:hover::after {
-        height: 50px;
-      }
-
-      /* 서브메뉴 ol요소
-        - 안쪽 박스에 패딩을 준 이유는?
-        .smenu박스는 높이값을 0으로 자식요소
-        숨기기를 할 박스이므로 패딩이 있으면
-        높이값 0이어도 패딩때문에 숨겨지지 않는다!
-        따라서 안쪽박스에 패딩설정을 해야한다! */
-      .smenu ol {
-        /* 플렉스박스 */
-        display: flex;
-        /* 안쪽여백 */
-        padding: 5px 10px;
-      }
-      /* 서브메뉴 a요소 */
-      .smenu a {
-        /* 글자색 */
-        color: #000;
-        /* 밑줄없앰 */
-        text-decoration: none;
-        /* 블록변경 -> 아님!*/
-        /* display: block; */
-        /* 패딩 */
-        padding: 5px 10px;
-        /* 글자중앙 */
-        text-align: center;
-        /* 글자크기 */
-        font-size: 14px;
-        /* 줄간격 */
-        line-height: 40px;
-        /* 트랜지션: 속시이지 */
-        transition: 0.3s;
-      }
-      /* 서브메뉴 a에 오버시 */
-      .smenu a:hover {
-        background-color: #ececec;
-        color: orangered;
-      }
-
-      /* 본문내용 */
-      .cont {
-        background-color: #fdfccf;
-        text-align: center;
-        line-height: 50;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>유형2. 가로네비 서브별 드롭다운 가로형 - flex적용</h1>
-    <!-- GNB 네비게이션 -->
-    <nav class="gnb">
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li class="sm">
-          <a href="#">웹개발</a>
-          <!-- 서브메뉴 -->
-          <div class="smenu">
-            <ol>
-              <li>
-                <a href="#">웹디자인</a>
-              </li>
-              <li>
-                <a href="#">HTML5+CSS3</a>
-              </li>
-              <li>
-                <a href="#">jQuery</a>
-              </li>
-              <li>
-                <a href="#">웹+모바일</a>
-              </li>
-            </ol>
-          </div>
-        </li>
-        <li class="sm">
-          <a href="#">게시판</a>
-          <!-- 서브메뉴 -->
-          <div class="smenu">
-            <ol>
-              <li>
-                <a href="#">Q&amp;A</a>
-                <!-- HTML 특수문자처리
-                                엔퍼센드(&) &amp; 
-                                여는꺽쇠(<) &lt;
-                                닫는꺽쇠(>) &gt;
-                            -->
-              </li>
-              <li>
-                <a href="#">방명록</a>
-              </li>
-            </ol>
-          </div>
-        </li>
-        <li>
-          <a href="#">프로필</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- 내용박스 -->
-    <div class="cont">본문내용</div>
-  </body>
 </html>
