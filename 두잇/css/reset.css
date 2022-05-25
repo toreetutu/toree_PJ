@@ -25,3 +25,8 @@ ul,ol {
   list-style: none;
   /* 불릿, 숫자표시 없앰 */
 }
+
+/* 4. a요소 밑줄 없앰 */
+a {
+  text-decoration: none;
+}
