@@ -10,7 +10,7 @@
 body {
   font-family: 'Questrial', 'KoPubDotum', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Nanum Gothic', 'Noto Sans', 'sans-serif';
   color: #404040;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.9;
   font-weight: normal;
   font-style: normal;
@@ -21,6 +21,7 @@ body {
 /**************** 1. 상단영역 *****************/
 /* 상단전체영역*/
 .top {
+  max-height: 100px;
   display: flex;
   /* 플렉스박스: 로고,GNB메뉴,탑메뉴를 가로로 정렬 */
   justify-content: space-between;
@@ -46,9 +47,20 @@ body {
   width: 729px;
   padding: 35px 0;
   display: flex;
+  /* 아래 li들을 가로로 정렬하려고 display: flex */
   justify-content: space-evenly;
   /* 수평정렬: 아이템 요소 양쪽과 사이간격 모두 일정 */
-  
+}
+
+/* GNB메뉴 글자크기 */
+.gnb>li>a {
+  font-size: 18px;
+}
+
+.gnb>li>a:hover,
+.topmn>li>a:hover {
+  color: #ccc;
+  /* GNB메뉴, 탑메뉴 호버시 글자색상변경 */
 }
 
 
@@ -57,11 +69,30 @@ body {
   width: 295px;
   padding: 35px 0;
   display: flex;
+  /* 아래 li들을 가로로 정렬하려고 display: flex */
   justify-content: space-evenly;
 }
 
+/* 탑메뉴 글자 */
+.topmn>li>a {
+  font-family: Quicksand,KoPubDotum, sans-serif;
+  font-size: 16px;
+}
 
 
+/* 서브메뉴 */
+
+.hoho1 {
+ /* display: none; */
+}
+
+.hoho2 {
+ /* display: none; */
+}
+
+.hoho3 {
+ /* display: none; */
+}
 
 
 /**************** 2. 메인영역 *****************/

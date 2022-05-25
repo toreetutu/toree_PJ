@@ -14,5 +14,16 @@ body * {
 
 
 
-/******** 2. 메인영역 *********/
+/******** 2.메인영역 *********/
+/* 배너이미지 */
+.galley {
+  width: 100%;
+  background-color: #fff;
+  
+  display: flex;
+  justify-content: center
+}
 
+.galley span {
+  margin: 5px 7px;
+}
