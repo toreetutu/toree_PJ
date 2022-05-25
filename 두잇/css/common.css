@@ -19,18 +19,19 @@ body {
 
 /**************** 1. 상단영역 *****************/
 .top {
-  /* 높이값 */
-  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
 }
 
 /* 1-1. 메인로고  */
-#logo {
-  position: absolute;
-  padding: 20px 50px;
-}
+/* .logo {
+    padding: 20px 50px;
+} */
 
 /* 로고이미지 */
-#logo img {
+.logo img {
   width: 89px;
   vertical-align: bottom;
   /* a요소나 div등으로 이미지를 싸면 하단에 4px공백이 들어감.(인라인요소 세팅때문에 생기는 자연스러운 디폴트 현상)
@@ -40,15 +41,18 @@ body {
 
 /* 1-2. GNB메뉴 */
 .gnb {
+  display: flex;
+  padding-left: 0;
   /* 가로크기 */
-  width: 634px;
+  /* width: 634px;
   float: right;
   margin-top: 25px;
   margin-right: 50px;
 
-  outline: 1px dashed red;
+  outline: 1px dashed red; */
  
 }
+
 
 /* li 리스트요소 */
 .gnb li {
