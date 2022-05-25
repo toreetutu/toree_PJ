@@ -1,0 +1,15 @@
+.data-list li a{cursor: pointer;}
+.data-list li.hide {display: none;}
+
+.floating .floating-content .img-wrap {width: 66%;height: auto;bottom: 156px;}
+
+@media all and (max-width: 750px){
+	.floating .floating-content .img-wrap {width: 66%;height: auto;bottom: auto;}
+}
+
+
+.cke_editable img{
+	max-width:100%;
+	height:auto !important;
+}
+
