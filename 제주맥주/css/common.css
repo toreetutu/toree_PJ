@@ -94,14 +94,33 @@ body {
 }
 
 /* 1-2. GNB메뉴 */
+.gwrap {
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+}
+
 .gnb {
   display: flex;
+  /* li들을 가로정렬하기 위해 display:flex */
+  justify-content: space-evenly;
+  /* li 사이간격 띄움 */
 }
 
 .gnb li {
-  flex: 1;
+  margin-top: 20px;
 }
 
+.gnb li a {
+  color: #55585b;
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.gnb li a:hover {
+  color: #ccc;
+}
 
 
 /**************** 2. 메인영역 *****************/
