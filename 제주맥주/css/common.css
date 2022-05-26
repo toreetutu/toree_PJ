@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* css를 별도 작성하여 외부css로 가져올 때는 여기의 포맷팅을 따로 읽어 html에 적용하므로 캐릭터 셋을 별도로 해주어야 함
+자바스크립트는 html파일 안에 집어넣어 돌아가기 때문에 깨지지 않음 */
+
+/* 제주맥주 공통디자인 css - common.css */
+/* 상단영역, 하단영역 등 공통디자인 */
+
+
+/* 공통 글씨체,배경색 */
+body {
+  font-family: 'Spoqa Han Sans', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Nanum Gothic', 'Noto Sans', 'sans-serif';
+  color: #3d464b;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: normal;
+  font-style: normal;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+/**************** 1. 상단영역 *****************/
+/* 상단전체영역*/
+.wrap {
+  width: 1200px;
+  height: 180px;
+  margin: 0 auto;
+
+  display: flex;
+  /* 플렉스박스: 로고, 탑메뉴를 가로로 정렬 */
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+
+  background-color: bisque;
+}
+
+.wrap div {
+  flex: 1;
+  /* wrap의 자식 div들(빈div,로고,탑메뉴)를 등분 */
+}
+
+
+/* 1-1.로고 */
+.logo img {
+  width: 90px;
+  margin: 0 auto;
+}
+
+
+/**************** 2. 메인영역 *****************/
+.cont {
+  /* 높이값 */
+  height: 2340px;
+
+  background-color: lightblue;
+}
+
+
+
+/**************** 3. 하단영역 *****************/
+.info {
+  /* 높이값 */
+  height: 315px;
+}
