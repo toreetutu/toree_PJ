@@ -8,13 +8,13 @@
 
 /* 공통 글씨체,배경색 */
 body {
-  font-family: 'Spoqa Han Sans', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Nanum Gothic', 'Noto Sans', 'sans-serif';
+  font-family: 'Nanum Gothic', 'Malgun Gothic', 'sans-serif';
   color: #3d464b;
   font-size: 14px;
   line-height: 1.6;
   font-weight: normal;
   font-style: normal;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #fff;
 }
 
 
@@ -24,7 +24,7 @@ body {
   width: 1200px;
   height: 180px;
   margin: 0 auto;
-  
+
   display: flex;
   /* 플렉스박스: 로고, 탑메뉴를 가로로 정렬 */
   justify-content: space-between;
@@ -44,12 +44,14 @@ body {
 
 /* 1-1.로고 */
 .logo img {
+  display: block;
   width: 90px;
   margin: 0 auto;
 }
 
 /* 1-2.탑메뉴 */
-.topmn1,.topmn2 {
+.topmn1,
+.topmn2 {
   display: flex;
   /* topmn의 li를 한줄로 나란히 나오게 */
   justify-content: flex-end;
@@ -60,24 +62,45 @@ body {
   margin-top: 40px;
 }
 
-.topmn1>li>a  {
-  font-size: 12px;
+.topmn1 li {
+  padding: 3px 0;
+  margin-left: 25px;
+}
+.topmn1 li a {
   color: #888;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /* 1-2.탑메뉴2 */
 .topmn2 {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .topmn2 li {
-  padding: 5px;
-  border: 1px solid #000;
+  padding: 3px 18px;
+  margin-left: 10px;
+  border: 1px solid #1ecad3;
   border-radius: 20px;
+  background-color: #1ecad3;
 }
 
+.topmn2 li a {
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
 
+/* 1-2. GNB메뉴 */
+.gnb {
+  display: flex;
+}
 
+.gnb li {
+  flex: 1;
+}
 
 
 
