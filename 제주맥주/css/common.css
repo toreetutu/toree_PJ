@@ -24,7 +24,7 @@ body {
   width: 1200px;
   height: 180px;
   margin: 0 auto;
-
+  
   display: flex;
   /* 플렉스박스: 로고, 탑메뉴를 가로로 정렬 */
   justify-content: space-between;
@@ -37,6 +37,8 @@ body {
 .wrap div {
   flex: 1;
   /* wrap의 자식 div들(빈div,로고,탑메뉴)를 등분 */
+
+  padding: 30px 0;
 }
 
 
@@ -45,6 +47,34 @@ body {
   width: 90px;
   margin: 0 auto;
 }
+
+/* 1-2.탑메뉴 */
+.topmn1,.topmn2 {
+  display: flex;
+  /* topmn의 li를 한줄로 나란히 나오게 */
+  justify-content: flex-end;
+}
+
+/* 1-2.탑메뉴1 */
+.topmn1 {
+  margin-top: 40px;
+}
+
+
+/* 1-2.탑메뉴2 */
+.topmn2 {
+  margin-top: 40px;
+}
+
+.topmn2 li {
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+
+
+
 
 
 /**************** 2. 메인영역 *****************/
