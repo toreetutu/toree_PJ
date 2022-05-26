@@ -60,6 +60,10 @@ body {
   margin-top: 40px;
 }
 
+.topmn1>li>a  {
+  font-size: 12px;
+  color: #888;
+}
 
 /* 1-2.탑메뉴2 */
 .topmn2 {
@@ -69,7 +73,7 @@ body {
 .topmn2 li {
   padding: 5px;
   border: 1px solid #000;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 
