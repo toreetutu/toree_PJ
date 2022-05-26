@@ -28,10 +28,8 @@ body {
   display: flex;
   /* 플렉스박스: 로고, 탑메뉴를 가로로 정렬 */
   justify-content: space-between;
-  padding: 0 50px;
-  box-sizing: border-box;
-
-  background-color: bisque;
+ /* 수평정렬속성: 아이템 요소 양쪽끝에 붙고 사이간격 일정 */
+  /* background-color: bisque; */
 }
 
 .wrap div {
@@ -66,11 +64,16 @@ body {
   padding: 3px 0;
   margin-left: 25px;
 }
+
 .topmn1 li a {
   color: #888;
   font-family: 'Nunito', sans-serif;
   font-size: 12px;
   font-weight: bold;
+}
+
+.topmn1 li a:hover {
+  color: #ccc;
 }
 
 /* 1-2.탑메뉴2 */
@@ -79,11 +82,15 @@ body {
 }
 
 .topmn2 li {
-  padding: 3px 18px;
+  padding: 3px 20px;
   margin-left: 10px;
   border: 1px solid #1ecad3;
   border-radius: 20px;
   background-color: #1ecad3;
+}
+
+.topmn2 li:hover {
+  background-color: #10adb5;;
 }
 
 .topmn2 li a {
@@ -104,30 +111,25 @@ body {
   display: flex;
   /* li들을 가로정렬하기 위해 display:flex */
   justify-content: space-evenly;
-  /* li 사이간격 띄움 */
-}
-
-.gnb li {
-  margin-top: 20px;
+  /* li 사이간격 띄움(수평정렬속성)
+  : 아이템 요소 양쪽과 사이간격 모두일정*/
 }
 
 .gnb li a {
   color: #55585b;
   font-family: 'Baloo Da 2', cursive;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
 }
 
 .gnb li a:hover {
-  color: #ccc;
+  color: #1ecad3;
 }
 
 
 /**************** 2. 메인영역 *****************/
 .cont {
-  /* 높이값 */
-  height: 2340px;
-
+  
   background-color: lightblue;
 }
 
@@ -135,6 +137,72 @@ body {
 
 /**************** 3. 하단영역 *****************/
 .info {
-  /* 높이값 */
-  height: 315px;
+  margin: 25px 20px 0 20px;
+  background-color: lightyellow;
+  color: #999;
 }
+
+.cpif {
+  display: flex;
+}
+
+.cpif div {
+  flex: 1;
+}
+
+.itd {
+  display: flex;
+  align-items: center;
+}
+
+.itd a {
+  font-family: 'Nunito', sans-serif;
+  color: #999;
+  margin-right: 35px;
+}
+
+.itd a:hover {
+  color: #1ecad3;
+}
+
+.itd a:nth-child(7) {
+  color: #000;
+}
+/* 3-2. SNS 메뉴  */
+.sns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center
+}
+
+.sns a img {
+  width: 40px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.sns a:nth-child(1) img {
+  width: 190px;
+}
+
+/* 회사주소와 저작권 */
+.cpr p:nth-child(1) {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+}
+
+.cpr p:nth-child(2) {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  margin: 20px 0 50px 0;
+}
+
+
+
+/* 
+	
+	3-1. 회사주소와 기본정보
+	
+	3-4. 문의,공유,위로가기 버튼
+*/

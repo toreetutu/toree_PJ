@@ -8,10 +8,34 @@
 
 /* 전체화면 구현중 공사중 외곽선 표시: body밑의 만들어진 모든 것에 적용 */
 body * {
-  outline: 1px dashed lime; 
+  outline: 1px dashed lime;
+}
+
+.bgimg {
+  background-size: cover;
+}
+
+.bgimg div:nth-child(1) {
+  height: 100vh;
+  background-image: url(../images/jb_jejulager_web_6.mp4)no-repeat center/auto cover;
+  outline: 5px dotted #000;
+}
+
+.bgimg div:nth-child(2) {
+  background-image: url(../images/larger_back.png) no-repeat cover;
+  outline: 5px dotted red;
 }
 
 
 
-
 /******** 2.메인영역 *********/
+/* 2-1.동영상 */
+
+
+/* 2-2.배너이미지 */
+
+
+
+
+
+/* 2-6. 판매처 이미지 슬라이드 */
