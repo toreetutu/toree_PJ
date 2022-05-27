@@ -17,11 +17,15 @@ body {
   background-color: #fff;
 }
 
+img, video{
+  vertical-align: bottom;
+}
+
 
 /**************** 1. 상단영역 *****************/
 /* 상단전체영역*/
 .wrap {
-  width: 1200px;
+  max-width: 1200px;
   height: 180px;
   margin: 0 auto;
 
@@ -102,7 +106,7 @@ body {
 
 /* 1-2. GNB메뉴 */
 .gwrap {
-  width: 1200px;
+  max-width: 1200px;
   height: 60px;
   margin: 0 auto;
 }
@@ -153,6 +157,7 @@ body {
 .btn {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .btn a {
