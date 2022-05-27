@@ -19,10 +19,11 @@ body * {
 .bgimg div:nth-child(1) {
   
   background-image: url(../images/jb_jejulager_web_6.mp4)no-repeat center/auto cover;
-  outline: 5px dotted #000;
+  
 }
 
 .bgimg div:nth-child(2) {
+
   
   background-image: url(../images/larger_back.png) no-repeat cover;
   outline: 5px dotted red;
