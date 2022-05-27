@@ -142,30 +142,31 @@ body {
   color: #999;
 }
 
-.cpif {
+.btn_wrap {
   display: flex;
 }
 
-.cpif div {
+.btn_wrap div {
   flex: 1;
 }
 
-.itd {
+.btn {
   display: flex;
   align-items: center;
 }
 
-.itd a {
+.btn a {
   font-family: 'Nunito', sans-serif;
   color: #999;
   margin-right: 35px;
+  white-space: nowrap;
 }
 
-.itd a:hover {
+.btn a:hover {
   color: #1ecad3;
 }
 
-.itd a:nth-child(7) {
+.btn a:nth-child(7) {
   color: #000;
 }
 /* 3-2. SNS 메뉴  */
