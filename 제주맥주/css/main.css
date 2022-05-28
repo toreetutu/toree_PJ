@@ -92,8 +92,8 @@ body * {
 /*  */
 .rbxIn img:nth-child(1) {
   position: absolute;
-  top: 15%;
-  width: 15%;
+  top: 10%;
+  width: 10%;
 }
 
 .rbxIn img:nth-child(2) {
