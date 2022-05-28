@@ -116,6 +116,7 @@ img, video{
   justify-content: space-evenly;
   /* li 사이간격 띄움(수평정렬속성)
   : 아이템 요소 양쪽과 사이간격 모두일정*/
+  padding-top: 10px;
 }
 
 .gnb li a {
