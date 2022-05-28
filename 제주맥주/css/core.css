@@ -16,3 +16,9 @@
   4. 탑메뉴2
   font-family: 'Do Hyeon', sans-serif;
 */
+
+/* 마우스로 긁었을 때 */
+::selection {
+  color: #fff;
+  background: #1ecad3;
+}

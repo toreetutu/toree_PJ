@@ -35,13 +35,13 @@ body * {
   outline: 1px dashed red;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .rbx::before {
   content: '';
   display: block;
-  padding-top: 19%;
+  padding-top: 28%;
   /* 
     [ 내가 원하는 비율 계산하기 ]
     패딩탑 100%가 부모박스 가로크기의 1:1 비율이므로
@@ -92,7 +92,7 @@ body * {
 /*  */
 .rbxIn img:nth-child(1) {
   position: absolute;
-  top: 10%;
+  top: 15%;
   width: 10%;
 }
 
@@ -108,7 +108,7 @@ body * {
 .cat {
   position: absolute;
   bottom: 10%;
-  left: 45%;
+  left: 43%;
   /* 부모는? .rbxIn */
   margin: 0;
   padding: 0;
