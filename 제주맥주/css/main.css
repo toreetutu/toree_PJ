@@ -15,12 +15,13 @@ body * {
 
 /******** 2.메인영역 *********/
 /* 2-1.동영상 */
-.mvid video{
+.mvid video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.mvid::before{
+
+.mvid::before {
   content: '';
   padding-top: 80%;
 }
@@ -28,47 +29,98 @@ body * {
 
 /* 2-2.배너이미지 */
 
-.rbx{
+.rbx {
   position: relative;
-  outline: 1px dashed gray;
+  /* .rbxIn의 부모 */
+  outline: 1px dashed red;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.rbx::before{
+.rbx::before {
   content: '';
   display: block;
-  padding-top: 28%;
+  padding-top: 19%;
   /* 
-      [ 내가 원하는 비율 계산하기 ]
-      패딩탑 100%가 부모박스 가로크기의 1:1 비율이므로
-      이미지비율을 식으로 쓰면 ...
-      가로 : 세로 = 100% : x
-      1920 : 540 = 100 : x
-      내항의 곱은 외항의 곱과 같다! 비례식!!!
-      540*100 = 1920*x
-      x = 540*100/1920
-        = 2.8125
-      이 x값이 패딩탑 %값이다!!!  
+    [ 내가 원하는 비율 계산하기 ]
+    패딩탑 100%가 부모박스 가로크기의 1:1 비율이므로
+    이미지비율을 식으로 쓰면 ...
+    가로 : 세로 = 100% : x
+    1920 : 540 = 100 : x
+    내항의 곱은 외항의 곱과 같다! 비례식!!!
+    540*100 = 1920*x
+    x = 540*100/1920
+      = 2.8125
+    이 x값이 패딩탑 %값이다!!!  
   */
 }
 
-.larger{
+.larger {
   background-image: url(../images/larger_back.png);
 }
 
-.weat{
+.weat {
   background-image: url(../images/weat_back.png);
 }
 
-.pellong{
+.pellong {
   background-image: url(../images/pellong_back.png);
 }
 
-.geomeong{
+.geomeong {
   background-image: url(../images/geomeong_back.png);
 }
+
+
+/* 비율유지 속 내용박스 */
+.rbxIn {
+  position: absolute;
+  /* 앱솔루트가 없으면 패딩은 비율에 맞게 밀고 있는데 위의 패딩탑 때문에 내용이 안에 못 들어가고 바깥에서 밀려있음. 들어올 자리를 앱솔루트가 만들어줌(위로 올라가서 .rbx에 부모자격 줘야함)  */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 부모는 반드시 .rbx여야 함!!  */
+
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*  */
+.rbxIn img:nth-child(1) {
+  position: absolute;
+  top: 15%;
+  width: 15%;
+}
+
+.rbxIn img:nth-child(2) {
+  position: absolute;
+  bottom: 5%;
+  left: 21%;
+  width: 16%;
+}
+
+
+/* 내용세팅 */
+.cat {
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
+  /* 부모는? .rbxIn */
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+
+
+
+
 
 
 

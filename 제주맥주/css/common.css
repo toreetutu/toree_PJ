@@ -99,9 +99,8 @@ img, video{
 
 .topmn2 li a {
   color: #fff;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 14px;
-  font-weight: bold;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 15px;
 }
 
 /* 1-2. GNB메뉴 */
@@ -161,7 +160,7 @@ img, video{
 }
 
 .btn a {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'IBM Plex Sans KR', sans-serif;
   color: #999;
   margin-right: 35px;
   white-space: nowrap;
@@ -193,7 +192,7 @@ img, video{
 
 /* 회사주소와 저작권 */
 .cpr p:nth-child(1) {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-size: 13px;
 }
 
@@ -207,8 +206,6 @@ img, video{
 
 
 /* 
-	
-	3-1. 회사주소와 기본정보
 	
 	3-4. 문의,공유,위로가기 버튼
 */
