@@ -30,32 +30,10 @@ body * {
 
 
 /* 2-2.배너이미지 */
-
-.rbx {
-  position: relative;
-  /* .rbxIn의 부모 */
-  outline: 1px dashed red;
+.bgc {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.rbx::before {
-  content: '';
-  display: block;
-  padding-top: 28%;
-  /* 
-    [ 내가 원하는 비율 계산하기 ]
-    패딩탑 100%가 부모박스 가로크기의 1:1 비율이므로
-    이미지비율을 식으로 쓰면 ...
-    가로 : 세로 = 100% : x
-    1920 : 540 = 100 : x
-    내항의 곱은 외항의 곱과 같다! 비례식!!!
-    540*100 = 1920*x
-    x = 540*100/1920
-      = 2.8125
-    이 x값이 패딩탑 %값이다!!!  
-  */
 }
 
 .larger {
@@ -74,53 +52,93 @@ body * {
   background-image: url(../images/geomeong_back.png);
 }
 
+/* 비율유지하는 배경이미지 - 사용안함 */
+/* .rbx::before {
+  content: '';
+  display: block;
+  padding-top: 35%;
+} */
+  /* 
+    [ 내가 원하는 비율 계산하기 ]
+    패딩탑 100%가 부모박스 가로크기의 1:1 비율이므로
+    이미지비율을 식으로 쓰면 ...
+    가로 : 세로 = 100% : x
+    1920 : 540 = 100 : x
+    내항의 곱은 외항의 곱과 같다! 비례식!!!
+    540*100 = 1920*x
+    x = 540*100/1920
+      = 2.8125
+    이 x값이 패딩탑 %값이다!!!  
+  */
 
-/* 비율유지 속 내용박스 */
-.rbxIn {
+/* 비율유지하는 속 내용박스 - 사용안함 */
+/* .rbxIn {
   position: absolute;
-  /* 앱솔루트가 없으면 패딩은 비율에 맞게 밀고 있는데 위의 패딩탑 때문에 내용이 안에 못 들어가고 바깥에서 밀려있음. 들어올 자리를 앱솔루트가 만들어줌(위로 올라가서 .rbx에 부모자격 줘야함)  */
+  /* 앱솔루트가 없으면 패딩은 비율에 맞게 밀고 있는데 위의 패딩탑 때문에 내용이 안에 못 들어가고 바깥에서 밀려있음. 들어올 자리를 앱솔루트가 만들어줌(위로 올라가서 .rbx에 부모자격 줘야함)  *
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  /* 부모는 반드시 .rbx여야 함!!  */
+  /* 부모는 반드시 .rbx여야 함!! *
 
   display: flex;
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
+} */
+
+/* 배너이미지 4개 */
+.mainTop>div:nth-child(1)~div{
+  height: 593px;
 }
 
 .cat {
-  position: absolute;
-  width: 70%;
-  bottom: 10%;
-  left: 43%;
-  /* 부모는? .rbxIn */
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+ 
 }
+
+.tit img {
+  width: 200px;
+}
+.des img{
+  width: 200px;
+}
+.des{
+  display: flex;
+  justify-content: center;
+}
+
+
+
 
 /* 내용세팅: 이미지 */
-.cat img:nth-child(1) {
+/* .cat div:nth-child(1) img {
   position: absolute;
+  width: 200px;
+  top: 0;
+  
   
 }
 
-.cat img:nth-child(2) {
+.cat div:nth-child(2) img {
   position: absolute;
-  
-}
+  width: 200px;
+} */
 
 
 /* 내용세팅: 제품설명 */
 .cat p {
-  position: absolute;
   margin: 0;
   padding: 0;
   color: #fff;
   font-size: 1.5rem;
   font-family: 'IBM Plex Sans KR', sans-serif;
+  text-align: left;
+  padding: 50px 0 0 50px;
 }
-
 
 
 
@@ -144,6 +162,24 @@ body * {
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
   
+.mainTop>div:nth-child(1)~div {
+  height: 694px;
+}
+.des {
+  flex-direction: column;
+  justify-content: center;
+}
+.tit img {
+  width: 150px;
+}
+.cat p {
+  width: 300px;
+  margin: 0 auto;
+
+}
+.larger {
+  background-position: left;
+}
 }
