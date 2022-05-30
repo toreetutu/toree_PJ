@@ -14,8 +14,6 @@ body * {
 
 
 /******** 2.메인영역 *********/
-
-
 /* 2-1.동영상 */
 .mvid video {
   width: 100%;
@@ -29,8 +27,9 @@ body * {
 }
 
 
-/* 2-2.배너이미지 */
+/* 2-2.배너이미지 배경 */
 .bgc {
+  height: 593px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -39,15 +38,12 @@ body * {
 .larger {
   background-image: url(../images/larger_back.png);
 }
-
 .weat {
   background-image: url(../images/weat_back.png);
 }
-
 .pellong {
   background-image: url(../images/pellong_back.png);
 }
-
 .geomeong {
   background-image: url(../images/geomeong_back.png);
 }
@@ -87,53 +83,54 @@ body * {
   margin: 0 auto;
 } */
 
-/* 배너이미지 4개 */
-.mainTop>div:nth-child(1)~div{
+/* 배너이미지 4개 높이 */
+/* .mainTop>div:nth-child(1)~div{
   height: 593px;
-}
+} */
 
+
+/* 라거 배너이미지 속박스 */
+.larger .cat {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 80px;
+}
+/* 위트/펠롱/거멍 배너이미지 속박스 */
 .cat {
   width: 800px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 50px;
- 
+  padding-top: 110px;
 }
 
-.tit img {
+/* 2-3. 타이틀이미지 */
+/* 라거 타이틀이미지 */
+.larger .tit img {
   width: 200px;
 }
+/* 위트/펠롱/거멍 타이틀이미지 */
+.tit img {
+  width: 350px;
+}
+
+
+/* 아이템이미지+설명 */
+.des {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* 2-4. 아이템이미지 */
 .des img{
   width: 200px;
 }
-.des{
-  display: flex;
-  justify-content: center;
-  align-items: center
-}
 
-
-
-
-/* 내용세팅: 이미지 */
-/* .cat div:nth-child(1) img {
-  position: absolute;
-  width: 200px;
-  top: 0;
-  
-  
-}
-
-.cat div:nth-child(2) img {
-  position: absolute;
-  width: 200px;
-} */
-
-
-/* 내용세팅: 제품설명 */
-.cat p {
+/* 2-5. 제품설명 */
+.des p {
   margin: 0;
-  padding: 50px 0 0 50px;
+  padding: 50px 0 0 46px;
   color: #fff;
   font-size: 18px;
   font-family: 'IBM Plex Sans KR', sans-serif;
@@ -141,8 +138,16 @@ body * {
 }
 
 
-
-
+/* 내용세팅: 이미지 -> 사용안함 */
+/* .cat div:nth-child(1) img {
+  position: absolute;
+  width: 200px;
+  top: 0;
+}
+.cat div:nth-child(2) img {
+  position: absolute;
+  width: 200px;
+} */
 
 
 
@@ -162,11 +167,22 @@ body * {
 }
 
 
+
+/**** 미디어쿼리 991px 시작 ****/
 @media screen and (max-width: 991px) {
   
 .mainTop>div:nth-child(1)~div {
   height: 694px;
 }
+
+/* 속박스 */
+.larger .cat {
+  padding-top: 50px;
+}
+.cat {
+  padding-top: 50px;
+}
+
 .des {
   flex-direction: column;
   justify-content: center;
@@ -174,12 +190,24 @@ body * {
 .tit img {
   width: 150px;
 }
-.cat p {
+.des p {
   width: 300px;
   margin: 0 auto;
+}
+.bgc {
+  background-position: right;
+}
+
 
 }
-.larger {
-  background-position: left;
+
+/**** 미디어쿼리 991px 끝 ****/
+
+/**** 미디어쿼리 766px 시작 ****/
+@media screen and (max-width: 766px) {
+  .mainTop>div:nth-child(1)~div {
+  height: 662px;
 }
 }
+
+/**** 미디어쿼리 766px 끝 ****/
