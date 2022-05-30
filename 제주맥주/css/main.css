@@ -37,7 +37,7 @@ body * {
   outline: 1px dashed red;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100%;
 }
 
 .rbx::before {
@@ -91,28 +91,33 @@ body * {
   margin: 0 auto;
 }
 
+.cat {
+  position: absolute;
+  width: 70%;
+  bottom: 10%;
+  left: 43%;
+  /* 부모는? .rbxIn */
+}
+
 /* 내용세팅: 이미지 */
 .cat img:nth-child(1) {
   position: absolute;
   top: -180%;
   left: 25%;
-  width: 50%;
+  width: 70%;
 }
 
 .cat img:nth-child(2) {
   position: absolute;
   bottom: 5%;
-  left: 30%;
-  width: 50%;
+  left: -100%;
+  width: 70%;
 }
 
 
 /* 내용세팅: 제품설명 */
-.cat {
+.cat p {
   position: absolute;
-  bottom: 10%;
-  left: 43%;
-  /* 부모는? .rbxIn */
   margin: 0;
   padding: 0;
   color: #fff;
@@ -140,4 +145,9 @@ body * {
   font-size: 20px;
   font-family: 'Gowun Dodum', sans-serif;
   margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  
 }
