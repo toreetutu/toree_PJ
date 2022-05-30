@@ -91,22 +91,23 @@ body * {
   margin: 0 auto;
 }
 
-/*  */
-.rbxIn img:nth-child(1) {
+/* 내용세팅: 이미지 */
+.cat img:nth-child(1) {
   position: absolute;
-  top: 15%;
-  width: 10%;
+  top: -180%;
+  left: 25%;
+  width: 50%;
 }
 
-.rbxIn img:nth-child(2) {
+.cat img:nth-child(2) {
   position: absolute;
   bottom: 5%;
   left: 30%;
-  width: 10%;
+  width: 50%;
 }
 
 
-/* 내용세팅 */
+/* 내용세팅: 제품설명 */
 .cat {
   position: absolute;
   bottom: 10%;
