@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* 제주맥주 메인 페이지 미디어쿼리  - media.css */
+
+/********** 991px이하 미디어쿼리 시작 ************/
+@media screen and (max-width: 991px) {
+
+  /* 2.메인영역 */
+  .mainTop>div:nth-child(1)~div {
+    height: 694px;
+  }
+
+  /* 속박스 */
+  .larger .cat {
+    padding-top: 50px;
+  }
+
+  .cat {
+    padding-top: 50px;
+  }
+
+  .des {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .larger .tit img {
+    width: 150px;
+  }
+
+  .tit img {
+    width: 321px;
+  }
+
+  .des p {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .bgc {
+    background-position: left;
+  }
+}
+
+/********** 991px이하 미디어쿼리 끝 ************/
+
+
+/********** 776px이하 미디어쿼리 시작 ************/
+@media screen and (max-width: 766px) {
+  .mainTop>div:nth-child(1)~div {
+    height: 662px;
+  }
+}
+
+/********** 776px이하 미디어쿼리 끝 ************/

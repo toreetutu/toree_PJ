@@ -6,6 +6,7 @@
 @import url(core.css);
 @import url(common.css);
 
+
 /* 전체화면 구현중 공사중 외곽선 표시: body밑의 만들어진 모든 것에 적용 */
 body * {
   outline: 1px dashed lime;
@@ -132,7 +133,7 @@ body * {
   margin: 0;
   padding: 50px 0 0 46px;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: 'IBM Plex Sans KR', sans-serif;
   text-align: left;
 }
@@ -171,46 +172,3 @@ body * {
   min-height: 53px;
 }
 
-/**** 미디어쿼리 991px 시작 ****/
-@media screen and (max-width: 991px) {
-  
-.mainTop>div:nth-child(1)~div {
-  height: 694px;
-}
-
-/* 속박스 */
-.larger .cat {
-  padding-top: 50px;
-}
-.cat {
-  padding-top: 50px;
-}
-
-.des {
-  flex-direction: column;
-  justify-content: center;
-}
-.tit img {
-  width: 150px;
-}
-.des p {
-  width: 300px;
-  margin: 0 auto;
-}
-.bgc {
-  background-position: right;
-}
-
-
-}
-
-/**** 미디어쿼리 991px 끝 ****/
-
-/**** 미디어쿼리 766px 시작 ****/
-@media screen and (max-width: 766px) {
-  .mainTop>div:nth-child(1)~div {
-  height: 662px;
-}
-}
-
-/**** 미디어쿼리 766px 끝 ****/
