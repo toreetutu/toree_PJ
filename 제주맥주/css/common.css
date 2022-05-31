@@ -51,6 +51,11 @@ img, video{
   margin: 0 auto;
 }
 
+/* 작은로고: 안보였다가 브라우저 줄면 보임 */
+.slogo img {
+  display: none;
+}
+
 /* 1-2.탑메뉴 */
 .topmn1,
 .topmn2 {

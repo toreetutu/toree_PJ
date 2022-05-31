@@ -4,19 +4,38 @@
 /********** 991px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 991px) {
 
+  /* 전체 rem단위 글자 변경위한 root 글자크기 변경 */
+  html {
+    font-size: 10px;
+  }
+
+  /* 숨기기: 사이즈줄면 모두 안보이게 함 */
+  /* GNB메뉴,탑메뉴 */
+  .wrap,
+  .gwrap {
+    display: none;
+  }
+
+
+  /* 영역높이값 */
+  .top {
+    height: 50px;
+  }
+
+  /* 작은로고 보이게하기 */
+  .slogo img {
+    display: block;
+    outline: 1px solid red;
+  }
+
+
   /* 2.메인영역 */
   .mainTop>div:nth-child(1)~div {
     height: 694px;
   }
 
   /* 속박스 */
-  .larger .cat {
-    padding-top: 50px;
-  }
 
-  .cat {
-    padding-top: 50px;
-  }
 
   .des {
     flex-direction: column;
@@ -32,7 +51,7 @@
   }
 
   .des p {
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
     padding: 20px;
     font-size: 1.6rem;
@@ -42,7 +61,22 @@
   .bgc {
     background-position: left;
   }
+
+  /* 제품설명 제대로 줄바꿈 */
+  .des p .aa {
+    display: inline-block;
+  }
+
+  /* 판매처 */
+  .stit {
+    color: #1ecad3;
+    font-size: 1.7rem;
+    font-family: 'Gowun Dodum', sans-serif;
+    margin-bottom: 30px;
+  }
 }
+
+
 
 /********** 991px이하 미디어쿼리 끝 ************/
 

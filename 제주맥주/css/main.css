@@ -90,19 +90,16 @@ body * {
 } */
 
 
-/* 라거 배너이미지 속박스 */
-.larger .cat {
-  width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 80px;
-}
-/* 위트/펠롱/거멍 배너이미지 속박스 */
+/* 배너이미지 속박스 */
 .cat {
   width: 800px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 110px;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  /* 싸고있는 .bgc에 높이가 593px 있기 때문에 자기크기높이의 50%만큼 밀어서 정가운데 놓을 수 있음?? */
 }
 
 /* 2-3. 타이틀이미지 */
@@ -138,6 +135,10 @@ body * {
   text-align: left;
 }
 
+.des p .aa {
+  display: none;
+}
+
 
 /* 내용세팅: 이미지 -> 사용안함 */
 /* .cat div:nth-child(1) img {
@@ -162,7 +163,7 @@ body * {
 
 .stit {
   color: #1ecad3;
-  font-size: 20px;
+  font-size: 2rem;
   font-family: 'Gowun Dodum', sans-serif;
   margin-bottom: 30px;
 }
