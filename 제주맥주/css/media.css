@@ -10,9 +10,10 @@
   }
 
   /* 숨기기: 사이즈줄면 모두 안보이게 함 */
-  /* GNB메뉴,탑메뉴 */
-  .wrap,
-  .gwrap {
+  /* 로고, GNB메뉴,탑메뉴 */
+  .logo,
+  .topmn1,
+  .topmn2 {
     display: none;
   }
 
@@ -25,9 +26,12 @@
   /* 작은로고 보이게하기 */
   .slogo img {
     display: block;
+    width: 95px;
     outline: 1px solid red;
   }
-
+  .wrap div {
+    margin: 0;
+}
 
   /* 2.메인영역 */
   .mainTop>div:nth-child(1)~div {
