@@ -159,14 +159,17 @@ body * {
   text-align: center;
 }
 
-.slide.title {
+.stit {
   color: #1ecad3;
   font-size: 20px;
   font-family: 'Gowun Dodum', sans-serif;
   margin-bottom: 30px;
 }
 
-
+/* 슬라이드이미지 */
+.slist img {
+  min-height: 53px;
+}
 
 /**** 미디어쿼리 991px 시작 ****/
 @media screen and (max-width: 991px) {
