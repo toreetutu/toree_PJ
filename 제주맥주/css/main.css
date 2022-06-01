@@ -106,11 +106,6 @@ body * {
 }
 
 /* 2-3. 타이틀이미지 */
-.tit {
-  width: 50%;
-  margin: 0 auto;
-}
-
 /* 라거 타이틀이미지 */
 .larger .tit img {
   width: 200px;
@@ -166,10 +161,11 @@ body * {
 .mainBtm {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 30px 0;
   text-align: center;
 }
 
+/* 판매처 설명 */
 .stit {
   color: #1ecad3;
   font-size: 2rem;
@@ -177,7 +173,7 @@ body * {
   margin-bottom: 30px;
 }
 
-/* 슬라이드이미지 */
+/* 판매처 슬라이드이미지 */
 .slist {
   width: 80vw;
   position: relative;
@@ -190,5 +186,5 @@ body * {
 .slist li img {
   flex: 1;
   width: 13vw;
-  margin: 0px 5px;
+  margin: 0 5px;
 }

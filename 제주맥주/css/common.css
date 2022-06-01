@@ -164,7 +164,7 @@ img, video{
 
 /**************** 3. 하단영역 *****************/
 .info {
-  margin: 25px 20px 0 20px;
+  margin: 50px 20px 0 20px;
   background-color: lightyellow;
   color: #999;
 }
@@ -214,26 +214,33 @@ img, video{
   width: 190px;
 }
 
-/* 회사주소와 저작권 */
+/* 회사정보와 저작권 */
+.cpr {
+  margin-top: 30px;
+}
+
 .cpr p:nth-child(1) {
   font-family: 'IBM Plex Sans KR', sans-serif;
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 
 .cpr p:nth-child(2) {
   font-family: 'Nunito', sans-serif;
-  font-size: 11px;
+  font-size: 1.1rem;
   font-weight: bold;
   margin: 20px 0 50px 0;
 }
 
-
+/* 회사정보 띄어쓰기 */
+.cpr .bb {
+  display: none;
+}
 
 /* 3-4. 문의,공유,위로가기 버튼 */
 .fixed_icon {
   position: fixed;
-  bottom: 5%;
-  right: 5%;
+  bottom: 3%;
+  right: 3%;
 
   display: flex;
   flex-direction: column;

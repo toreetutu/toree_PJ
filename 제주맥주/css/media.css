@@ -4,19 +4,24 @@
 /********** 991px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 991px) {
 
-  /* 1. 상단영역 */
   /* 숨기기: 사이즈줄면 모두 안보이게
-  (로고, GNB메뉴, 탑메뉴) */
+  (로고, GNB메뉴, 탑메뉴, sns) */
   .logo,
   .topmn1,
-  .topmn2 {
+  .topmn2,
+  .gwrap,
+  .sns {
     display: none;
   }
 
 
-  /* 상단영역높이값 */
+  /* 1. 상단영역 */
   .top {
     height: 50px;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 99;
   }
 
   /* 작은로고 보이게하기 */
@@ -27,7 +32,7 @@
   }
 
   .wrap div {
-    margin: -15px 10px;
+    padding: 15px 5px;
   }
 
   /* 햄버거버튼 보이게함 */
@@ -36,11 +41,13 @@
     display: block;
   }
 
+
   /* 2. 메인영역 */
   /* 배경이미지 4개 */
   .mainTop>div:nth-child(1)~div {
     background-position: left;
     height: 638px;
+    width: auto;
   }
 
 
@@ -48,6 +55,10 @@
   .des {
     flex-direction: column;
     justify-content: center;
+  }
+
+  .cat {
+    width: 100%;
   }
 
   /* 라거 타이틀이미지 작아짐*/
@@ -65,6 +76,7 @@
     width: 170px;
   }
 
+  /* 2-5. 제품설명 */
   .des p {
     width: 480px;
     margin: 0 auto;
@@ -73,24 +85,61 @@
     text-align: center;
   }
 
-
-
   /* 제품설명 줄바꿈 제대로 나오게 */
   .des p .aa {
     display: inline-block;
   }
 
-  /* 판매처 */
+  /* 판매처 설명 */
+  .mainBtm {
+    padding: 30px 0;
+  }
+
   .stit {
-    color: #1ecad3;
-    font-size: 2rem;
-    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 1.6rem;
     margin-bottom: 30px;
+  }
+
+
+
+  /* 판매처 슬라이드이미지 */
+  .slist {
+    width: 95vw;
   }
 
   .slist li img {
     width: 30vw;
-    
+  }
+
+  /* 3. 하단영역 */
+  /* 이용약관~처리방침 사이간격, 글자크기 */
+  .btn a {
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+
+  /* ABOUT US~IR 안보이게 */
+  .btn a:nth-child(1),
+  .btn a:nth-child(2),
+  .btn a:nth-child(3),
+  .btn a:nth-child(4),
+  .btn a:nth-child(5) {
+    display: none;
+  }
+
+  /* 회사정보 글자크기 작게 */
+  .cpr p:nth-child(1) {
+    font-size: 1.1rem;
+  }
+
+  /* 회사정보 띄어쓰기 */
+  .cpr .bb {
+    display: block;
+  }
+
+  /* 3-4. 문의,공유,위로가기 버튼 */
+  .fixed_icon a {
+    width: 45px;
   }
 }
 
@@ -98,7 +147,34 @@
 
 
 /********** 766px이하 미디어쿼리 시작 ************/
+@media screen and (max-width:766px) {
 
+
+  /* 배경이미지 4개 */
+  .mainTop>div:nth-child(1)~div {
+    width: 100%;
+  }
+
+  /* 2-5. 제품설명 */
+  .des p {
+    width: 50vw;
+    margin: 0 auto;
+
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* 3. 하단영역 */
+  /* 이용약관~처리방침 글자크기 다시 크게*/
+  .btn a {
+    font-size: 1.3rem;
+  }
+
+  /* 회사정보 글자크기 다시 크게 */
+  .cpr p:nth-child(1) {
+    font-size: 1.3rem;
+  }
+}
 
 
 /********** 766px이하 미디어쿼리 끝 ************/
