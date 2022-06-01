@@ -2,7 +2,7 @@
 /* 제주맥주 초기화 css - reset.css */
 /* 요소의 기본세팅 초기화 */
 
-/* 0. rem단위 계산 편의위해 html 10px 세팅  */
+/* 0. rem단위 계산 편의를 위해 html 10px 세팅  */
 html {
   font-size: 10px;
 }

@@ -39,12 +39,15 @@ body * {
 .larger {
   background-image: url(../images/larger_back.png);
 }
+
 .weat {
   background-image: url(../images/weat_back.png);
 }
+
 .pellong {
   background-image: url(../images/pellong_back.png);
 }
+
 .geomeong {
   background-image: url(../images/geomeong_back.png);
 }
@@ -55,7 +58,7 @@ body * {
   display: block;
   padding-top: 35%;
 } */
-  /* 
+/* 
     [ 내가 원하는 비율 계산하기 ]
     패딩탑 100%가 부모박스 가로크기의 1:1 비율이므로
     이미지비율을 식으로 쓰면 ...
@@ -103,10 +106,16 @@ body * {
 }
 
 /* 2-3. 타이틀이미지 */
+.tit {
+  width: 50%;
+  margin: 0 auto;
+}
+
 /* 라거 타이틀이미지 */
 .larger .tit img {
   width: 200px;
 }
+
 /* 위트/펠롱/거멍 타이틀이미지 */
 .tit img {
   width: 350px;
@@ -121,7 +130,7 @@ body * {
 }
 
 /* 2-4. 아이템이미지 */
-.des img{
+.des img {
   width: 200px;
 }
 
@@ -169,7 +178,17 @@ body * {
 }
 
 /* 슬라이드이미지 */
-.slist img {
-  min-height: 53px;
+.slist {
+  width: 80vw;
+  position: relative;
+  margin: 0 auto;
+
+  display: flex;
+  overflow: hidden;
 }
 
+.slist li img {
+  flex: 1;
+  width: 13vw;
+  margin: 0px 5px;
+}

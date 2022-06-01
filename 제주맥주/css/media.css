@@ -4,13 +4,9 @@
 /********** 991px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 991px) {
 
-  /* 전체 rem단위 글자 변경위한 root 글자크기 변경 */
-  html {
-    font-size: 10px;
-  }
-
-  /* 숨기기: 사이즈줄면 모두 안보이게 함 */
-  /* 로고, GNB메뉴,탑메뉴 */
+  /* 1. 상단영역 */
+  /* 숨기기: 사이즈줄면 모두 안보이게
+  (로고, GNB메뉴, 탑메뉴) */
   .logo,
   .topmn1,
   .topmn2 {
@@ -18,7 +14,7 @@
   }
 
 
-  /* 영역높이값 */
+  /* 상단영역높이값 */
   .top {
     height: 50px;
   }
@@ -29,44 +25,57 @@
     width: 95px;
     outline: 1px solid red;
   }
-  .wrap div {
-    margin: 0;
-}
 
-  /* 2.메인영역 */
-  .mainTop>div:nth-child(1)~div {
-    height: 694px;
+  .wrap div {
+    margin: -15px 10px;
   }
 
+  /* 햄버거버튼 보이게함 */
+  .ham {
+    /* 포지션이 앱솔루트이면 기본 block이다! */
+    display: block;
+  }
+
+  /* 2. 메인영역 */
+  /* 배경이미지 4개 */
+  .mainTop>div:nth-child(1)~div {
+    background-position: left;
+    height: 638px;
+  }
+
+
   /* 속박스 */
-
-
   .des {
     flex-direction: column;
     justify-content: center;
   }
 
+  /* 라거 타이틀이미지 작아짐*/
   .larger .tit img {
-    width: 150px;
+    width: 130px;
   }
 
+  /* 위트/펠롱/거멍 타이틀이미지 작아짐 */
   .tit img {
-    width: 321px;
+    width: 320px;
+  }
+
+  /* 2-4. 아이템이미지 */
+  .des img {
+    width: 170px;
   }
 
   .des p {
-    width: 400px;
+    width: 480px;
     margin: 0 auto;
     padding: 20px;
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-align: center;
   }
 
-  .bgc {
-    background-position: left;
-  }
 
-  /* 제품설명 제대로 줄바꿈 */
+
+  /* 제품설명 줄바꿈 제대로 나오게 */
   .des p .aa {
     display: inline-block;
   }
@@ -74,22 +83,22 @@
   /* 판매처 */
   .stit {
     color: #1ecad3;
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-family: 'Gowun Dodum', sans-serif;
     margin-bottom: 30px;
   }
+
+  .slist li img {
+    width: 30vw;
+    
+  }
 }
-
-
 
 /********** 991px이하 미디어쿼리 끝 ************/
 
 
-/********** 776px이하 미디어쿼리 시작 ************/
-@media screen and (max-width: 766px) {
-  .mainTop>div:nth-child(1)~div {
-    height: 662px;
-  }
-}
+/********** 766px이하 미디어쿼리 시작 ************/
 
-/********** 776px이하 미디어쿼리 끝 ************/
+
+
+/********** 766px이하 미디어쿼리 끝 ************/

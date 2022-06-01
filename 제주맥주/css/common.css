@@ -136,6 +136,24 @@ img, video{
 }
 
 
+/* 모바일용 햄버거 버튼 */
+.ham {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  color: #1ecad3;
+  font-size: 30px;
+  /* 트랜스폼을 이용해 버튼 가로로 늘림 */
+  transform: scaleX(1.5);
+
+  /* 버튼 기본디자인없앰: 배경색 투명으로, 보더 없앰 */
+  background-color: transparent;
+  border: none;
+
+  /* 모바일 아닐 때 안보임 */
+  display: none; /* 모바일 일때 보이게 하려면 media.css 파일에서 display:block; */
+}
+
 /**************** 2. 메인영역 *****************/
 .cont {
   
@@ -211,7 +229,23 @@ img, video{
 
 
 
-/* 
-	
-	3-4. 문의,공유,위로가기 버튼
-*/
+/* 3-4. 문의,공유,위로가기 버튼 */
+.fixed_icon {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.fixed_icon a {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.fixed_icon img {
+  width: 100%;
+  height: 100%;
+}
