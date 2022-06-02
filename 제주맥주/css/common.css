@@ -17,7 +17,8 @@ body {
   background-color: #fff;
 }
 
-img, video{
+img,
+video {
   vertical-align: bottom;
 }
 
@@ -32,7 +33,7 @@ img, video{
   display: flex;
   /* 플렉스박스: 로고, 탑메뉴를 가로로 정렬 */
   justify-content: space-between;
- /* 수평정렬속성: 아이템 요소 양쪽끝에 붙고 사이간격 일정 */
+  /* 수평정렬속성: 아이템 요소 양쪽끝에 붙고 사이간격 일정 */
   /* background-color: bisque; */
 }
 
@@ -99,7 +100,8 @@ img, video{
 }
 
 .topmn2 li:hover {
-  background-color: #10adb5;;
+  background-color: #10adb5;
+  ;
 }
 
 .topmn2 li a {
@@ -151,16 +153,41 @@ img, video{
   border: none;
 
   /* 모바일 아닐 때 안보임 */
-  display: none; /* 모바일 일때 보이게 하려면 media.css 파일에서 display:block; */
+  display: none;
+  /* 모바일 일때 보이게 하려면 media.css 파일에서 display:block; */
 }
+
+/* 모바일용 서브페이지 */
+.sub_menu {
+  /* 모바일 아닐 때 안보임 */
+  display: none;
+}
+
+
+
+.sub_top {
+  display: flex;
+  background-color: #1ecad3;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+  position: relative;
+  top: -130px;
+  left: -20px;
+  padding-left: 20px;
+  width: 105%;
+}
+
+.sub_top a {
+  color: #fff;
+  background-color: #1ecad3;
+}
+
 
 /**************** 2. 메인영역 *****************/
 .cont {
-  
   background-color: tomato;
 }
-
-
 
 /**************** 3. 하단영역 *****************/
 .info {
@@ -197,6 +224,7 @@ img, video{
 .btn a:nth-child(7) {
   color: #000;
 }
+
 /* 3-2. SNS 메뉴  */
 .sns {
   display: flex;

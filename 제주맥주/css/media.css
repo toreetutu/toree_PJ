@@ -141,6 +141,12 @@
   .fixed_icon a {
     width: 45px;
   }
+
+
+  /* 모바일용 서브페이지 */
+  .sub_menu {
+    display: block;
+  }
 }
 
 /********** 991px이하 미디어쿼리 끝 ************/
