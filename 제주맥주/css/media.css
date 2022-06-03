@@ -121,7 +121,8 @@
     font-size: 1.2rem;
   }
 
-  /* ABOUT US~IR 안보이게 */
+  /* ABOUT US~IR 안보이게
+  : 다른방법으로 선택하는 법은??? */
   .btn a:nth-child(1),
   .btn a:nth-child(2),
   .btn a:nth-child(3),
@@ -145,11 +146,6 @@
     width: 45px;
   }
 
-
-  /* 모바일용 서브페이지 */
-  /* .sub_page {
-    display: block;
-  } */
 }
 
 /********** 991px이하 미디어쿼리 끝 ************/
