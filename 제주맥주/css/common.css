@@ -51,11 +51,22 @@ video {
   width: 90px;
   margin: 0 auto;
 }
-
-/* 작은로고: 안보였다가 브라우저 줄면 보임 */
-.slogo img {
+.slogo img:last-child{
   display: none;
 }
+.top.on .slogo img:last-child{
+  display: inline;
+}
+.top.on .slogo img:first-child{
+  display: none;
+}
+
+
+
+/* 작은로고: 안보였다가 브라우저 줄면 보임 */
+/* .slogo img {
+  display: none;
+} */
 
 /* 1-2.탑메뉴 */
 .topmn1,
@@ -157,12 +168,42 @@ video {
   /* 모바일 일때 보이게 하려면 media.css 파일에서 display:block; */
 }
 
-/* 모바일용 서브페이지 */
-.sub_menu {
-  /* 모바일 아닐 때 안보임 */
-  display: none;
+/* 햄버거버튼모양 가상요소로 문자넣기 
+  이유: x버튼으로 변경가능하도록 하려고 */
+.ham::before {
+  content: '≡';
 }
 
+/* 햄버거버튼 x버튼으로 문자모양변경 
+      (전체메뉴 보일때만->.top.on일때만) */
+.top.on .ham::before {
+  content: '×';
+}
+
+/* 햄버거버튼 변경 (전체메뉴 보일때만->.top.on일때만) */
+.top.on .ham {
+  color: #1ecad3;
+  transform: scale(1.5);
+}
+
+
+
+/* 모바일용 서브페이지 */
+.sub_page {
+  /* 모바일 아닐 때 안보임 */
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 20px;
+  position: fixed;
+  top: 50px;
+  
+  background-color: #fff;
+  z-index: 9999;
+}
+.top.on .sub_page{
+  display: block;
+}
 
 
 .sub_top {
@@ -172,7 +213,7 @@ video {
   height: 40px;
   align-items: center;
   position: relative;
-  top: -130px;
+  /* top: -130px; */
   left: -20px;
   padding-left: 20px;
   width: 105%;

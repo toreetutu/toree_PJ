@@ -23,6 +23,9 @@
     position: fixed;
     z-index: 99;
   }
+  .top.on{
+    height: 55px;
+  }
 
   /* 작은로고 보이게하기 */
   .slogo img {
@@ -41,7 +44,7 @@
     display: block;
   }
 
-
+  
   /* 2. 메인영역 */
   /* 배경이미지 4개 */
   .mainTop>div:nth-child(1)~div {
@@ -144,9 +147,9 @@
 
 
   /* 모바일용 서브페이지 */
-  .sub_menu {
+  /* .sub_page {
     display: block;
-  }
+  } */
 }
 
 /********** 991px이하 미디어쿼리 끝 ************/

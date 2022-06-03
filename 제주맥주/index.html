@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/media.css">
   <!-- 외부css 하나만 불러도 main.css에서 import 하고있는 3개의 기본css가 같이 들어옴  -->
+  <script src="./js/common.js"></script>
 </head>
 
 <body>
@@ -19,6 +20,7 @@
         <div class="slogo">
           <a href="index.html">
             <img src="./images/logo_small.png" alt="작은로고">
+            <img src="./images/logo_sub.png" alt="작은로고">
           </a>
         </div>
         <!-- 1-1.메인로고 -->
@@ -32,7 +34,7 @@
           <ul class="topmn1">
             <li>
               <a href="#">LOGIN</a>
-            </li>
+            </li>h
             <li>
               <a href="#">JOIN</a>
             </li>
@@ -74,15 +76,15 @@
         </ul>
       </nav>
       <!-- 모바일용 햄버거버튼 : 햄버거모양(ㄷ한자키) -->
-      <button class="ham" >≡</button>
-      <!-- 모바일용 메뉴 -->
-      <div class="sub_menu">
+      <button class="ham" onclick="showGNB()"></button>
+      <!-- 모바일용 서브페이지 -->
+      <div class="sub_page">
         <div class="sub_header">
-          <div class="sub_logo">
+          <!-- <div class="sub_logo">
             <a href="#">
               <img src="./images/logo_sub.png" alt="서브로고">
             </a>
-          </div>
+          </div> -->
           <div class="sub_top">
             <div>
               <a href="#">
