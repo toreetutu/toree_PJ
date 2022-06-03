@@ -51,6 +51,8 @@ video {
   width: 90px;
   margin: 0 auto;
 }
+
+/* x */
 .slogo img:last-child{
   display: none;
 }
@@ -60,13 +62,6 @@ video {
 .top.on .slogo img:first-child{
   display: none;
 }
-
-
-
-/* 작은로고: 안보였다가 브라우저 줄면 보임 */
-/* .slogo img {
-  display: none;
-} */
 
 /* 1-2.탑메뉴 */
 .topmn1,
