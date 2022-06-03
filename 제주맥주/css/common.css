@@ -52,16 +52,29 @@ video {
   margin: 0 auto;
 }
 
-/* x */
+/* 브라우저 원래사이즈일때 작은로고들 안보임 */
+.slogo img {
+  display: none;
+}
+/* 브라우저 줄었을 때 서브페이지의 이미지없는 작은로고 안보이게함 */
 .slogo img:last-child{
   display: none;
 }
+
+/* 햄버거버튼 눌러서 서브페이지일때 이미지없는 작은로고 나오게함 */
 .top.on .slogo img:last-child{
   display: inline;
+  width: 80px;
+  margin: 0 15px;
+  vertical-align: text-top;
 }
+
+/* 햄버거버튼 눌러서 서브페이지일때 이미지있는 작은로고 안보이게함 */
 .top.on .slogo img:first-child{
   display: none;
 }
+
+
 
 /* 1-2.탑메뉴 */
 .topmn1,
@@ -189,9 +202,8 @@ video {
   /* 모바일 아닐 때 안보임 */
   display: none;
   /* 화면전체에 배경 다 덮이도록 */
-  width: 100vw;
-  height: 100vh;
-  padding: 0 20px;
+  width: 100%;
+  height: calc(100vh - 50px);
   position: fixed;
   top: 50px;
   
@@ -210,15 +222,20 @@ video {
   height: 40px;
   align-items: center;
   position: relative;
-  /* top: -130px; */
-  left: -20px;
+  
   padding-left: 20px;
-  width: 105%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sub_top a {
   color: #fff;
   background-color: #1ecad3;
+  font-family: 'Baloo Da 2', cursive;
+}
+
+.sub_top a span{
+  margin-right: 20px;
 }
 
 

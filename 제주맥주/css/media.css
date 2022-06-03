@@ -27,11 +27,11 @@
     height: 55px;
   }
 
-  /* 작은로고 보이게하기 */
-  .slogo img {
-    display: block;
+  /* 작은로고1 보이게하기 */
+  .slogo img:first-child {
+    display: inline;
     width: 95px;
-    outline: 1px solid red;
+    margin: 0 10px;
   }
 
   .wrap div {
