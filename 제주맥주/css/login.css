@@ -14,175 +14,182 @@
 
 /* 컨텐츠영역 최소높이 */
 .cont {
-    min-height: 600px;
-    padding: 15px !important;
-    /* 800px이하 미디어쿼리보다 우선적용위해 
+  min-height: 900px;
+  padding: 40px !important;
+  /* 800px이하 미디어쿼리보다 우선적용위해 
     !important 사용해서 최우선적용함
     : 모바일에서 박스와 브라우저 사이 간격 생기게 함 */
 }
 
 /* 1.로그인 타이틀 */
 .stit {
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 50px;
-    padding: 40px 0 20px;
-    text-align: center;
-    font-weight: normal;
+  font-family: 'Nunito', sans-serif;
+  font-size: 48px;
+  padding: 40px 0 48px;
+  text-align: center;
+  font-weight: 900;
 }
 
 /* 로그인 박스 */
 .scont {
-    position: relative;
-    /* .btnbx의 부모자격 */
-
-    max-width: 700px;
-    min-height: 275px;
-    margin: 0 auto;
-    border: 2px solid #737373;
-    border-radius: 10px;
-    /* 크기유지 */
-    box-sizing: border-box;
-    padding: 60px 15px;
-    background-color: #fff;
+  height: 655px;
 }
+
+/*  */
+.input_block .input_form {
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.input_block .input_form.brt {
+    margin-top: -1px;
+}
+
 
 /* 입력창 공통라벨 */
 .minput label {
-    display: inline-block;
-    /* 가로150 주고 옆에 아무도 못오게 하지만 인라인블록줘서 크기 맞춤 */
-    width: 150px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #222;
-    text-align: center;
-    line-height: 36px;
-    /* outline: 2px solid red; */
+  display: inline-block;
+  /* 가로150 주고 옆에 아무도 못오게 하지만 인라인블록줘서 크기 맞춤 */
+  width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  line-height: 36px;
+  /* outline: 2px solid red; */
 }
 
 /* 입력양식공통 */
 .minput input {
-    /* input이 인라인블록 요소라서 줄바꿈되고 디자인 먹음 */
-    width: 320px;
-    height: 36px;
-    border: 1px solid #777;
-    border-radius: 5px;
-    font-size: 18px;
-    padding-left: 5px;
-    /* 보더패딩이 포함되게 크기유지 */
-    box-sizing: border-box;
-    color: #666;
+  /* input이 인라인블록 요소라서 줄바꿈되고 디자인 먹음 */
+  width: 320px;
+  height: 36px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 5px;
+  /* 보더패딩이 포함되게 크기유지 */
+  box-sizing: border-box;
+  color: #666;
 }
 
 /* 비밀번호 박스 */
 .scont div:nth-child(2) {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* 브라우저 포커스 아웃라인 제거(아이디/비밀번호 넣을 때 해당박스 굵게 칠해지는 것)
 :모든 브라우저에 기본 포커스 아웃라인 세팅된 걸 제거 */
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 /* 버튼영역 */
 .btnbx {
-    position: absolute;
-    top: 60px;
-    right: 60px;
-    /* 싸고있는 .scont에게 부모자격을 줘야함: */
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  /* 싸고있는 .scont에게 부모자격을 줘야함: */
 }
 
 /* 서브밋(LOGIN) 버튼 */
 #sbtn {
-    width: 113px;
-    height: 92px;
-    border: 1px solid #888;
-    border-radius: 5px;
-    /* 그라데이션 
+  width: 113px;
+  height: 92px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  /* 그라데이션 
     배경이미지에서 세팅
     linear-gradient(방향, 색1, 색2,...) */
-    background-image: linear-gradient(to bottom, #ddd, #555);
-    color: #fff;
-    text-shadow: 1px 1px #555;
-    font-size: 15px;
+  background-image: linear-gradient(to bottom, #ddd, #555);
+  color: #fff;
+  text-shadow: 1px 1px #555;
+  font-size: 15px;
 }
 
 /* 기타체크링크 박스 */
 .addbx {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 16px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 16px;
 }
 
 /* 체크박스 영역 */
 .addbx span {
-    margin: 0 15px;
-    color: #555;
+  margin: 0 15px;
+  color: #555;
 }
 
 /* 체크박스 라벨과 세로정렬 */
 .addbx input {
-    vertical-align: -2px;
+  vertical-align: -2px;
 }
 
 /* 기타링크 */
 .addbx a {
-    margin: 0 15px;
-    color: #222;
-    text-decoration: none;
+  margin: 0 15px;
+  color: #222;
+  text-decoration: none;
 }
 
 /* 추가링크 영역바 */
 .bar {
-    font-weight: normal;
-    /* b요소 기본 두껍게 해제 */
+  font-weight: normal;
+  /* b요소 기본 두껍게 해제 */
 }
 
 /*모바일용 바(.bar1), 줄바꿈(.brk) 숨기기 */
-.bar1,.brk {
-    display: none;
+.bar1,
+.brk {
+  display: none;
 }
 
 /* 미디어쿼리 690px이하 시작 */
 @media screen and (max-width:690px) {
 
-    /* 입력창 공통라벨 */
-    .minput label {
-        display: block;
-        width: auto;
-    }
+  /* 입력창 공통라벨 */
+  .minput label {
+    display: block;
+    width: auto;
+  }
 
-    /* 입력양식공통 */
-    .minput input {
-        width: 100%;
-    }
+  /* 입력양식공통 */
+  .minput input {
+    width: 100%;
+  }
 
-    /* 버튼영역 */
-    .btnbx {
-        position: static;
-        /* absolute였던 포지션을 static으로 바꿔서
+  /* 버튼영역 */
+  .btnbx {
+    position: static;
+    /* absolute였던 포지션을 static으로 바꿔서
         위치 맘대로 돌아다니지 않게 함 */
-    }
+  }
 
-    /* 서브밋(LOGIN) 버튼 */
-    #sbtn {
-        width: 100%;
-        height: 50px;
-        margin-top: 50px;
-    }
+  /* 서브밋(LOGIN) 버튼 */
+  #sbtn {
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+  }
 
-    /* 추가링크박스 위아래줄간격 띄움 */
-    .addbx {
-        line-height: 2.5;
-    }
+  /* 추가링크박스 위아래줄간격 띄움 */
+  .addbx {
+    line-height: 2.5;
+  }
 
-    /* 추가링크 바숨기기 */
-    .bar2{
-        display: none;
-    }
-    /* 추가링크 바,줄바꿈 보이기 */
-    .bar1,.brk{
-        display: inline;
-    }
+  /* 추가링크 바숨기기 */
+  .bar2 {
+    display: none;
+  }
+
+  /* 추가링크 바,줄바꿈 보이기 */
+  .bar1,
+  .brk {
+    display: inline;
+  }
 }
+
 /* 미디어쿼리 690px이하 끝 */
