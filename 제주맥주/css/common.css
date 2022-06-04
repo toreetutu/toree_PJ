@@ -245,7 +245,7 @@ video {
 
 /* 탑메뉴1 사이사이 간격띄움 */
 .sub_top div:first-child a {
-  font-family: 'Baloo Da 2', cursive;
+  font-family: 'Nunito', sans-serif;
   font-weight: bold;
   padding-right: 10px;
 }
@@ -264,15 +264,29 @@ video {
   padding: 0 20px;
 }
 
-/*  */
+/* GNB메뉴 */
 .sub_big li {
-  
+  margin: 20px 0;
 }
 
+.sub_big li a {
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* 제주맥주한달살기, 양조장투어 글씨 */
+.sub_big span {
+  font-size: 14px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-weight: normal;
+}
 /* GNB메뉴 SHOP 쇼핑카트 */
-.sub_nav span img {
+.sub_big span img {
   width: 27px;
   vertical-align: middle;
+  color: #555;
 }
 
 
