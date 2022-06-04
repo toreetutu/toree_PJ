@@ -22,3 +22,21 @@
   color: #fff;
   background: #1ecad3;
 }
+
+/* 스크롤바 디자인 클래스 */
+/* -webkit- 벤더사 명(크롬, 사파리) 접두어 
+  (참고: -ms-(ie), -o-(오페라), -moz-(파이어폭스)) */
+.scbar::-webkit-scrollbar {
+  /* 전체스크롤바 크기 변경 */
+  width: 8px;
+}
+.scbar::-webkit-scrollbar-thumb {
+  /* 스크롤바 */
+  background-color: #10adb5;
+  border-radius: 7px;
+}
+.scbar::-webkit-scrollbar-track {
+  /* 스크롤바 트랙 */
+  background-color: #eee;
+  border-radius: 7px;
+}

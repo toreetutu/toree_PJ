@@ -152,7 +152,7 @@ video {
 }
 
 .gnb li {
-  padding: 0 70px;
+  padding: 0 50px;
 }
 
 /* JEJUBEERLIFE~BREWERY 글자 */
@@ -387,14 +387,14 @@ video {
 
 /**************** 2. 메인영역 *****************/
 .cont {
-  background-color: tomato;
+  /* background-color: tomato; */
 }
 
 /**************** 3. 하단영역 *****************/
 .info {
   margin: 50px 20px 0 20px;
-  background-color: lightyellow;
   color: #999;
+  /* background-color: lightyellow; */
 }
 
 .btn_wrap {
