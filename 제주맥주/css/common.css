@@ -27,7 +27,7 @@ video {
 /* 상단전체영역*/
 .wrap {
   max-width: 1200px;
-  height: 180px;
+  /* height: 180px; */
   margin: 0 auto;
 
   display: flex;
@@ -56,13 +56,14 @@ video {
 .slogo img {
   display: none;
 }
+
 /* 브라우저 줄었을 때 서브페이지의 이미지없는 작은로고 안보이게함 */
-.slogo img:last-child{
+.slogo img:last-child {
   display: none;
 }
 
 /* 햄버거버튼 눌러서 서브페이지일때 이미지없는 작은로고 나오게함 */
-.top.on .slogo img:last-child{
+.top.on .slogo img:last-child {
   display: inline;
   width: 80px;
   margin: 0 15px;
@@ -70,7 +71,7 @@ video {
 }
 
 /* 햄버거버튼 눌러서 서브페이지일때 이미지있는 작은로고 안보이게함 */
-.top.on .slogo img:first-child{
+.top.on .slogo img:first-child {
   display: none;
 }
 
@@ -161,7 +162,7 @@ video {
 .ham {
   position: absolute;
   top: 5px;
-  right: 20px;
+  right: 15px;
   color: #1ecad3;
   font-size: 30px;
   /* 트랜스폼을 이용해 버튼 가로로 늘림 */
@@ -206,37 +207,75 @@ video {
   height: calc(100vh - 50px);
   position: fixed;
   top: 50px;
-  
+
   background-color: #fff;
   z-index: 9999;
 }
-.top.on .sub_page{
+
+/* 서브페이지 안보이게 */
+.top.on .sub_page {
   display: block;
 }
 
 
 .sub_top {
   display: flex;
-  background-color: #1ecad3;
+  /* 탑메뉴1,2 가로정렬: 양쪽끝에 놓이게 */
   justify-content: space-between;
-  height: 40px;
+  /* 탑메뉴1,2 세로정렬 */
   align-items: center;
-  position: relative;
-  
-  padding-left: 20px;
+  background-color: #1ecad3;
+  height: 40px;
+
+
   width: 100%;
   box-sizing: border-box;
 }
 
+/* 탑메뉴1: 왼쪽에서 간격띄워 로고와 같은 선에서 시작하게 */
+.sub_top div:nth-child(1) {
+  padding-left: 20px;
+}
+
+/* 탑메뉴1,2 */
 .sub_top a {
   color: #fff;
   background-color: #1ecad3;
-  font-family: 'Baloo Da 2', cursive;
 }
 
-.sub_top a span{
-  margin-right: 20px;
+/* 탑메뉴1 사이사이 간격띄움 */
+.sub_top div:first-child a {
+  font-family: 'Baloo Da 2', cursive;
+  font-weight: bold;
+  padding-right: 10px;
 }
+
+/* 탑메뉴2 오른쪽에서 간격 띄우고 폰트 */
+.sub_top div:last-child a {
+  margin-right: 20px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+/* 서브페이지 GNB메뉴 */
+.sub_nav {
+  display: flex;
+  /* sub_big과 sub_small 세로로 정렬 */
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+/*  */
+.sub_big li {
+  
+}
+
+/* GNB메뉴 SHOP 쇼핑카트 */
+.sub_nav span img {
+  width: 27px;
+  vertical-align: middle;
+}
+
+
 
 
 /**************** 2. 메인영역 *****************/
