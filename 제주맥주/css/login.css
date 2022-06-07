@@ -101,12 +101,6 @@ input:focus {
   outline: none;
 }
 
-/* 버튼영역 */
-.btnbx {
-  position: absolute;
-  
-  /* 싸고있는 .scont에게 부모자격을 줘야함: */
-}
 
 /* 로그인상태유지, 로그인버튼 박스 */
 .loginBox {
@@ -131,9 +125,11 @@ input:focus {
 
 /* 기타체크링크 박스 */
 .addbx {
-  margin-top: 50px;
+  margin-top: 10px;
   text-align: center;
   font-size: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* 체크박스 영역 */
@@ -149,8 +145,8 @@ input:focus {
 
 /* 기타링크 */
 .addbx a {
-  margin: 0 15px;
-  color: #222;
+  font-size: 14px;
+  color: #3d464b;
   text-decoration: none;
 }
 
@@ -187,35 +183,7 @@ input:focus {
     width: 100%;
   }
 
-  /* 버튼영역 */
-  .btnbx {
-    position: static;
-    /* absolute였던 포지션을 static으로 바꿔서
-        위치 맘대로 돌아다니지 않게 함 */
-  }
 
-  /* 서브밋(LOGIN) 버튼 */
-  #sbtn {
-    width: 100%;
-    height: 50px;
-    margin-top: 50px;
-  }
-
-  /* 추가링크박스 위아래줄간격 띄움 */
-  .addbx {
-    line-height: 2.5;
-  }
-
-  /* 추가링크 바숨기기 */
-  .bar2 {
-    display: none;
-  }
-
-  /* 추가링크 바,줄바꿈 보이기 */
-  .bar1,
-  .brk {
-    display: inline;
-  }
 }
 
 /* 991px이하 미디어쿼리 끝 */
