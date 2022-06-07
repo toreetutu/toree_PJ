@@ -324,9 +324,13 @@ video {
   background-image: url(../images/shopping-cart-solid.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 32px;
-  height: 27px;
-  color: #1ecad3; /* 왜 안바뀌지 */
+  width: 36px;
+  height: 32px;
+  color: #1ecad3;
+  /* svg 이미지 색상바꾸기 
+  : https://codepen.io/sosuke/pen/Pjoqqp
+  에서 16진법색상코드(HEX코드)넣고 filter 속성 코드로 변환  */
+  filter: invert(74%) sepia(71%) saturate(611%) hue-rotate(138deg) brightness(85%) contrast(94%);
 }
 
 /* GNB메뉴-대메뉴 BREWERY 위아래 선넣기, 패딩 */
