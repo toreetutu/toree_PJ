@@ -255,17 +255,10 @@ input:focus {
     font-size: 6rem;
   }
 
-  /* 입력창 공통라벨 */
-  .minput label {
-    display: block;
-    width: auto;
-  }
-
-  /* 입력양식공통 */
-  .minput input {
-    width: 100%;
-  }
-
+  
+  .input_block .input_form {
+    width: 82.7vw;
+}
 
 }
 
