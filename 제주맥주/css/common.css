@@ -318,12 +318,15 @@ video {
 
 /* GNB메뉴-대메뉴 SHOP 뒤에 가상요소로 카트이미지 넣기 */
 .sub_big>li:nth-child(4)>a::after {
+  content: '';
   display: inline-block;
+  vertical-align: middle;
   background-image: url(../images/shopping-cart-solid.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 27px;
-  background-color: #555;
+  width: 32px;
+  height: 27px;
+  color: #1ecad3; /* 왜 안바뀌지 */
 }
 
 /* GNB메뉴-대메뉴 BREWERY 위아래 선넣기, 패딩 */
