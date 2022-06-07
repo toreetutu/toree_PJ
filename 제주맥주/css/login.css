@@ -14,7 +14,7 @@
 
 /* 컨텐츠영역 최소높이 */
 .cont {
-  min-height: 900px;
+  /* min-height: 900px; */
   padding: 40px !important;
   /* 800px이하 미디어쿼리보다 우선적용위해 
     !important 사용해서 최우선적용함
@@ -43,7 +43,7 @@
   border-top: 1px solid #e0e0e0;
   box-sizing: border-box;
   position: relative;
-  width: 398px;
+  width: 400px;
   margin: 0 auto;
 }
 
@@ -104,13 +104,13 @@ input:focus {
 
 /* 로그인상태유지, 로그인버튼 박스 */
 .loginBox {
-  width: 398px;
+  width: 400px;
   margin: 0 auto;
 }
 
 /* 서브밋(로그인) 버튼 */
 #sbtn {
-  width: 398px;
+  width: 400px;
   height: 45px;
   border: 1px solid #1ecad3;
   
@@ -150,17 +150,49 @@ input:focus {
   text-decoration: none;
 }
 
-/* 추가링크 영역바 */
-.bar {
-  font-weight: normal;
-  /* b요소 기본 두껍게 해제 */
+/* or 영역 */
+.divider {
+  display: flex;
+  justify-content: space-between;
 }
 
-/*모바일용 바(.bar1), 줄바꿈(.brk) 숨기기 */
-.bar1,
-.brk {
-  display: none;
+.border left,
+.border right {
+  height: 1px;
+  border-top: 2px solid #000;
 }
+
+/* 서브밋(로그인) 버튼 */
+#kkobtn {
+  width: 400px;
+  height: 45px;
+  border: 1px solid #ffeb00;
+  
+  /* 그라데이션 
+    배경이미지에서 세팅
+    linear-gradient(방향, 색1, 색2,...) */
+  background-color: #ffeb00;
+  color: #fff;
+  text-shadow: 1px 1px #555;
+  font-size: 15px;
+}
+
+/* 서브밋(비회원 주문조회) 버튼 */
+#nmembtn {
+  width: 400px;
+  height: 45px;
+  border: 1px solid #8393a7;
+  
+  /* 그라데이션 
+    배경이미지에서 세팅
+    linear-gradient(방향, 색1, 색2,...) */
+  background-color: #8393a7;
+  color: #fff;
+  text-shadow: 1px 1px #555;
+  font-size: 15px;
+}
+
+
 
 /* 제주맥주 메인 페이지 미디어쿼리 */
 
