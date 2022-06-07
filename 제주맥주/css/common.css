@@ -317,7 +317,8 @@ video {
 
 
 /* GNB메뉴-대메뉴 SHOP 뒤에 가상요소로 카트이미지 넣기 */
-.sub_big li:nth-child(4) a::after {
+.sub_big>li:nth-child(4)>a::after {
+  display: inline-block;
   background-image: url(../images/shopping-cart-solid.svg);
   background-repeat: no-repeat;
   background-size: cover;
