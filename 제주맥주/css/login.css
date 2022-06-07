@@ -43,10 +43,23 @@
   border-top: 1px solid #e0e0e0;
   box-sizing: border-box;
   position: relative;
+  width: 398px;
+  margin: 0 auto;
 }
 
 .input_block .input_form.brt {
   margin-top: -1px;
+}
+
+.input_block input {
+  border: none;
+  box-shadow: none;
+  padding: 12px 16px;
+  line-height: 1.2;
+}
+
+.widget.login .input_block input {
+  color: #000;
 }
 
 
@@ -91,21 +104,26 @@ input:focus {
 /* 버튼영역 */
 .btnbx {
   position: absolute;
-  top: 60px;
-  right: 60px;
+  
   /* 싸고있는 .scont에게 부모자격을 줘야함: */
 }
 
-/* 서브밋(LOGIN) 버튼 */
+/* 로그인상태유지, 로그인버튼 박스 */
+.loginBox {
+  width: 398px;
+  margin: 0 auto;
+}
+
+/* 서브밋(로그인) 버튼 */
 #sbtn {
-  width: 113px;
-  height: 92px;
-  border: 1px solid #888;
-  border-radius: 5px;
+  width: 398px;
+  height: 45px;
+  border: 1px solid #1ecad3;
+  
   /* 그라데이션 
     배경이미지에서 세팅
     linear-gradient(방향, 색1, 색2,...) */
-  background-image: linear-gradient(to bottom, #ddd, #555);
+  background-color: #1ecad3;
   color: #fff;
   text-shadow: 1px 1px #555;
   font-size: 15px;
