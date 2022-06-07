@@ -315,18 +315,21 @@ video {
   font-weight: normal;
 }
 
-
 /* GNB메뉴-대메뉴 SHOP 뒤에 가상요소로 카트이미지 넣기 */
 .sub_big>li:nth-child(4)>a::after {
+  /* 반드시 써주기 */
   content: '';
+  /* SHOP 옆으로 나란히 오게함 */
   display: inline-block;
+  /* SHOP과 세로정렬 맞춤 */
   vertical-align: middle;
   background-image: url(../images/shopping-cart-solid.svg);
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 36px;
-  height: 32px;
-  color: #1ecad3;
+  background-size: contain;
+  width:25px;
+  height: 25px;
+  margin-left: 5px;
+  color: #1ecad3; /* 이렇게 색상 안바뀜 filter로 변경*/
   /* svg 이미지 색상바꾸기 
   : https://codepen.io/sosuke/pen/Pjoqqp
   에서 16진법색상코드(HEX코드)넣고 filter 속성 코드로 변환  */
