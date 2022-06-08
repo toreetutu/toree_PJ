@@ -23,7 +23,8 @@
     position: fixed;
     z-index: 99;
   }
-  .top.on{
+
+  .top.on {
     height: 55px;
   }
 
@@ -44,9 +45,9 @@
     display: block;
   }
 
-  
+
   /* 2. 메인영역 */
-  /* 배경이미지 4개 */
+    /* 배경이미지 4개 */
   .mainTop>div:nth-child(1)~div {
     background-position: left;
     height: 638px;
@@ -153,7 +154,10 @@
 
 /********** 766px이하 미디어쿼리 시작 ************/
 @media screen and (max-width:766px) {
-
+  /* 비율유지 동영상 */
+  .mvid video {
+    height: 85vh;
+  }
 
   /* 배경이미지 4개 */
   .mainTop>div:nth-child(1)~div {
