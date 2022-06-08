@@ -47,9 +47,16 @@
 
 
   /* 2. 메인영역 */
-    /* 배경이미지 4개 */
-  .mainTop>div:nth-child(1)~div {
+  /* 2-2.라거 배경이미지 1개 */
+  .mainTop>div:nth-child(2) {
     background-position: left;
+    height: 638px;
+    width: auto;
+  }
+
+  /* 2-2. 위트/펠롱/거멍 배경이미지 3개 */
+  .mainTop>div:nth-child(2)~div {
+    background-position: right;
     height: 638px;
     width: auto;
   }
@@ -166,7 +173,7 @@
 
   /* 2-5. 제품설명 */
   .des p {
-    width: 50vw;
+    width: 55vw;
     margin: 0 auto;
 
     font-size: 1.6rem;
@@ -187,7 +194,33 @@
 
 /********** 766px이하 미디어쿼리 끝 ************/
 
-/********** 350px이하 미디어쿼리 시작 ************/
+/********** 450px이하 미디어쿼리 시작 ************/
+@media screen and (max-width:450px) {
 
+  /* 2-3. 제품 타이틀이미지 */
+  .tit img {
+    width: 240px;
+  }
 
-/********** 350px이하 미디어쿼리 끝 ************/
+  /* 2-4. 제품이미지 */
+  .des img {
+    width: 200px;
+  }
+
+  /* 2-5. 제품설명 */
+  .des p {
+    width: 80vw;
+  }
+
+  /* 제품설명 줄바꿈 제대로 나오게 */
+  .des p .bb {
+    display: inline-block;
+  }
+
+  /* 3-4. 문의,공유,위로가기 버튼 */
+  .fixed_icon {
+    right: 5%;
+  }
+}
+
+/********** 450px이하 미디어쿼리 끝 ************/

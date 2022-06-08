@@ -117,14 +117,14 @@ body * {
 }
 
 
-/* 아이템이미지+설명 */
+/* 제품이미지+설명 */
 .des {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-/* 2-4. 아이템이미지 */
+/* 2-4. 제품이미지 */
 .des img {
   width: 200px;
 }
@@ -139,7 +139,8 @@ body * {
   text-align: left;
 }
 
-.des p .aa {
+.des p .aa,
+.des p .bb {
   display: none;
 }
 
