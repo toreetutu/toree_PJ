@@ -15,7 +15,7 @@
   }
 
 
-  /* 1. 상단영역 */
+  /************* 1. 상단영역 ************/
   .top {
     height: 50px;
     width: 100%;
@@ -24,6 +24,7 @@
     z-index: 99;
   }
 
+  /* 상단영역을 on 했을 때 */
   .top.on {
     height: 55px;
   }
@@ -43,10 +44,11 @@
   .ham {
     /* 포지션이 앱솔루트이면 기본 block이다! */
     display: block;
+    z-index: 1; /* 로고보다 위 */
   }
 
 
-  /* 2. 메인영역 */
+  /************** 2. 메인영역 **************/
   /* 2-2.라거 배경이미지 1개 */
   .mainTop>div:nth-child(2) {
     background-position: left;
@@ -92,7 +94,7 @@
     width: 480px;
     margin: 0 auto;
     padding: 20px;
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: center;
   }
 
@@ -101,19 +103,18 @@
     display: inline-block;
   }
 
-  /* 판매처 설명 */
+  /* 판매처 슬라이드 박스 */
   .mainBtm {
     padding: 30px 0;
   }
 
+  /* 판매처 슬라이드 설명 */
   .stit {
     font-size: 1.6rem;
     margin-bottom: 30px;
   }
 
-
-
-  /* 판매처 슬라이드이미지 */
+  /* 판매처 슬라이드 이미지 */
   .slist {
     width: 95vw;
   }
@@ -122,7 +123,8 @@
     width: 30vw;
   }
 
-  /* 3. 하단영역 */
+
+  /*********** 3. 하단영역 ***********/
   /* 이용약관~처리방침 사이간격, 글자크기 */
   .btn a {
     margin-right: 10px;

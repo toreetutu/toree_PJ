@@ -9,7 +9,12 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/media.css">
   <!-- 외부css 하나만 불러도 main.css에서 import 하고있는 3개의 기본css가 같이 들어옴  -->
+  <!-- 공통외부 JS -->
   <script src="./js/common.js"></script>
+  <script src="./js/linksys.js"></script>
+  <!-- <script src="js/linksys.js" defer></script> -->
+  <!-- 외부JS 호출시 defer 속성을 사용하면 html이 모두 로딩된 후 본 파일을 실행함
+  설정시 코드유실 등의 이유로 여기서 세팅하지 않고 JS파일 자체에서 처리하는 경우가 월등히 많다(따라서 실제 프로젝트에서 잘 사용되지 않음) -->
 </head>
 
 <body class="scbar">
@@ -273,16 +278,16 @@
           <a href="#">영상정보 처리방침</a>
         </div>
         <div class="sns">
-          <a href="https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw">
+          <a href="https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw" target="_blank">
             <img src="./images/youtube.png" alt="유튜브">
           </a>
-          <a href="https://www.facebook.com/jejubeerofficial">
+          <a href="https://www.facebook.com/jejubeerofficial" target="_blank">
             <img src="./images/facebook.png" alt="페이스북">
           </a>
-          <a href="https://www.instagram.com/jejubeerofficial/">
+          <a href="https://www.instagram.com/jejubeerofficial/" target="_blank">
             <img src="./images/insta.png" alt="인스타">
           </a>
-          <a href="https://post.naver.com/my.nhn?memberNo=39126203">
+          <a href="https://post.naver.com/my.nhn?memberNo=39126203" target="_blank">
             <img src="./images/blog.png" alt="블로그">
           </a>
         </div>
