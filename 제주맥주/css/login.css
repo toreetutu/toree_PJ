@@ -6,6 +6,11 @@
 @import url(core.css);
 @import url(common.css);
 
+/* 전체화면 구현중 공사중 외곽선 표시: body밑의 만들어진 모든 것에 적용 */
+body * {
+  outline: 1px dashed lime;
+}
+
 
 /* 컨텐츠영역 겉박스 */
 #cont {
@@ -121,9 +126,10 @@ input:focus {
   color: #fff;
   text-shadow: 1px 1px #555;
   font-size: 15px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
-/* 기타체크링크 박스 */
+/* 기타체크링크 박스 : 회원가입, 아이디 비밀번호찾기 */
 .addbx {
   margin-top: 10px;
   text-align: center;
@@ -251,23 +257,40 @@ input:focus {
 @media screen and (max-width: 991px) {
 
   /* 1.로그인 타이틀 */
-  .login_stit {
-    font-size: 6rem;
+  .cont> .login_stit {
+    font-size: 4.8rem;
   }
 
-  
   .input_block .input_form {
-    width: 82.7vw;
-}
+    width: 100%
+  }
 
 }
-
-
-
-
-
-
-
-
 
 /********** 991px이하 미디어쿼리 끝 **********/
+
+
+/********** 766px이하 미디어쿼리 시작 ************/
+/* 추가 미디어쿼리 */
+#sbtn,
+#kkobtn,
+#nmembtn,
+.my {
+  width: 100%;
+}
+
+/* 로그인박스: 로그인~비회원주문조회 */
+.loginBox {
+  width: 100%;
+}
+
+.addbx a {
+  font-size: 11px;
+}
+
+/* 1.로그인 타이틀 */
+.login_stit {
+  font-size: 3rem;
+}
+
+/********** 766px이하 미디어쿼리 끝 ************/
