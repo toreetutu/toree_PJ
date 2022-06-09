@@ -72,6 +72,7 @@ function linkFn() {
           break;
         default:
           url = "etc";
+          console.log(txt);
       } ////// switch case //////////
 
 

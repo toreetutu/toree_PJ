@@ -4,6 +4,11 @@
 /********** 991px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 991px) {
 
+  /* 크기 줘서 버티는 요소 없는데도 가로바 생기는 것 없앰 */
+  body {
+    overflow-x: hidden;
+  }
+
   /* 숨기기: 사이즈줄면 모두 안보이게
   (로고, GNB메뉴, 탑메뉴, sns) */
   .logo,
@@ -44,7 +49,8 @@
   .ham {
     /* 포지션이 앱솔루트이면 기본 block이다! */
     display: block;
-    z-index: 1; /* 로고보다 위 */
+    z-index: 1;
+    /* 로고보다 위 */
   }
 
 
@@ -163,6 +169,7 @@
 
 /********** 766px이하 미디어쿼리 시작 ************/
 @media screen and (max-width:766px) {
+
   /* 비율유지 동영상 */
   .mvid video {
     height: 85vh;
