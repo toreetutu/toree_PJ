@@ -205,7 +205,7 @@
 
 /********** 450px이하 미디어쿼리 시작 ************/
 @media screen and (max-width:450px) {
-
+  
   /* 2-3. 제품 타이틀이미지 */
   .tit img {
     width: 240px;
@@ -229,6 +229,22 @@
   /* 3-4. 문의,공유,위로가기 버튼 */
   .fixed_icon {
     right: 5%;
+  }
+
+
+  /* 모바일서브페이지 - 갤럭시폴드용 */
+  .sub_header {
+    font-size: 11px;
+  }
+
+  .sub_big li a,
+  .sub_small li a{
+    font-size: 20px;
+  }
+
+  /*  */
+  .sub_big span {
+    font-size: 12px;
   }
 }
 

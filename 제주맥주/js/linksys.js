@@ -55,7 +55,7 @@ function linkFn() {
 
       // 1) a요소 텍스트 읽어오기
       var txt = this.innerText;
-      console.log(txt);
+      // console.log(txt);
 
       // 2) 텍스트에 따라 이동할 페이지 분기하기
       // switch case 사용
@@ -63,7 +63,7 @@ function linkFn() {
       // 이동주소 변수
       var url;
 
-      switch (txt) {
+      switch (txt.trim()) {
         case "로고":
           url = "main.html";
           break;
@@ -72,7 +72,7 @@ function linkFn() {
           break;
         default:
           url = "etc";
-          console.log(txt);
+          // console.log(txt);
       } ////// switch case //////////
 
 

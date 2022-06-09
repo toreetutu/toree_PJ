@@ -63,7 +63,7 @@ video {
 }
 
 /* 햄버거버튼 눌러서 서브페이지일때 이미지없는 작은로고 나오게함 */
-.top.on .slogo img:last-child {
+.top.on .slogo img:last-of-type {
   display: inline;
   width: 80px;
   margin: 0 15px;
@@ -71,7 +71,7 @@ video {
 }
 
 /* 햄버거버튼 눌러서 서브페이지일때 이미지있는 작은로고 안보이게함 */
-.top.on .slogo img:first-child {
+.top.on .slogo img:first-of-type {
   display: none;
 }
 
