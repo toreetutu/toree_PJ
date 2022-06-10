@@ -43,14 +43,12 @@ body * {
 
 /* 이메일,비밀번호 인풋박스 전체 
 + 안에 텍스트 입력하는 박스*/
-.input_block .input_form,
-#uid, #passwd {
+.input_block .input_form {
   border: 1px solid #e0e0e0;
   background: #fff;
   border-top: 1px solid #e0e0e0;
   box-sizing: border-box;
   position: relative;
-  width: 400px;
   margin: 0 auto;
 }
 
@@ -62,9 +60,9 @@ body * {
 
 /* 이메일박스, 비밀번호박스 각각 */
 .input_block input {
-  /* border: none;
-  box-shadow: none; */
-  padding: 12px 16px;
+  border: none;
+  box-shadow: none;
+  padding: 12px 0;
 }
 
 
@@ -280,12 +278,12 @@ input:focus {
 
 /********** 450px이하 미디어쿼리 시작 ************/
 /* 추가 미디어쿼리 */
-/* #sbtn,
+#sbtn,
 #kkobtn,
 #nmembtn,
 .my {
   width: 100%;
-} */
+}
 
 /* 로그인박스: 로그인~비회원주문조회 */
 .loginBox {
