@@ -49,6 +49,7 @@ body * {
   border-top: 1px solid #e0e0e0;
   box-sizing: border-box;
   position: relative;
+  width: 400px;
   margin: 0 auto;
 }
 
@@ -63,6 +64,11 @@ body * {
   border: none;
   box-shadow: none;
   padding: 12px 0;
+}
+
+#uid,
+#passwd {
+  width: 100%;
 }
 
 
@@ -259,7 +265,8 @@ input:focus {
 @media screen and (max-width: 991px) {
   .cont {
     min-height: 600px;
-}
+  }
+
   /* 1.로그인 타이틀 */
   .cont>.login_stit {
     font-size: 4.8rem;
@@ -277,27 +284,32 @@ input:focus {
 
 
 /********** 450px이하 미디어쿼리 시작 ************/
-/* 추가 미디어쿼리 */
-#sbtn,
-#kkobtn,
-#nmembtn,
-.my {
-  width: 100%;
-}
+@media screen and (max-width: 450px) {
 
-/* 로그인박스: 로그인~비회원주문조회 */
-.loginBox {
-  width: min(max(100%), 400px);
-}
+  /* 추가 미디어쿼리 */
+  #sbtn,
+  #kkobtn,
+  #nmembtn,
+  .my {
+    width: 100%;
+  }
 
-/* 기타링크: 회원가입, 아이디비밀번호찾기 */
-.addbx a {
-  font-size: 11px;
-}
 
-/* 1.로그인 타이틀 */
-.login_stit {
-  font-size: 3rem;
+
+  /* 로그인박스: 로그인~비회원주문조회 */
+  .loginBox {
+    width: min(max(100%), 400px);
+  }
+
+  /* 기타링크: 회원가입, 아이디비밀번호찾기 */
+  .addbx a {
+    font-size: 11px;
+  }
+
+  /* 1.로그인 타이틀 */
+  .login_stit {
+    font-size: 3rem;
+  }
 }
 
 /********** 450px이하 미디어쿼리 끝 ************/
