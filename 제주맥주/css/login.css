@@ -115,7 +115,7 @@ input:focus {
 
 /* 로그인상태유지, 로그인버튼 박스 */
 .loginBox {
-  /* width: 400px; */
+  width: 400px;
   margin: 0 auto;
 }
 
