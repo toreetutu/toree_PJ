@@ -427,6 +427,7 @@ video {
   color: #999;
   margin-right: 35px;
   white-space: nowrap;
+  margin-bottom: 64px;
 }
 
 .btn a:hover {
@@ -441,7 +442,7 @@ video {
 .sns {
   display: flex;
   justify-content: flex-end;
-  align-items: center
+  align-items: flex-start;
 }
 
 .sns a img {

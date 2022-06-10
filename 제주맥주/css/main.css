@@ -161,10 +161,11 @@ body * {
 
 /* 2-6. 판매처 이미지 슬라이드 */
 .mainBtm {
-  max-width: 1200px;
+  width: 1000px;
   margin: 0 auto;
   padding: 30px 0;
   text-align: center;
+  overflow: hidden;
 }
 
 /* 판매처 설명 */
@@ -177,16 +178,30 @@ body * {
 
 /* 판매처 슬라이드이미지 */
 .slist {
-  width: 80vw;
   position: relative;
+  left: 0;
+  width: 80vw;
   margin: 0 auto;
 
   display: flex;
-  overflow: hidden;
+  animation: flowAni 20s linear infinite;
 }
 
+@keyframes flowAni {
+  to{
+    left: -2172px;
+  }
+}
+
+/* 슬라이드이미지에 마우스오버시 */
+.slist:hover{
+  /* 애니메이션 멈춤 */
+  animation-play-state: paused;
+}
+
+/* 슬라이드이미지 각각 */
 .slist li img {
   flex: 1;
-  width: 13vw;
-  margin: 0 5px;
+  width: 137px;
+  padding: 15px;
 }

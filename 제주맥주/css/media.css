@@ -5,7 +5,7 @@
 @media screen and (max-width: 991px) {
 
   /* 크기 줘서 버티는 요소 없는데도 가로바 생기는 것 없앰 */
-  body {
+  html,body {
     overflow-x: hidden;
   }
 

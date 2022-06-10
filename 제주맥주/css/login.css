@@ -69,6 +69,8 @@ body * {
 #uid,
 #passwd {
   width: 100%;
+  padding-left: 15px;
+  box-sizing: border-box;
 }
 
 
@@ -233,6 +235,7 @@ input:focus {
   /* 상단영역 줄어듬 */
   .top {
     width: 90%;
+    margin: 0 auto;
   }
 
   /* GNB메뉴 */
@@ -278,6 +281,7 @@ input:focus {
   }
 
 
+
 }
 
 /********** 991px이하 미디어쿼리 끝 **********/
@@ -309,6 +313,11 @@ input:focus {
   /* 1.로그인 타이틀 */
   .login_stit {
     font-size: 3rem;
+  }
+
+  
+  .input_block .input_form{
+    width: 100%;
   }
 }
 
