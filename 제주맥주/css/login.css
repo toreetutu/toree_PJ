@@ -196,7 +196,7 @@ input:focus {
   background-color: #fff;
 }
 
-/* 서브밋(로그인) 버튼 */
+/* 서브밋(카카오 로그인) 버튼 */
 #kkobtn {
   width: 400px;
   height: 45px;
@@ -209,6 +209,19 @@ input:focus {
   color: #fff;
   text-shadow: 1px 1px #555;
   font-size: 15px;
+}
+
+/* 가상요소로 카카오 로그인 버튼 앞 말풍선 이미지 */
+.btnbx>#kkobtn::before {
+  content: '';
+  display: inline-block;
+  background-image: url(../images/comment-solid.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  outline: 1px solid red;
+
 }
 
 /* 서브밋(비회원 주문조회) 버튼 */

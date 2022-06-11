@@ -114,17 +114,15 @@
     padding: 30px 0;
   }
 
-  /* 판매처 슬라이드 설명 */
+  /* 판매처 슬라이드 설명박스 */
   .stit {
+    /* 설명싼 박스가로 크기에 따라 움직임 */
+    width: 100vw;
     font-size: 1.6rem;
     margin-bottom: 30px;
   }
 
   /* 판매처 슬라이드 이미지 */
-  .slist {
-    width: 95vw;
-  }
-
   .slist li img {
     width: 30vw;
   }
