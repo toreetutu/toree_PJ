@@ -459,7 +459,7 @@ video {
   align-items: flex-start;
 }
 
-/* SNS 이미지 각각  */
+/* SNS 이미지 각각 */
 .sns a img {
   width: 40px;
   margin-left: 10px;
@@ -493,7 +493,7 @@ video {
 /* 3-4. 문의,공유,위로가기 버튼 */
 .fixed_icon {
   position: fixed;
-  bottom: 3%;
+  bottom: 2%;
   right: 3%;
 
   display: flex;

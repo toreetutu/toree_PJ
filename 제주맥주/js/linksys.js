@@ -29,7 +29,7 @@ function linkFn() {
 
   // 2. 대상선정: .top a -> 상단영역의 모든 a
   // 변수 만들어주고 접근(선택함 -> .top 밑의 a가 여러개니까 querySelectorAll)
-  var alink = document.querySelectorAll(".top a, .sub_page a");
+  var alink = document.querySelectorAll(".top a");
   console.log("a링크 개수:", alink.length, alink);
   // length는 컬렉션 집합의 개수
   // html 요소가 여러개 담긴 메모리공간을 컬렉션이라고 함
@@ -70,6 +70,11 @@ function linkFn() {
         case "LOGIN":
           url = "login.html";
           break;
+        case "서브유튜브":
+          url = "https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw";
+          break;
+        
+
         default:
           url = "etc";
           // console.log(txt);
@@ -96,6 +101,54 @@ function linkFn() {
 
     }; /////// click 이벤트 함수 //////
   } //////////// for //////////////
+
+  let subA = document.querySelectorAll(".sub_footer a");
+  for(let x of subA){
+    x.onclick=()=>{
+      // aler t(33);
+      switch (x.title) {
+        case "서브유튜브":
+          url = "https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw";
+          break;
+        case "서브페이스북":
+          url = "https://www.facebook.com/jejubeerofficial";
+          break;
+        case "서브인스타":
+          url = "https://www.instagram.com/jejubeerofficial";
+          break;
+        case "서브블로그":
+          url = "https://post.naver.com/my.nhn?memberNo=39126203";
+          break;
+          
+
+        
+
+        default:
+          url = "etc";
+          // console.log(txt);
+      } ////// switch case //////////
+
+
+      // 페이지별 이동
+
+      // txt가 etc면 alert창으로 문구 띄움
+      if (url === "etc")
+        alert(`${txt} 페이지는 오픈 준비중입니다`);
+
+      else
+        window.open().location.href = url;
+      // location.href = 주소 -> 현재창 주소이동 
+
+      // a요소는 기본적으로 이동하는 특성이 있다
+      // 이것을 막기 위해서 본 함수를 빠져나갈 때 
+      // 모든 기본 기능을 못하게 막는 것이 return false 설정이다
+      return false;
+      // 본 코드 맨 끝에 해야함 (위에서 하면 만나는 순간 빠져나감)
+
+      
+      return false;
+    }
+  }
 
 
 
