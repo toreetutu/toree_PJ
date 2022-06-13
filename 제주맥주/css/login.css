@@ -215,11 +215,11 @@ input:focus {
 .btnbx>#kkobtn::before {
   content: '';
   display: inline-block;
-  background-image: url(./images/comment-solid.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 30px;
   height: 30px;
+  background-image: url(./images/comment-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   outline: 1px solid red;
 
 }

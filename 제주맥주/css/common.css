@@ -114,6 +114,7 @@ video {
   margin-top: 20px;
 }
 
+/* 제주맥주라이프,양조장예약 각각 박스 */
 .topmn2 li {
   padding: 0 18px;
   margin-left: 10px;
@@ -128,6 +129,7 @@ video {
   ;
 }
 
+/* 제주맥주라이프,양조장예약 글자 */
 .topmn2 li a {
   color: #fff;
   font-family: 'Do Hyeon', sans-serif;
@@ -141,6 +143,7 @@ video {
   margin: 0 auto;
 }
 
+/* JEJUBEERLIFE~BREWERY 전체박스 */
 .gnb {
   /* 플렉스박스 */
   display: flex;
@@ -151,6 +154,7 @@ video {
   padding-top: 10px;
 }
 
+/* JEJUBEERLIFE~BREWERY 각각 박스 */
 .gnb li {
   padding: 0 50px;
 }
@@ -295,6 +299,7 @@ video {
   flex-direction: column;
 }
 
+/* GNB메뉴-소메뉴 EVENT~BREWERY 각각 박스 */
 .sub_big li {
   flex: 1;
   margin: 5px 0;
@@ -409,11 +414,14 @@ video {
   /* background-color: lightyellow; */
 }
 
+/* 추가정보링크+SNS 영역 */
 .btn_wrap {
+  /* 플렉스박스 */
   display: flex;
 }
 
 .btn_wrap div {
+  /* 등분할 */
   flex: 1;
 }
 
