@@ -425,12 +425,15 @@ video {
   flex: 1;
 }
 
+/* 추가정보링크 */
 .btn {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  /* 브라우저 줄었을 때 줄바꿈 */
   flex-wrap: wrap;
 }
 
+/* 추가정보링크 글자 */
 .btn a {
   font-family: 'IBM Plex Sans KR', sans-serif;
   color: #999;
@@ -439,10 +442,12 @@ video {
   margin-bottom: 64px;
 }
 
+/* 추가정보링크 글자 호버시 */
 .btn a:hover {
   color: #1ecad3;
 }
 
+/* 개인정보처리방침 글자 */
 .btn a:nth-child(7) {
   color: #000;
 }
@@ -454,26 +459,25 @@ video {
   align-items: flex-start;
 }
 
+/* SNS 이미지 각각  */
 .sns a img {
   width: 40px;
   margin-left: 10px;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
+/* 유튜브 */
 .sns a:nth-child(1) img {
   width: 190px;
 }
 
-/* 회사정보와 저작권 */
-.cpr {
-  margin-top: 30px;
-}
-
+/* 회사정보 */
 .cpr p:nth-child(1) {
   font-family: 'IBM Plex Sans KR', sans-serif;
   font-size: 1.3rem;
 }
 
+/* 저작권 */
 .cpr p:nth-child(2) {
   font-family: 'Nunito', sans-serif;
   font-size: 1.1rem;
