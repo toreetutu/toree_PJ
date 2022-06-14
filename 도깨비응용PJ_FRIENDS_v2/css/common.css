@@ -27,7 +27,7 @@ body {
 /* 1-1. 메인로고  */
 #logo {
   position: absolute;
-  padding: 50px;
+  margin: 50px 0 0 50px;
 }
 
 /* 로고이미지 */
@@ -232,7 +232,7 @@ body {
 /**************** 3. 하단영역 *****************/
 .info {
   /* 높이값 */
-  height: 200px;
+  height: auto;
   position: relative;
   /* 부모자격 */
 }
@@ -286,7 +286,7 @@ body {
 .cpr a {
   display: inline-block;
 
-  width: 10vw;
+  width: 10%;
   padding-top: 10%;
   vertical-align: middle;
   
@@ -297,10 +297,12 @@ body {
   background-position: center;
   /* outline: 1px dashed red; */
 }
-.bb{
+
+/* 저작권글씨 */
+.bb {
   display: block;
-  
-  line-height: 50px;
+  font-size: 2rem;
+  margin-top: 50px;
   white-space: nowrap;
   /* outline: 1px dashed red; */
 }

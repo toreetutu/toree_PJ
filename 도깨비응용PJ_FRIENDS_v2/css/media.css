@@ -1,8 +1,8 @@
 @charset "utf-8";
 /* FRIENDS 메인 페이지 미디어쿼리  - media.css */
 
-/********** 1000px이하 미디어쿼리 시작 ************/
-@media screen and (max-width: 1000px) {
+/********** 1100px이하 미디어쿼리 시작 ************/
+@media screen and (max-width: 1100px) {
 
   /* 1.전체 rem단위 글자 변경위한 root 글자크기 변경 */
   html {
@@ -16,38 +16,97 @@
     justify-content: space-evenly
   }
 
+  /* 컨텐츠영역: 영역높이값  */
+  .cont {
+    height: auto;
+    margin: 80px 0;
+  }
+
   .gnb {
     margin-top: 103px;
-    display: flex;
-    margin-right: 0;
-}
-  
-  .gnb ul{
-    flex: 1;
+
   }
 
-  
 
+  /* 로고 */
   #logo {
-    /* 보이는 화면 기준으로  */
-    left: 50%;
+    /* 보이는 화면 기준으로 왼쪽에서 50% - 데스크탑 마진레프트 50px */
+    left: calc(50% - 50px);
     /* x축 기준으로 자기크기의 50%만큼 왼쪽으로 보냄 */
     transform: translateX(-50%);
-    
   }
 
 
-
-  .cont {
+  #cbx {
     display: flex;
+    /* 줄바꿈함 */
     flex-wrap: wrap;
+    /* 플렉스아이템 가로정렬: 첫번째와 마지막 항목 시작점과 끝점 배치 후 중앙항목 같은 간격으로 배치 */
+    justify-content: center;
   }
+
+  /* 4.캐릭터박스 비율변경
+  : 사이즈줄면 캐릭터박스 3개씩 2줄 되면서 커짐 */
+  .cat {
+    width: 32%;
+  }
+
+  /* 캐릭터박스(.cat)에 마우스 오버 시 
+  설명박스(.cd) 높이값 변경  */
+  .cat:hover .cd {
+    height: 200px;
+  }
+
+  .info ul {
+    width: 250px;
+  }
+
+  .info li {
+    padding: 0 30px;
+}
+
+  .fab {
+    transform: scale(2);
+    display: inline-block;
+  }
+
+
+
+/* 저작권글씨 */
+.bb {
+  margin-top: 0;
+}
 }
 
 
-/********** 720px이하 미디어쿼리 시작 ************/
-@media screen and (max-width: 720px) {
+/********** 1100px이하 미디어쿼리 끝 ************/
+
+/********** 800px이하 미디어쿼리 시작 ************/
+@media screen and (max-width: 800px) {
+
   /* GNB메뉴 숨기기 */
+  .gnb {
+    display: none;
+  }
+
+  #logo img {
+    width: 300px;
+  }
+
+  /* 컨텐츠영역: 영역높이값  */
+  .cont {
+    height: auto;
+    margin-top: 60px;
+  }
+
+
+  /* 4.캐릭터박스 비율변경
+  : 사이즈줄면 캐릭터박스 3개씩 2줄 되면서 커짐 */
+  .cat {
+    width: 70%;
+  }
+
+
 }
 
 
@@ -60,10 +119,4 @@
 
 
 
-/********** 1000px이하 미디어쿼리 끝 ************/
-
-
-/* 숨기기: GNB메뉴 */
-/* .gnb {
-  display: none;
-} */
+/********** 800px이하 미디어쿼리 끝 ************/
