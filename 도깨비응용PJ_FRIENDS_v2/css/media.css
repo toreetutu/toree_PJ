@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* FRIENDS 메인 페이지 미디어쿼리  - media.css */
+
+/********** 990px이하 미디어쿼리 시작 ************/
+@media screen and (max-width: 990px) {
+
+  /* 숨기기: 로고,GNB메뉴 */
+  #logo,
+  .gnb {
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+/********** 990px이하 미디어쿼리 끝 ************/
+
+
+
