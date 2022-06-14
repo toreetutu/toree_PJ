@@ -73,7 +73,7 @@ function linkFn() {
         case "서브유튜브":
           url = "https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw";
           break;
-        
+
 
         default:
           url = "etc";
@@ -103,8 +103,8 @@ function linkFn() {
   } //////////// for //////////////
 
   let subA = document.querySelectorAll(".sub_footer a");
-  for(let x of subA){
-    x.onclick=()=>{
+  for (let x of subA) {
+    x.onclick = () => {
       // aler t(33);
       switch (x.title) {
         case "서브유튜브":
@@ -119,8 +119,8 @@ function linkFn() {
         case "서브블로그":
           url = "https://post.naver.com/my.nhn?memberNo=39126203";
           break;
-          
-        
+
+
         default:
           url = "etc";
           // console.log(txt);
@@ -135,7 +135,9 @@ function linkFn() {
 
       else
         window.open().location.href = url;
-      // location.href = 주소 -> 현재창 주소이동 
+      // window.open() -> 새창열기
+      // location.href = 주소 -> 현재창 페이지 이동 
+    
 
       // a요소는 기본적으로 이동하는 특성이 있다
       // 이것을 막기 위해서 본 함수를 빠져나갈 때 
@@ -143,7 +145,7 @@ function linkFn() {
       return false;
       // 본 코드 맨 끝에 해야함 (위에서 하면 만나는 순간 빠져나감)
 
-      
+
       return false;
     }
   }

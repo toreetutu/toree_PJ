@@ -4,10 +4,26 @@
 /********** 990px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 990px) {
 
-  /* 숨기기: 로고,GNB메뉴 */
-  #logo,
+  /* 숨기기: GNB메뉴 */
   .gnb {
     display: none;
+  }
+
+  #logo {
+    /* 보이는 화면 기준으로  */
+    left: 50%;
+    /* x축 기준으로 자기크기의 50%만큼 왼쪽으로 보냄 */
+    transform: translateX(-50%);
+    padding: 50px;
+  }
+
+  .top {
+    height: auto;
+}
+
+  .cont {
+    display: flex;
+    flex-wrap: wrap;
   }
 
 
@@ -21,9 +37,6 @@
 
 
 
-
 }
+
 /********** 990px이하 미디어쿼리 끝 ************/
-
-
-
