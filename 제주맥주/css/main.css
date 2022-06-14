@@ -140,6 +140,7 @@ body * {
   text-align: left;
 }
 
+/* 제품설명: 모바일에서 줄바꿈되도록 */
 .des p .aa,
 .des p .bb {
   display: none;
@@ -185,9 +186,9 @@ body * {
 
   display: flex;
   /* 애니메이션: 이시이지반방마 */
-  /* 이름 시간40초동안 등속도로 지연시간없고
+  /* 이름 시간60초동안 등속도로 지연시간없고
   반복영원히 */
-  animation: flowAni 40s linear infinite;
+  animation: flowAni 60s linear infinite;
 }
 
 @keyframes flowAni {

@@ -120,9 +120,7 @@ function linkFn() {
           url = "https://post.naver.com/my.nhn?memberNo=39126203";
           break;
           
-
         
-
         default:
           url = "etc";
           // console.log(txt);

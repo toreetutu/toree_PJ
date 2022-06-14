@@ -485,7 +485,8 @@ video {
   margin: 20px 0 50px 0;
 }
 
-/* 회사정보 띄어쓰기 */
+/* 회사정보 띄어쓰기
+: 모바일에서 줄바꿈되게  */
 .cpr .bb {
   display: none;
 }
@@ -496,9 +497,10 @@ video {
   bottom: 2%;
   right: 3%;
 
+  /* 플렉스박스 */
   display: flex;
+  /* 플렉스방향: 세로로 */
   flex-direction: column;
-
 }
 
 .fixed_icon a {
