@@ -238,7 +238,7 @@ body {
 }
 
 .info ul {
-  width: 130px;
+  width: 150px;
   /* 마영오 하려면 가로값 필요함: 블록박스(ul) 중앙정렬은 가로크기가 auto면 안되고 부모보다 작아야 함 (가로값 안 준 경우에는 크기는 auto임) */
   /* 블록가로중앙 마영오 */
   margin: 0 auto;
@@ -253,7 +253,7 @@ body {
   /* 왼쪽부터 옆으로 흐르게 */
   float: left;
   /* SNS메뉴들 사이 간격 띄움 */
-  padding: 0 10px;
+  padding: 0 15px;
 }
 
 .info ul::after {
@@ -301,7 +301,7 @@ body {
 /* 저작권글씨 */
 .bb {
   display: block;
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin-top: 50px;
   white-space: nowrap;
   /* outline: 1px dashed red; */

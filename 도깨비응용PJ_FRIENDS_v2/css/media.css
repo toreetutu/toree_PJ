@@ -4,9 +4,11 @@
 /********** 1100px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 1100px) {
 
+
   /* 1.전체 rem단위 글자 변경위한 root 글자크기 변경 */
   html {
     font-size: 10px;
+    overflow-x: hidden;
   }
 
   /* 2.상단영역 중앙박스 */
@@ -16,10 +18,22 @@
     justify-content: space-evenly
   }
 
+  /* 로고 */
+  #logo {
+    top: 50px;
+    /* 보이는 화면 기준으로 왼쪽에서 50% - 데스크탑 마진레프트 50px */
+    left: calc(50% - 100px);
+    margin: 0;
+    /* x축 기준으로 자기크기의 50%만큼 왼쪽으로 보냄 */
+    /* transform: translateX(-50%); */
+  }
+
+
   /* 컨텐츠영역: 영역높이값  */
   .cont {
     height: auto;
-    margin: 80px 0;
+    margin: 40px 0;
+    padding-top: 0;
   }
 
   .gnb {
@@ -28,15 +42,30 @@
 
   }
 
-
-  /* 로고 */
-  #logo {
-    /* 보이는 화면 기준으로 왼쪽에서 50% - 데스크탑 마진레프트 50px */
-    left: calc(50% - 50px);
-    /* x축 기준으로 자기크기의 50%만큼 왼쪽으로 보냄 */
-    transform: translateX(-50%);
+  .cat {
+    position: relative;
+    /* 캐릭터설명박스 .cd의 부모자격 */
   }
 
+  /* 캐릭터설명박스 */
+  .cd {
+    position: absolute;
+    /* 아래 이미지보다 설명박스가 위에 오도록  */
+    z-index: 1;
+    margin-top: 0
+}
+  /* .cat의 홀수들(1,3,5번) */
+  .cat:nth-child(odd) {
+    margin-right: 6%;
+  }
+
+  /*  */
+  .cat:hover .ci {
+    margin-top: 0;
+  }
+
+
+  
 
   #cbx {
     display: flex;
@@ -55,28 +84,33 @@
   /* 캐릭터박스(.cat)에 마우스 오버 시 
   설명박스(.cd) 높이값 변경  */
   .cat:hover .cd {
-    height: 200px;
+    height: 340px;
   }
 
   .info ul {
-    width: 250px;
-  }
+    display: flex;
+    justify-content: center;
+    position: static;
+    /* 앱솔루트였던 포지션을 static으로 만듬 */
+    
+}
 
   .info li {
-    padding: 0 30px;
-}
+    float: none;
+  }
 
   .fab {
-    transform: scale(2);
-    display: inline-block;
+   font-size: 60px;
+    
   }
 
 
 
-/* 저작권글씨 */
-.bb {
-  margin-top: 0;
-}
+  /* 저작권글씨 */
+  .bb {
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
 }
 
 
@@ -90,6 +124,7 @@
     display: none;
   }
 
+  /* 로고 */
   #logo img {
     width: 300px;
   }
@@ -98,6 +133,7 @@
   .cont {
     height: auto;
     margin-top: 60px;
+
   }
 
 
