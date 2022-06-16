@@ -32,7 +32,7 @@
   .cont {
     height: auto;
     margin: 40px 0;
-    padding-top: 0;
+    padding-top: 100px;
   }
 
   .gnb {
@@ -68,6 +68,10 @@
     font-size: 1.8rem;
   }
 
+  /* 슬라이드배너 박스 */
+  #container {
+    padding-top: 250px;
+}
 
   #cbx {
     display: flex;
@@ -96,7 +100,7 @@
     position: static;
     /* 앱솔루트였던 포지션을 static으로 만듬 */
 
-    padding-top: 260px;
+    padding-top: 100px;
 
   }
 
@@ -167,7 +171,7 @@
   /* 캐릭터박스(.cat)에 마우스 오버 시 
   설명박스(.cd) 높이값 변경  */
   .cat:hover .cd {
-    height: 20px;
+    height: 300px;
   }
 
 
