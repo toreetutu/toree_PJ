@@ -135,7 +135,8 @@
   .scbar {
     /* 모바일에서 전체적으로 왼쪽으로 치우쳐보이는 것 중앙에 가져다놓음 */
     overflow-x: hidden;
-    /*  */
+    /* 캐릭터설명박스가 다음 이미지 밀수있게
+    .cat의 position: relative를 static으로 만듬??? */
     position: static;
   }
 
