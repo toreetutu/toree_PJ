@@ -4,7 +4,6 @@
 /********** 1100px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 1100px) {
 
-
   /* 1.전체 rem단위 글자 변경위한 root 글자크기 변경 */
   html {
     font-size: 10px;
@@ -97,7 +96,7 @@
     position: static;
     /* 앱솔루트였던 포지션을 static으로 만듬 */
 
-      padding-top: 260px;
+    padding-top: 260px;
 
   }
 
@@ -108,11 +107,8 @@
 
   /* sns메뉴 이미지 */
   .fab {
-    font-size: 60px;
-
+    font-size: 40px;
   }
-
-
 
   /* 저작권글씨 */
   .bb {
@@ -126,12 +122,13 @@
 
 /********** 760px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 760px) {
-
+  
   .scbar {
     overflow-x: hidden;
   }
 
-  /* GNB메뉴 숨기기 */
+  /* 숨기기: 슬라이드,  GNB메뉴 */
+  #container,
   .gnb {
     display: none;
   }
@@ -170,10 +167,14 @@
   /* 캐릭터박스(.cat)에 마우스 오버 시 
   설명박스(.cd) 높이값 변경  */
   .cat:hover .cd {
-    height: 200px;
+    height: 20px;
   }
 
 
+
+  .bb {
+    font-size: 1.2rem;
+  }
 
 }
 
@@ -198,5 +199,6 @@
     width: 200px;
   }
 }
+
 
 /********** 350px이하 미디어쿼리 끝 ************/
