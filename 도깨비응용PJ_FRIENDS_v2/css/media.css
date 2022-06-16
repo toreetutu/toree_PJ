@@ -264,7 +264,7 @@
   /* li 하위 a요소 */
   .gnb>ul>li>a {
     color: #fff;
-    font-size: 4vh;
+    font-size: 5vh;
     line-height: 10vh;
   }
 
