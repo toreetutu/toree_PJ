@@ -133,33 +133,61 @@
 @media screen and (max-width: 760px) {
 
   .scbar {
+    /*  */
     overflow-x: hidden;
+    /*  */
     position: static;
   }
 
-  /* 숨기기: 슬라이드,  GNB메뉴 */
+  /* 숨기기: 슬라이드,  GNB메뉴, 서브메뉴, 서브메뉴배경 가상요소 */
   #container,
-  .gnb {
+  .gnb,
+  .smenu,
+  .gnb>ul>li.bgbx::after {
     display: none;
   }
 
   /* 로고박스 */
   #logo {
     /* 보이는 화면 기준으로 왼쪽에서 50% - 로고이미지 자기크기(300px)의 절반인 150px */
-    left: calc(50% - 150px);
+    left: calc(50% - 100px);
   }
 
   /* 로고이미지 */
   #logo img {
-    width: 300px;
+    width: 200px;
   }
+
+  /* 햄버거버튼 보이게 함 */
+  .ham {
+    /* 포지션이 앱솔루트이면 기본 block이다! */
+    display: block;
+    z-index: 1;
+    /* 로고보다위 */
+  }
+
+  /* 햄버거버튼 x버튼으로 문자모양변경 
+    (전체메뉴 보일때만->.top.on일때만) */
+  .top.on .ham::before {
+    content: '×';
+  }
+
+  /* 햄버거(x)버튼 변경 
+    (전체메뉴 보일때만->.top.on일때만) */
+  .top.on .ham {
+    /* 트랜스폼을 이용해 버튼 가로로 늘림 */
+    transform: scale(1.2);
+  }
+
+
+
+
 
   /* 컨텐츠영역: 영역높이값  */
   .cont {
     height: auto;
     margin-top: 60px;
   }
-
 
   /* 캐릭터박스 비율변경
   : 사이즈줄면 캐릭터박스 1개씩 6줄 되면서 커짐 */
@@ -189,6 +217,55 @@
     font-size: 1.2rem;
   }
 
+
+
+  /* 햄버거버튼 클릭시 전체메뉴 GNB 변경 */
+  /* (GNB 보이기-> .top.on일때만) */
+  .top.on .gnb {
+    display: block;
+  }
+
+  .gnb {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 30%);
+    /* 
+      [ rgba의 2가지 표기법 ]
+      1. rgba(red색, green색,blue색,alpha값)
+        -alpha값은 투명도 (소수점으로, 0~1사이)
+      2. rgb(red색 green색 blue색 / alpha값%) 
+        -alpha값은 투명도 (%으로, 0&~100%사이)
+    */
+  }
+
+  .gnb ul {
+    width: auto;
+    margin-top: 15vh;
+  }
+
+  /* li 리스트요소 */
+  .gnb>ul>li {
+    float: none;
+    height: 10vh;
+    padding: 0px;
+    margin-top: 15px;
+    text-align: center;
+    /* outline: 2px dotted pink; */
+  }
+
+  /* li 하위 a요소 */
+  .gnb>ul>li>a {
+    color: #fff;
+    font-size: 4vh;
+    line-height: 10vh;
+  }
+
+
+
+
 }
 
 /********** 760px이하 미디어쿼리 끝 ************/
@@ -203,14 +280,14 @@
 
   /* 로고박스 */
   #logo {
-    top: 45px;
-    /* 보이는 화면 기준으로 왼쪽에서 50% - 로고이미지 자기크기(200px)의 절반인 100px */
-    left: calc(50% - 100px);
+    top: 50px;
+    /* 보이는 화면 기준으로 왼쪽에서 50% - 로고이미지 자기크기(150px)의 절반인 75px */
+    left: calc(50% - 75px);
   }
 
   /* 로고이미지 */
   #logo img {
-    width: 200px;
+    width: 150px;
   }
 
 

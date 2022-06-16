@@ -16,7 +16,7 @@ body {
 
   /* 로고 있는 부분 화면 좌-우 끝까지 흰색 나오도록 겉박스 선택 */
   background-color: rgb(0, 0, 0, .3);
-  
+
 }
 
 .top {
@@ -54,22 +54,23 @@ body {
   /* position: absolute;
   top: -80px;
   right: 0; */
-  /* 부모는? .gnb */
+/* 부모는? .gnb */
 
 
-  /* 마영오- 블록요소 가로중앙정렬
+/* 마영오- 블록요소 가로중앙정렬
   margin: 0 auto; */
 
-  /* outline: 2px dotted blue;
+/* outline: 2px dotted blue;
 } */
 
 /* 가상요소로 clear 설정하기 */
 /* ul에 overflow: hidden 해버리면 서브메뉴가 아래로 보이지 않음, 그래서 가상요소로 float을 끊어줘야함 */
-.gnb ul::after{
+.gnb ul::after {
   content: '';
   display: block;
   clear: both;
 }
+
 /* li 리스트요소 */
 .gnb li {
   /* 블록요소 옆으로 흐르게 */
@@ -79,7 +80,7 @@ body {
   padding: 0 20px;
   margin: 0 20px;
   border: 1px dashed transparent;
-  
+
 
   /* border: 1px solid transparent;
   border-radius: 30px; */
@@ -87,7 +88,7 @@ body {
   /* outline: 2px dotted aqua; */
 }
 
-.gnb>ul> li:hover {
+.gnb>ul>li:hover {
   color: #fff;
   border: 1px dashed #fff;
   border-radius: 20px;
@@ -105,10 +106,10 @@ body {
   top:0; 주게되면 화면 최상단부터 다 덮으므로 left만 값 줌
   top값은 젠틀함  */
 
-  width: 100%; 
+  width: 100%;
   /* 100%는 부모역할을 하는 보이는화면 기준 */
   height: 0;
-  
+
   /* top부분 미세위치 조정은 마진탑으로: top값은 젠틀하므로 값을 줘버리면 디자인이 다 망가지므로 줄 수 없음 */
   margin-top: 20px;
   /* 트랜지션: 속시이지-속성을 하나하나 다 지정해줄 수 있기 때문에 정확히 콕 집어서 height라고 지정해 높이만 만져줌  
@@ -122,6 +123,7 @@ body {
   height: 90px;
   transition: height .4s ease-out;
 }
+
 /* 세번째 li오버시 가상요소배경(반투명검은색) 보이기  */
 .gnb>ul>li.m2:hover::after {
   height: 280px;
@@ -134,7 +136,8 @@ body {
   font-family: 'Shadows Into Light', cursive;
   font-size: 18px;
   font-weight: bold;
-  line-height: 26px; /* 인라인요소a의 위아래 줄간격은 line-height로 설정(세로정렬은 vertical-align) */
+  line-height: 26px;
+  /* 인라인요소a의 위아래 줄간격은 line-height로 설정(세로정렬은 vertical-align) */
   letter-spacing: 1px;
   text-decoration: none;
   color: #222;
@@ -163,7 +166,8 @@ body {
     -> 높이값0 + 넘치는 자식요소 숨기기(오버플로우 히든으로)
       주의) 위아래방향 패딩 없어야 함! */
   height: 0;
-  overflow: hidden; /* oh */
+  overflow: hidden;
+  /* oh */
   line-height: 35px;
   /* background-color: rgb(0, 0, 0, .3); */
   /* 상단마진조정 */
@@ -208,8 +212,10 @@ body {
   /* 블록으로 변경 */
   display: block;
   /* text-align: center; */
-  font-size: 1.4rem; /* 미디어쿼리 적용 시 본래 14px / 10px = 1.4rem */
-  line-height: 25px; /* 미디어쿼리 적용 시 본래 35px / 10px = 3.5rem */
+  font-size: 1.4rem;
+  /* 미디어쿼리 적용 시 본래 14px / 10px = 1.4rem */
+  line-height: 25px;
+  /* 미디어쿼리 적용 시 본래 35px / 10px = 3.5rem */
   /* 인라인요소a의 위아래 줄간격은 line-height로 설정(세로정렬은 vertical-align) */
   /* 트랜지션: 속시이지 */
   transition: .4s;
@@ -220,7 +226,29 @@ body {
   border-bottom: 1px dotted #fff;
 }
 
+/* 햄버거버튼모양 가상요소로 문자넣기 
+  이유: x버튼으로 변경가능하도록 하려고 */
+.ham::before {
+  content: '≡';
+}
 
+/* 모바일용 햄버거 버튼 */
+.ham {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  font-size: 60px;
+  /* 트랜스폼을 이용해 버튼 가로로 늘림 */
+  transform: scaleX(1.2);
+
+  /* 버튼 기본디자인없앰: 배경색 투명으로, 보더 없앰 */
+  background-color: transparent;
+  color: #fff;
+  border: none;
+
+  /* 760px이상일때 안보임 */
+  display: none; /* 모바일 일때 보이게 하려면 media.css 파일에서 display:block; */
+}
 
 
 /**************** 2. 메인영역 *****************/
@@ -229,6 +257,7 @@ body {
   겉의 박스에 높이값 주면 안쪽에 100%로 높이값 줘야 하므로 불편 */
   height: 750px;
 }
+
 /**************** 3. 하단영역 *****************/
 .info {
   /* 높이값 */
@@ -243,7 +272,7 @@ body {
   /* 블록가로중앙 마영오 */
   margin: 0 auto;
   /* outline: 1px dotted blue; */
-  
+
   position: absolute;
   top: 0;
   right: 0;
@@ -289,7 +318,7 @@ body {
   width: 10%;
   padding-top: 10%;
   vertical-align: middle;
-  
+
   /* 아이콘이미지 */
   background: url(../images/ftlogo.png) no-repeat;
   /* background-position: 53% -45%; */
