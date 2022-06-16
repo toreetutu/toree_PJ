@@ -75,7 +75,7 @@
 
   /* 이미지+설명박스의 홀수들(1,3,5번) */
   .cat:nth-child(odd) {
-    margin-right: 6%;
+    margin-right: 10%;
   }
 
   /* 이미지+설명박스에 마우스오버시  */
@@ -107,9 +107,6 @@
     justify-content: center;
     position: static;
     /* 앱솔루트였던 포지션을 static으로 만듬 */
-
-    padding-top: 100px;
-
   }
 
   /* sns메뉴 */
@@ -137,6 +134,7 @@
 
   .scbar {
     overflow-x: hidden;
+    position: static;
   }
 
   /* 숨기기: 슬라이드,  GNB메뉴 */
@@ -160,7 +158,6 @@
   .cont {
     height: auto;
     margin-top: 60px;
-
   }
 
 
@@ -182,6 +179,11 @@
     height: 300px;
   }
 
+  /* 하단영역 */
+  /* .info ul {
+    margin-top: 300px;
+  } */
+
   /* 저작권글씨 */
   .bb {
     font-size: 1.2rem;
@@ -197,6 +199,7 @@
   .top {
     height: 120px;
   }
+
 
   /* 로고박스 */
   #logo {
