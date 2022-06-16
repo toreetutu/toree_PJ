@@ -256,6 +256,11 @@
     /* outline: 2px dotted pink; */
   }
 
+  /* gnb 마우스오버시 */
+  .gnb>ul>li:hover {
+    border-radius: 50px;
+}
+
   /* li 하위 a요소 */
   .gnb>ul>li>a {
     color: #fff;
