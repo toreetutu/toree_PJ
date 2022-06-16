@@ -140,12 +140,15 @@
     position: static;
   }
 
-  /* 숨기기: 슬라이드,  GNB메뉴, 서브메뉴, 서브메뉴배경 가상요소 */
+  /* 숨기기: 슬라이드,  GNB메뉴, 서브메뉴 */
   #container,
   .gnb,
-  .smenu,
-  .gnb>ul>li.bgbx::after {
+  .smenu{
     display: none;
+  }
+
+  .top {
+    height: 120px;
   }
 
   /* 로고박스 */
@@ -260,7 +263,7 @@
   /* gnb 마우스오버시 */
   .gnb>ul>li:hover {
     border-radius: 50px;
-}
+  }
 
   /* li 하위 a요소 */
   .gnb>ul>li>a {
@@ -279,8 +282,14 @@
 /********** 350px이하 미디어쿼리 시작 ************/
 
 @media screen and (max-width: 350px) {
+  /* 상단영역 높이 */
   .top {
     height: 120px;
+  }
+
+  /* 숨기기: 서브메뉴배경 가상요소 */
+  .gnb>ul>li.bgbx::after {
+    display: none;
   }
 
 
@@ -308,8 +317,8 @@
     right: 10px;
     font-size: 40px;
   }
-    
-    
+
+
 
 
 }
