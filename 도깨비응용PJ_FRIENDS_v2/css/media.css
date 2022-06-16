@@ -133,7 +133,7 @@
 @media screen and (max-width: 760px) {
 
   .scbar {
-    /*  */
+    /* 모바일에서 전체적으로 왼쪽으로 치우쳐보이는 것 중앙에 가져다놓음 */
     overflow-x: hidden;
     /*  */
     position: static;
