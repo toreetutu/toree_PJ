@@ -302,6 +302,15 @@
     font-size: 1rem;
   }
 
+  /* 햄버거버튼: 조금 작게 */
+  .ham {
+    top: 35px;
+    right: 10px;
+    font-size: 40px;
+  }
+    
+    
+
 
 }
 
