@@ -186,7 +186,7 @@
   /* 컨텐츠영역: 영역높이값  */
   .cont {
     height: auto;
-    margin-top: 60px;
+    margin-top: -50px;
   }
 
   /* 캐릭터박스 비율변경
