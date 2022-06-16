@@ -136,6 +136,8 @@ function loadFn() {
 
       } ///// else문 //////////
 
+      return false;
+      // a요소 튀지않게 return false;
 
     }; //////// click /////////
 

@@ -219,8 +219,8 @@ body {
 #container {
   /*최상위부모*/
   position: relative;
-  width: 1400px;
-  height: 600px;
+  max-width: 1400px;
+  height: 700px;
   margin: 0px auto;
 }
 
@@ -228,7 +228,7 @@ body {
 #container>section {
   /*슬라이드부모*/
   position: relative;
-  width: 913px;
+  width: 1000px;
   height: 564px;
   margin: 0 auto;
   overflow: hidden;
@@ -289,19 +289,22 @@ body {
   display: flex;
   /* 플렉스박스 */
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   left: 80px;
 }
 
 .indic li {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
+  padding: 0 10px;
 }
 
 .indic li img {
   position: absolute;
   /*이미지 겹치게*/
+  width: 10px;
+  height: 10px;
 }
 
 .indic li img:last-child {
