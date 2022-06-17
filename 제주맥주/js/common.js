@@ -7,7 +7,7 @@
  **************************************************/
 function showGNB() {
   // 1.함수호출 확인
-  console.log('나야나');
+  // console.log('나야나');
 
   // 2.변경대상: .top (상단영역)
   var tg = document.querySelector(".top");
@@ -31,6 +31,13 @@ function showGNB() {
 let scTop;
 // 위로가기버튼 대상: .tbtn
 let tbtn;
+// 등장액션 대상: .scAct
+let scAct;
+// 등장액션 대상위치(배열변수)
+const scPos = [];
+// 화면높이값 기준 등장액션 위치 보정변수(화면높이의 2/3)
+const winH = window.innerHeight / 3 * 2
+
 
 /////////// 로드구역 /////////////////
 window.addEventListener("DOMContentLoaded", () => {
@@ -42,18 +49,51 @@ window.addEventListener("DOMContentLoaded", () => {
   tbtn = document.querySelector(".tbtn")
 
   // 위로가기버튼 클릭시 => 제이쿼리로 부드러운 이동 
-  $('.tbtn').click(()=>{
+  $('.tbtn').click(() => {
     // 제이쿼리 스크롤 애니메이션
     // animate({css속성변경},시간)
-    $('html,body').animation({
+    $('html,body').animate({
       scrollTop: "0"
     }, 300); ///// animate /////
 
-    // 부드러운 스크롤 위치값 어데이트
+    // 부드러운 스크롤 위치값 업데이트
     pos = 0;
   }); ////////// click /////////
 
+  // 등장액션요소
+  scAct = document.querySelectorAll(".scAct");
+
+  // 등장액션 요소의 위치값 저장하기
+  scAct.forEach((ele, idx) => { // ele-요소자신, idx-순번
+    // // console.log("scAct위치:",ele.offsetTop);
+    // 전역배열변수에 저장함
+    scPos[idx] = ele.getBoundingClientRect().top;
+
+  }); ///////// forEach /////////
+
+  // 위치배열변수 확인
+  // console.log(scPos);
+
 }); //////////// 로드구역 ////////////
+
+/********************************************* 
+  함수명: scAction
+  기능 : 스크롤 등장액션 구간별 클래스주기
+*********************************************/
+function scAction(seq) { // seq - 순번
+
+  // // console.log("체크:",seq);
+
+  // 해당범위이면 해당순번의 등장요소에 class="on"
+  if (scTop >= scPos[seq] - winH &&
+    scTop < scPos[seq]) {
+    scAct[seq].classList.add("on");
+    // // console.log("적용:",seq);
+  } ////////// if ////////////
+
+}; ///////////// scAction 함수//////////////////
+////////////////////////////////////////////////
+
 
 /********************************************* 
   [ 윈도우 스크롤 이벤트 함수 ]
@@ -65,16 +105,16 @@ window.addEventListener("DOMContentLoaded", () => {
 window.addEventListener('scroll', () => {
   // 스크롤 위치표시
   scTop = this.scrollY;
-  console.log("스크롤위치:", scTop);
+  // console.log("스크롤위치:", scTop);
   // scrollY - 세로축 스크롤위치값 리턴
   // this는 화살표함수에서 window객체임
-  console.log("this의미:", this);
+  // console.log("this의미:", this);
 
   // [ 여러방법의 스크롤위치값 알아오기 ]
   /* 
-  console.log("스크롤위치2:",document.scrollingElement.scrollTop);
-  console.log("스크롤위치3:",document.documentElement.scrollTop);
-  console.log("스크롤위치4:",document.querySelector("html").scrollTop); 
+  // console.log("스크롤위치2:",document.scrollingElement.scrollTop);
+  // console.log("스크롤위치3:",document.documentElement.scrollTop);
+  // console.log("스크롤위치4:",document.querySelector("html").scrollTop); 
   */
 
   ////////////////////////////////////
@@ -89,6 +129,14 @@ window.addEventListener('scroll', () => {
   // 300px미만일경우 클래스"on"제거 
   else
     tbtn.classList.remove("on");
+
+    
+  // 스크롤시 등장요소 위치값 개수만큼 scAction함수 호출! 
+  scPos.forEach((val, idx) => scAction(idx))
+  // 배열변수.forEach((배열값,순번)=>{구현코드})
+
+
+
 
 }); /////////////////// scroll ///////////////
 //////////////////////////////////////////////

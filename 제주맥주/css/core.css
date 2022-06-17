@@ -49,3 +49,16 @@
   overflow: hidden;
 }
 /* IR기법 사용시 주의사항: display:none 사용금지! 왜? 스크린리더기가 못 읽음!  */
+
+
+/* 등장액션 클래스 */
+.scAct {
+  transform: translateY(40%);
+  opacity: 0;
+  transition: 1.2s cubic-bezier(0.56, 0.15, 0, 0.76);
+}
+
+.scAct.on {
+  transform: translateY(0px);
+  opacity: 1;
+}
