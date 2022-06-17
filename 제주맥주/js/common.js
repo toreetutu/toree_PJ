@@ -34,9 +34,24 @@ let tbtn;
 
 /////////// 로드구역 /////////////////
 window.addEventListener("DOMContentLoaded", () => {
-  
+
+  // 부드러운 스크롤 호출
+  startSS();
+
   // 위로가기버튼 대상선정: .tbtn
   tbtn = document.querySelector(".tbtn")
+
+  // 위로가기버튼 클릭시 => 제이쿼리로 부드러운 이동 
+  $('.tbtn').click(()=>{
+    // 제이쿼리 스크롤 애니메이션
+    // animate({css속성변경},시간)
+    $('html,body').animation({
+      scrollTop: "0"
+    }, 300); ///// animate /////
+
+    // 부드러운 스크롤 위치값 어데이트
+    pos = 0;
+  }); ////////// click /////////
 
 }); //////////// 로드구역 ////////////
 
@@ -79,18 +94,18 @@ window.addEventListener('scroll', () => {
 //////////////////////////////////////////////
 
 
-  /************************************************** 
-        [윈도우 세로 스크롤 위치값 가져오는 방법]
+/************************************************** 
+      [윈도우 세로 스크롤 위치값 가져오는 방법]
 
-        1. this.scrollY (this키워드가 window의미)
-        2. window.scrollY
-        3. document.scrollingElement.scrollTop
-        4. document.documentElement.scrollTop
-        5. document.querySelector("html").scrollTop
+      1. this.scrollY (this키워드가 window의미)
+      2. window.scrollY
+      3. document.scrollingElement.scrollTop
+      4. document.documentElement.scrollTop
+      5. document.querySelector("html").scrollTop
 
-        참고) 가로스크롤일 경우
-            scrollY -> scrollX
-            scrollTop -> scrollLeft
-            로 바꿔서 위와 동일함!
+      참고) 가로스크롤일 경우
+          scrollY -> scrollX
+          scrollTop -> scrollLeft
+          로 바꿔서 위와 동일함!
 
-    **************************************************/
+  **************************************************/

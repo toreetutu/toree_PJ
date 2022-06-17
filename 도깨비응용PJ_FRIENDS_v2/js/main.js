@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", loadFn);
   1. 이벤트 종류: click
   2. 이벤트 대상: 이동버튼 (.abtn)
   3. 변경 대상: 슬라이드박스(#slide)
-  4. 기능설계: 
+  4. 기능설계:
 
       (1) 오른쪽버튼 클릭시 다음 슬라이드가 나타나도록 
         슬라이드 박스에 left값을 -100%로 변경시킨다
@@ -80,7 +80,7 @@ function loadFn() {
       // console.log("광클막기:", prot);
 
       /////////// 광클금지 //////////
-      if (prot) return; // 돌아가 설정
+      if (prot) return false; // 돌아가 설정
       prot = 1; // 잠금 설정
       setTimeout(() => prot = 0, 410);
       // 타임아웃으로 슬라이드 이동후 
@@ -137,7 +137,7 @@ function loadFn() {
       } ///// else문 //////////
 
       return false;
-      // a요소 튀지않게 return false;
+      // a요소 튀지않게(버튼눌렀을때 튀지않게함 return false);
 
     }; //////// click /////////
 
