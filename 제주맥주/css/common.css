@@ -523,13 +523,18 @@ video {
 /* 위로가기버튼:스크롤값 0일때 안보임 */
 /* 클래스 tbtn 주고 투명하게해서 숨김 */
 .tbtn {
-  opacity: 0;
+  display: none;
+
+  /* opacity: 0; */
   /* 투명 */
+  /* opacity로 하면 위  */
 }
 
 /* 위로가기버튼 클래스on상태: 이때작동함 */
 .tbtn.on {
-  opacity: 1;
+  display: block;
+
+  /* opacity: 1; */
   /* 나타나기 */
   bottom: 0;
   /* 올라옴! */
