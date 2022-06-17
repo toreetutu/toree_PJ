@@ -131,8 +131,8 @@
 
 /********** 760px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 760px) {
-
-  .scbar {
+  html,
+  body {
     /* 모바일에서 전체적으로 왼쪽으로 치우쳐보이는 것 중앙에 가져다놓음 */
     overflow-x: hidden;
     /* 캐릭터설명박스가 다음 이미지 밀수있게
@@ -143,8 +143,15 @@
   /* 숨기기: 슬라이드,  GNB메뉴, 서브메뉴 */
   #container,
   .gnb,
-  .smenu{
+  .smenu {
     display: none;
+  }
+
+  #top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
   .top {
@@ -231,7 +238,7 @@
 
   .gnb {
     position: fixed;
-    top: 0;
+    top: 17px;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -247,7 +254,7 @@
 
   .gnb ul {
     width: auto;
-    margin-top: 15vh;
+    margin-top: 7vh;
   }
 
   /* li 리스트요소 */
@@ -273,6 +280,11 @@
   }
 
 
+  /* 햄버거버튼 클릭시(x버튼일때)
+  로고 사라짐 */
+  .top.on #logo img {
+    display: none;
+}
 }
 
 /********** 760px이하 미디어쿼리 끝 ************/
@@ -280,6 +292,7 @@
 /********** 350px이하 미디어쿼리 시작 ************/
 
 @media screen and (max-width: 350px) {
+
   /* 상단영역 높이 */
   .top {
     height: 120px;
