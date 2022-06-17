@@ -9,9 +9,9 @@
 
 
 /* 전체화면 구현중 공사중 외곽선 표시: body밑의 만들어진 모든 것에 적용 */
-body * {
+/* body * {
   outline: 1px dashed lime;
-}
+} */
 
 
 

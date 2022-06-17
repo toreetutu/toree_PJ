@@ -6,6 +6,12 @@
 /* 상단영역, 하단영역 등 공통디자인 */
 
 
+html {
+  /* 부드러운 스크롤이동- 로봇PJ때 함 */
+  scroll-behavior: smooth;
+}
+
+
 /* 공통 글씨체,배경색 */
 body {
   font-family: 'Nanum Gothic', 'Malgun Gothic', 'sans-serif';
@@ -331,10 +337,11 @@ video {
   background-image: url(../images/shopping-cart-solid.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  width:25px;
+  width: 25px;
   height: 25px;
   margin-left: 5px;
-  color: #1ecad3; /* 이렇게 색상 안바뀜 filter로 변경*/
+  color: #1ecad3;
+  /* 이렇게 색상 안바뀜 filter로 변경*/
   /* svg 이미지 색상바꾸기 
   : https://codepen.io/sosuke/pen/Pjoqqp
   에서 16진법색상코드(HEX코드)넣고 filter 속성 코드로 변환  */
@@ -511,4 +518,19 @@ video {
 .fixed_icon img {
   width: 100%;
   height: 100%;
+}
+
+/* 위로가기버튼:스크롤값 0일때 안보임 */
+/* 클래스 tbtn 주고 투명하게해서 숨김 */
+.tbtn {
+  opacity: 0;
+  /* 투명 */
+}
+
+/* 위로가기버튼 클래스on상태: 이때작동함 */
+.tbtn.on {
+  opacity: 1;
+  /* 나타나기 */
+  bottom: 0;
+  /* 올라옴! */
 }

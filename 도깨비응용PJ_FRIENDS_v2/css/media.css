@@ -131,13 +131,11 @@
 
 /********** 760px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 760px) {
+
   html,
   body {
     /* 모바일에서 전체적으로 왼쪽으로 치우쳐보이는 것 중앙에 가져다놓음 */
     overflow-x: hidden;
-    /* 캐릭터설명박스가 다음 이미지 밀수있게
-    .cat의 position: relative를 static으로 만듬??? */
-    position: static;
   }
 
   /* 숨기기: 슬라이드,  GNB메뉴, 서브메뉴 */
@@ -192,12 +190,10 @@
 
 
 
-
-
   /* 컨텐츠영역: 영역높이값  */
   .cont {
     height: auto;
-    margin-top: -50px;
+    margin-top: 50px;
   }
 
   /* 캐릭터박스 비율변경
@@ -212,6 +208,12 @@
     margin-right: 0;
   }
 
+  .cat .cd {
+    /* 캐릭터설명박스가 다음 이미지 밀수있게
+    .cat의 position: absolute를 static으로 만들어서
+    자리를 차지하고 밀고 나가게 함 */
+    position: static;
+  }
   /* 캐릭터박스(.cat)에 마우스 오버 시 
   설명박스(.cd) 높이값 변경  */
   .cat:hover .cd {
@@ -284,7 +286,7 @@
   로고 사라짐 */
   .top.on #logo img {
     display: none;
-}
+  }
 }
 
 /********** 760px이하 미디어쿼리 끝 ************/
