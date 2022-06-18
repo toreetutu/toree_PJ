@@ -70,9 +70,7 @@ function linkFn() {
         case "LOGIN":
           url = "login.html";
           break;
-        case "서브유튜브":
-          url = "https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw";
-          break;
+        
 
 
         default:

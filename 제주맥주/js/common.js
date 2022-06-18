@@ -123,7 +123,7 @@ window.addEventListener('scroll', () => {
 
   // 1. 스크롤위치가 300px이상일때
   // 변경사항: .tbtn에 클래스 "on"넣기
-  // 함수가 하나라서 중괄호 제거가능
+  // 실행문이 하나라서 중괄호 제거가능
   if (scTop >= 300)
     tbtn.classList.add("on");
   // 300px미만일경우 클래스"on"제거 
