@@ -4,6 +4,11 @@
 /********** 1100px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 1100px) {
 
+  /* 0. 숨기기: SNS메뉴 앞에 넣은 가상요소 door 이미지 */
+  .info::before {
+    display: none;
+  }
+  
   /* 1.전체 rem단위 글자 변경위한 root 글자크기 변경 */
   html {
     font-size: 10px;

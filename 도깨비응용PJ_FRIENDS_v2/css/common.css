@@ -291,6 +291,21 @@ body {
   clear: both;
 }
 
+/* SNS 메뉴 앞 가상요소로 액자이미지 넣기 */
+.info::before {
+  content: '';
+  width: 25px;
+  height: 33px;
+  display: inline-block;
+  position: absolute;
+  right: 190px;
+  background: url(../images/door.png) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  cursor: pointer;
+  /* outline: 1px solid red; */
+}
+
 /* SNS 메뉴 */
 .fab {
   color: #fff;
