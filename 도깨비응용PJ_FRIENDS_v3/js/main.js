@@ -3,8 +3,6 @@
 // HTML 태그 로딩 후 loadFn함수 호출!
 window.addEventListener("DOMContentLoaded", loadFn);
 
-// 부드러운 스크롤 호출
-startSS();
 
 /************************************************* 
   [ 슬라이드 이동 기능정의 ]
@@ -38,6 +36,9 @@ startSS();
   기능: 로딩후 버튼이벤트 및 기능구현
 *************************************************/
 function loadFn() {
+
+  // 부드러운 스크롤 호출
+  startSS();
 
   // 1. 호출확인
   // console.log("로딩완료!");
@@ -300,7 +301,7 @@ function showGNB() {
   x버튼 클릭하면 동영상 창이 닫힘
  **************************************************/
 function onClickshowVideo() {
-  
+
   // alert("비디오?");
 
   // 슬레이트버튼 클릭하면 슬라이드 위치에 동영상재생됨 
@@ -319,14 +320,23 @@ function onClickshowVideo() {
   `;
 
   // 유튜브 디자인/위치 변경
+
+  popupMovie.style.position = "absolute";
+  popupMovie.style.display = "block";
+  popupMovie.style.top = "0%";
+  popupMovie.style.left = "0%";
+  popupMovie.style.width = "100%";
+  popupMovie.style.height = "100%";
+  popupMovie.style.backgroundColor = "#000";
+
+  // 유튜브 디자인/위치 변경
   const mv = document.querySelector("#mv");
 
   mv.style.position = "absolute";
   mv.style.top = "0%";
-  mv.style.left = "50%";
-  mv.style.transform = "translate(-50%,-93%)";
-  mv.style.width = "1000px";
-  mv.style.height = "564px";
+  mv.style.left = "0%";
+  mv.style.width = "100%";
+  mv.style.height = "100%";
   mv.style.backgroundColor = "#000";
 
 
@@ -347,7 +357,10 @@ function onClickshowVideo() {
   cbtn.style.cursor = "pointer";
 
   // 닫기버튼 cbtn 변수 클릭하면 유튜브 제거되는 함수 할당(실행)
-  cbtn.onclick = () => mv.remove();
+  cbtn.onclick = () => {mv.remove();
+    popupMovie.style.display = "none";
+  }
+
 
 }; //////////// onClickShowVideo 함수////////////////
 /////////////////////////////////////////////////////

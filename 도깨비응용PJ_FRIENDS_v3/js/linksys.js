@@ -29,7 +29,7 @@ function linkFn() {
 
   // 2. 대상선정: .top a -> 상단영역의 모든 a
   // 변수 만들어주고 접근(선택함 -> .top 밑의 a가 여러개니까 querySelectorAll)
-  var alink = document.querySelectorAll(".top a");
+  var alink = document.querySelectorAll(".top a,.sns a");
   console.log("a링크 개수:", alink.length, alink);
   // length는 컬렉션 집합의 개수
   // html 요소가 여러개 담긴 메모리공간을 컬렉션이라고 함
