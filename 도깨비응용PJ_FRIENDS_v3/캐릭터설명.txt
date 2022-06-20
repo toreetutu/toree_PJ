@@ -32,3 +32,15 @@ Joey Tribbiani
 Joey is a good-natured but not-so-bright struggling actor. Through out the series he has a variety, including a stint on the soap opera Days of Our Lives. Joey is obsessed with food.
 
 Joey is a womanizer, with many girlfriends throughout the series, often using his catchphrase pick-up line "How you doin'?".
+
+
+============================
+<li>
+          <a href="https://www.instagram.com/friends/" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/friendstv" target="_blank"><i class="fab fa-twitter-square  fa-3x"></i></a>
+        </li>
+        <li>
+          <a href="https://www.imdb.com/title/tt0108778/" target="_blank"><i class="fab fa-imdb fa-3x"></i></a>
+        </li>

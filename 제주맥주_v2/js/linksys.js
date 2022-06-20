@@ -144,7 +144,7 @@ function linkFn() {
       // 본 코드 맨 끝에 해야함 (위에서 하면 만나는 순간 빠져나감)
 
 
-      return false;
+    
     }
   }
 

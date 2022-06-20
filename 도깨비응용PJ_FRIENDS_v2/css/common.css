@@ -292,7 +292,7 @@ body {
 }
 
 /* SNS 메뉴 앞 가상요소로 액자이미지 넣기 */
-.info::before {
+/* .info::before {
   content: '';
   width: 25px;
   height: 33px;
@@ -303,8 +303,7 @@ body {
   background-size: 100%;
   background-position: center;
   cursor: pointer;
-  /* outline: 1px solid red; */
-}
+} */
 
 /* SNS 메뉴 */
 .fab {

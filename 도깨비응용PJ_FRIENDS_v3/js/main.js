@@ -1,8 +1,10 @@
 /* FRIENDS 공통 JS - 01.가로방향 배너 슬라이드 응용 */
 
 // HTML 태그 로딩 후 loadFn함수 호출!
-
 window.addEventListener("DOMContentLoaded", loadFn);
+
+// 부드러운 스크롤 호출
+startSS();
 
 /************************************************* 
   [ 슬라이드 이동 기능정의 ]
@@ -346,4 +348,6 @@ function onClickshowVideo() {
 
   // 닫기버튼 cbtn 변수 클릭하면 유튜브 제거되는 함수 할당(실행)
   cbtn.onclick = () => mv.remove();
-};
+
+}; //////////// onClickShowVideo 함수////////////////
+/////////////////////////////////////////////////////

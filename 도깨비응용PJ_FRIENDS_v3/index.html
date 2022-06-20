@@ -13,12 +13,7 @@
   <link rel="stylesheet" href="./css/media.css">
   <!-- 외부JS삽입 -->
   <script src="js/main.js"></script>
-  <style>
-    /* i {
-      width: 20px;
-      height: 20px;
-    } */
-  </style>
+  <script src="js/linksys.js"></script>
 </head>
 
 <body class="scbar">
@@ -30,7 +25,8 @@
     <header class="inbox top">
       <!-- 1-1.메인로고 -->
       <h1 id="logo">
-        <a href="index.html">
+        <a href="#">
+          <span class="ir">로고</span>
           <img src="./images/blogo.png" alt="프렌즈로고">
         </a>
       </h1>
@@ -293,8 +289,8 @@
 
           <!-- 동영상 -->
           <div id="popupMovie"></div>
-      
-        </section>
+
+      </section>
     </div>
   </div>
 
@@ -307,13 +303,22 @@
           <span onclick="onClickshowVideo()"><i class="fa-solid fa-clapperboard fa-3x"></i></span>
         </li>
         <li>
-          <a href="https://www.instagram.com/friends/" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a>
+          <a href="#">
+            <i class="fab fa-instagram-square fa-3x"></i>
+            <span class="ir">인스타</span>
+          </a>
         </li>
         <li>
-          <a href="https://twitter.com/friendstv" target="_blank"><i class="fab fa-twitter-square  fa-3x"></i></a>
+          <a href="#">
+            <i class="fab fa-twitter-square fa-3x"></i>
+            <span class="ir">트위터</span>
+          </a>
         </li>
         <li>
-          <a href="https://www.imdb.com/title/tt0108778/" target="_blank"><i class="fab fa-imdb fa-3x"></i></a>
+          <a href="#">
+            <i class="fab fa-imdb fa-3x"></i>
+            <span class="ir">imdb</span>
+          </a>
         </li>
       </ul>
       <!-- 3-2. 사이트정보 -->
