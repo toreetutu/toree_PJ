@@ -108,6 +108,8 @@ video {
   font-family: 'Nunito', sans-serif;
   font-size: 12px;
   font-weight: bold;
+  /* 트랜지션: 속시이지 */
+  transition: color .5s;
 }
 
 /* LOGIN~RECRUIT 글자 마우스 오버시 색상변경 */
@@ -128,12 +130,14 @@ video {
   border: 1px solid #1ecad3;
   border-radius: 20px;
   background-color: #1ecad3;
+  /* 트랜지션: 속시이지 */
+  transition: border .5s;
 }
 
-/* 제주맥주라이프, 양조장예약 글자에 각각 마우스오버 시 배경색변경 */
-.topmn2 li:hover {
+/* 제주맥주라이프, 양조장예약에 각각 마우스오버 시 배경색변경 */
+.topmn2:hover li {
   background-color: #10adb5;
-  ;
+
 }
 
 /* 제주맥주라이프,양조장예약 글자 */
@@ -172,6 +176,8 @@ video {
   font-family: 'Baloo Da 2', cursive;
   font-size: 16px;
   font-weight: bold;
+  /* 트랜지션: 속시이지 */
+  transition: color .8s;
 }
 
 /* JEJUBEERLIFE~BREWERY 글자 및 주변에 마우스오버 시 글자색상변경 */

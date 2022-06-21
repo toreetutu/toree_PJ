@@ -15,7 +15,7 @@ body {
   /* 포지션이 static이 아니어야 z-index가 적용됨  */
 
   /* 로고 있는 부분 화면 좌-우 끝까지 흰색 나오도록 겉박스 선택 */
-  background-color: rgb(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .3);
 
 }
 
