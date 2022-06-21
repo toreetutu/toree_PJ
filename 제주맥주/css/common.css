@@ -131,11 +131,12 @@ video {
   border-radius: 20px;
   background-color: #1ecad3;
   /* 트랜지션: 속시이지 */
-  transition: border .5s;
+  transition: .3s ease-in-out;
 }
 
 /* 제주맥주라이프, 양조장예약에 각각 마우스오버 시 배경색변경 */
-.topmn2:hover li {
+.topmn2 li:hover {
+  border: 1px solid #10adb5;
   background-color: #10adb5;
 
 }
@@ -176,12 +177,13 @@ video {
   font-family: 'Baloo Da 2', cursive;
   font-size: 16px;
   font-weight: bold;
+
   /* 트랜지션: 속시이지 */
-  transition: color .8s;
+  transition: .2s ease-in-out;
 }
 
 /* JEJUBEERLIFE~BREWERY 글자 및 주변에 마우스오버 시 글자색상변경 */
-.gnb li:hover a {
+.gnb li a:hover {
   color: #1ecad3;
 }
 
@@ -203,6 +205,7 @@ video {
   /* 모바일 아닐 때 안보임 */
   display: none;
   /* 모바일 일때 보이게 하려면 media.css 파일에서 display:block; */
+
 }
 
 /* 햄버거버튼모양 가상요소로 문자넣기 
@@ -454,6 +457,9 @@ video {
   margin-right: 35px;
   white-space: nowrap;
   margin-bottom: 64px;
+
+  /* 트랜지션: 속시이지 */
+  transition: .3s ease-in-out;
 }
 
 /* 추가정보링크 글자 호버시 */
