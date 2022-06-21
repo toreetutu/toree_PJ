@@ -308,13 +308,13 @@ body {
 
 
 /* SNS 메뉴 */
-.fa-solid,
-.fab {
+.sns .fa-solid,
+.sns .fab {
   color : #fff;
 }
 
-.fa-solid:hover,
-.fab:hover {
+.sns .fa-solid:hover,
+.sns .fab:hover {
   color: #333;
   /* 마우스오버시 색상변경 */
 }
