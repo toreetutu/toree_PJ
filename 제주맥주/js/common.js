@@ -1,5 +1,14 @@
 // 제주맥주 PJ 공통 JS ///////////////////
 
+// 페이지명 변수
+let pname = location.pathname.split('/');
+// location.pathname 페이지명이 포함된 전체경로
+// split(자를문자열) -> 배열에 담는다!
+pname = pname[pname.length - 1];
+// pname[개수-1] -> 배열의 마지막 데이터
+pname = pname.split(".")[0]; // -> 페이지이름만!
+console.log("페이지이름:", pname);
+
 /*************************************************** 
   함수명: showGNB
   기능 : GNB메뉴(서브페이지)를 보였다 숨기기 위해
@@ -104,7 +113,10 @@ function scAction(seq) { // seq - 순번
 *********************************************/
 window.addEventListener('scroll', () => {
 
-  
+   // 로그인, 회원가입, 갤러리 페이지는 스크롤셋팅 안함!
+   if (pname === "login" ||
+   pname === "member") return;
+
   // 스크롤 위치표시
   scTop = this.scrollY;
   // console.log("스크롤위치:", scTop);
