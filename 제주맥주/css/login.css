@@ -7,9 +7,9 @@
 @import url(common.css);
 
 /* 전체화면 구현중 공사중 외곽선 표시: body밑의 만들어진 모든 것에 적용 */
-body * {
+/* body * {
   outline: 1px dashed lime;
-}
+} */
 
 
 /* 컨텐츠영역 겉박스 */
@@ -171,7 +171,7 @@ input:focus {
   margin: 0 auto;
   font-size: 14px;
   text-align: center;
-  line-height: 60px;
+  line-height: 80px;
   /* outline: 2px dashed red; */
 }
 
@@ -249,7 +249,7 @@ input:focus {
 }
 
 
-/************ 제주맥주 메인 페이지 미디어쿼리 **************/
+/************ 제주맥주 로그인 페이지 미디어쿼리 **************/
 
 /********** 1024px이하 미디어쿼리 시작 ************/
 @media screen and (max-width: 1024px) {

@@ -103,6 +103,8 @@ function scAction(seq) { // seq - 순번
   - 스크롤 이벤트값: scrollY
 *********************************************/
 window.addEventListener('scroll', () => {
+
+  
   // 스크롤 위치표시
   scTop = this.scrollY;
   // console.log("스크롤위치:", scTop);

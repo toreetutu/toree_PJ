@@ -70,18 +70,22 @@ function linkFn() {
         case "LOGIN":
           url = "login.html";
           break;
-        // case "유튜브":
-        //   url = "https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw";
-        //   break;
-        // case "페이스북":
-        //   url = "https://www.facebook.com/jejubeerofficial";
-        //   break;
-        // case "인스타":
-        //   url = "https://www.instagram.com/jejubeerofficial";
-        //   break;
-        // case "블로그":
-        //   url = "https://post.naver.com/my.nhn?memberNo=39126203";
-        //   break;
+        case "JOIN":
+          url = "member.html";
+          break;
+
+          // case "유튜브":
+          //   url = "https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw";
+          //   break;
+          // case "페이스북":
+          //   url = "https://www.facebook.com/jejubeerofficial";
+          //   break;
+          // case "인스타":
+          //   url = "https://www.instagram.com/jejubeerofficial";
+          //   break;
+          // case "블로그":
+          //   url = "https://post.naver.com/my.nhn?memberNo=39126203";
+          //   break;
 
 
 
