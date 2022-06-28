@@ -1,8 +1,9 @@
 # toree_PJ
-01_도깨비응용PJ_FRIENDS
 
-02_도깨비응용PJ_FRIENDS_v2 : 미디어쿼리 / 자바스크립트 적용
+01_CGV PJ
 
-03_도깨비응용PJ_FRIENDS_v3 : 자바스크립트로 동영상 넣기 적용
+02_VOGUE PJ
+
+03_FRIENDS_v3
 
 04_제주맥주PJ
