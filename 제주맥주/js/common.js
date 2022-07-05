@@ -3,7 +3,7 @@
 // 페이지명 변수
 let pname = location.pathname.split('/');
 // location.pathname 페이지명이 포함된 전체경로
-// split(자를문자열) -> 배열에 담는다!
+// split(자를 문자열) -> 배열에 담는다!
 pname = pname[pname.length - 1];
 // pname[개수-1] -> 배열의 마지막 데이터
 pname = pname.split(".")[0]; // -> 페이지이름만!

@@ -73,6 +73,10 @@ function linkFn() {
         case "JOIN":
           url = "member.html";
           break;
+        case "ID/PW":
+          url = "join.html";
+          break;
+
 
           // case "유튜브":
           //   url = "https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw";
