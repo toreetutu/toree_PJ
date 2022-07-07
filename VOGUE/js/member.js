@@ -25,7 +25,7 @@ $(() => { /////////////// jQB /////////////////////
 
     ******************************************/
     $(`input[type=text][id!=email2][class!=search],
-   input[type=password]`)
+    input[type=password]`)
         .blur(function () {
 
             // 모든공백 제거함수 //////
