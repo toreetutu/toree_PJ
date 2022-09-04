@@ -1,0 +1,361 @@
+<!-- /* 원무_수납 > 02진료비계산기준관리 > 16할인코드관리PA021601 */ -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- 해당 문서의 문자 인코딩 타입을 정의: content-type 속성값 / 문서의 MIME 타입이나 문서의 문자셋을 설정 -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <!-- 호환성보기: 인터넷 익스플로러 최신버전으로 랜더링한 후 문서가 열림 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- 그림위에 마우스 오버시 이미지 관련 툴바가 생기지 않도록 정의 -->
+  <meta http-equiv="imagetoolbar" content="no" />
+
+  <!-- 뷰포트선언/콘텐츠를 표현할 넓이(디바이스 크기에 맞추겠다고 선언)/초기크기설정(기본꽉찬화면)/최대크기설정(최대배율범위:0~10.0)/사용자단말의 확대기능 사용유무선언 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+  <!-- CDN 이용해 jQuery 사용: 네트워크의 오류나 라이브러리를 제공하는 서버 컴퓨터에 오류 생기면 제이쿼리가 작동안함 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+  <!-- jQuery로 모달창 띄우기 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+  <title>NADIA</title>
+
+  <!-- Core CSS -->
+  <link href="../assets/css/common.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- container -->
+    <div id="container">
+      <!-- header -->
+      <header>
+        <h1 class="logo">
+          <img src="../assets/images/nadia-logo.png" alt="" />
+        </h1>
+        <div class="brand">PA</div>
+        <div class="menu-left">
+          <div class="tabmenu">
+            <i class="icon-tabMenu"></i>
+            <span class="tab-text">-</span>
+            <a href="" class="icon-del-sm">closed</a>
+          </div>
+        </div>
+        <div class="menu-right">
+          <a href="" class="btn btn-line-primary white">MY MENU</a>
+          <span><img src="assets/images/icon_faced02.png" alt="" />
+            <span class="name">Orthopedics / Jonathan Amaral</span></span>
+          <a href=""><i class="icon-en"></i></a>
+          <a href=""><i class="icon-out"></i></a>
+          <a href=""><i class="icon-system"></i></a>
+        </div>
+      </header>
+      <!-- //header -->
+      <!-- toolbar -->
+      <div class="toolbar">
+        <button><i class="icon-gnb-hamburger"></i></button>
+        <h2 class="toolbar-title">
+          /* 원무_수납 > 02진료비계산기준관리 > 16할인코드관리PA021601 */
+        </h2>
+        <div class="tb-right">
+          <a href="" class="btn btn-line-primary white">Reset</a>
+          <a href="" class="icon-bookmark">bookmark</a>
+          <a href="" class="icon-del">del</a>
+        </div>
+      </div>
+      <!-- //toolbar -->
+      <!-- main -->
+      <main class="cell-option-full">
+        <article class="grid1">
+          <div class="optionBox">
+            <div class="select-group">
+              <div class="check-wrap lg">
+                <input type="checkbox" id="ch1" name="ch1" checked />
+                <label for="ch1"><span class="checkbox"></span>
+                  <span class="checkbox-title">Standard Date</span></label>
+              </div>
+              <select style="width: 107px">
+                <option>2022-02-23</option>
+              </select>
+            </div>
+            <div class="select-gropup">
+              <span>Condition</span>
+              <select style="width: 158px">
+                <option>Discount code</option>
+              </select>
+              <input type="text" placeholder="" style="width: 300px" />
+            </div>
+            <a href="" class="btn btn-gradient sm">search</a>
+          </div>
+        </article>
+        <article class="grid2">
+          <!-- card -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Discount code management</span>
+              <div class="btn-group-right">
+                <a href="#" class="badge badge-primary">Add</a>
+                <a href="#" class="badge badge-primary">Delete</a>
+                <a href="#" class="badge badge-primary">Save</a>
+              </div>
+            </div>
+            <div class="card-body scrollbar1">
+              <!-- table  -->
+              <table class="tbl-list stripe" summary=" 제목">
+                <caption>
+                  표
+                </caption>
+                <colgroup>
+                  <col style="width: 40px" />
+                  <col style="width: 140px" />
+                  <col style="width: 100px" />
+                  <col style="width: 100px" />
+                  <col style="width: 342px" />
+                  <col style="width: 140px" />
+                  <col style="width: 140px" />
+                  <col style="width: 140px" />
+                  <col style="width: 140px" />
+                  <col style="width: 140px" />
+                  <col style="width: 140px" />
+                  <col style="width: 140px" />
+                  <col style="width: 140px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Discount code</th>
+                    <th>Date of start</th>
+                    <th>Date of end</th>
+                    <th>Discount code name</th>
+                    <th>Discount category code</th>
+                    <th>Salary discount rate</th>
+                    <th>100% discount on insurance</th>
+                    <th>Non-pay discount rate</th>
+                    <th>Selective treatment discount rate</th>
+                    <th>Whether material is included</th>
+                    <th>Whether to apply for outpatient inpatient</th>
+                    <th>Random discount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>D01</td>
+                    <td>2018-01-01</td>
+                    <td>2999-12-31</td>
+                    <td>Employee (self)</td>
+                    <td class="p0">
+                      <div class="select lg" data-role="selectBox" style="width: 140px">
+                        <span date-value="optValue" class="selected-option">
+                          <!-- 선택된 옵션 값이 출력되는 부분 --></span>
+                        <!-- 옵션 영역 -->
+                        <ul class="hide">
+                          <li>Oriental drug</li>
+                          <li>Admission fee (2 or 3...</li>
+                          <li>Admission fee (sing...</li>
+                          <li>Hemodialysis</li>
+                          <li>Room difference (m...</li>
+                          <li>Eye examination</li>
+                          <li>Oriental herbs in Single</li>
+                          <li>Oriental herbs in pack...</li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td class="right">50</td>
+                    <td class="right">50</td>
+                    <td class="right">50</td>
+                    <td class="right">50</td>
+                    <td>
+                      <div class="check-wrap">
+                        <input type="checkbox" id="ch2" name="ch2" />
+                        <label for="ch2"><span class="checkbox"></span></label>
+                      </div>
+                    </td>
+                    <td>All</td>
+                    <td>
+                      <div class="check-wrap">
+                        <input type="checkbox" id="ch2" name="ch2" />
+                        <label for="ch2"><span class="checkbox"></span></label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>D02</td>
+                    <td>2018-01-01</td>
+                    <td>2999-12-31</td>
+                    <td>Employee (self)</td>
+                    <td class="p0">
+                      <div class="select lg" data-role="selectBox" style="width: 140px">
+                        <span date-value="optValue" class="selected-option">
+                          <!-- 선택된 옵션 값이 출력되는 부분 --></span>
+                        <!-- 옵션 영역 -->
+                        <ul class="hide">
+                          <li>Oriental drug</li>
+                          <li>Admission fee (2 or 3...</li>
+                          <li>Admission fee (sing...</li>
+                          <li>Hemodialysis</li>
+                          <li>Room difference (m...</li>
+                          <li>Eye examination</li>
+                          <li>Oriental herbs in Single</li>
+                          <li>Oriental herbs in pack...</li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td class="right">50</td>
+                    <td class="right">50</td>
+                    <td class="right">50</td>
+                    <td class="right">50</td>
+                    <td>
+                      <div class="check-wrap">
+                        <input type="checkbox" id="ch2" name="ch2" />
+                        <label for="ch2"><span class="checkbox"></span></label>
+                      </div>
+                    </td>
+                    <td>All</td>
+                    <td>
+                      <div class="check-wrap">
+                        <input type="checkbox" id="ch2" name="ch2" />
+                        <label for="ch2"><span class="checkbox"></span></label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>D03</td>
+                    <td>2018-01-01</td>
+                    <td>2999-12-31</td>
+                    <td>Employee (self)</td>
+                    <td class="p0">
+                      <div class="select lg" data-role="selectBox" style="width: 140px">
+                        <span date-value="optValue" class="selected-option">
+                          <!-- 선택된 옵션 값이 출력되는 부분 --></span>
+                        <!-- 옵션 영역 -->
+                        <ul class="hide">
+                          <li>Oriental drug</li>
+                          <li>Admission fee (2 or 3...</li>
+                          <li>Admission fee (sing...</li>
+                          <li>Hemodialysis</li>
+                          <li>Room difference (m...</li>
+                          <li>Eye examination</li>
+                          <li>Oriental herbs in Single</li>
+                          <li>Oriental herbs in pack...</li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td class="right">50</td>
+                    <td class="right">50</td>
+                    <td class="right">50</td>
+                    <td class="right">50</td>
+                    <td>
+                      <div class="check-wrap">
+                        <input type="checkbox" id="ch2" name="ch2" />
+                        <label for="ch2"><span class="checkbox"></span></label>
+                      </div>
+                    </td>
+                    <td>All</td>
+                    <td>
+                      <div class="check-wrap">
+                        <input type="checkbox" id="ch2" name="ch2" />
+                        <label for="ch2"><span class="checkbox"></span></label>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- //table  -->
+            </div>
+            <div class="card-footer">
+              <span class="text-primary3">Total number of cases: 3 case</span>
+            </div>
+          </div>
+          <!-- //card -->
+        </article>
+      </main>
+      <!-- //main -->
+    </div>
+    <!-- //container -->
+  </div>
+
+  <script>
+    //Nav
+    const left = document.querySelector(".menu-left");
+    const nav = document.createElement("nav");
+    left.appendChild(nav);
+    $("nav").load("../nav.html");
+
+    //Tabld Dropdown
+    const body = document.querySelectorAll("body");
+    const select = document.querySelector(`[data-role="selectBox"]`);
+    // const values = select.querySelector(`[date-value="optValue"]`);
+    // const option = select.querySelector('ul');
+    // const opts = option.querySelectorAll('li');
+
+    const _selects = document.querySelectorAll(`[data-role="selectBox"]`);
+    // let selected = _selects[0];
+    let selected = null;
+
+    /* 셀렉트영역 클릭 시 옵션 숨기기, 보이기 */
+    function selects(e) {
+      e.stopPropagation();
+      selected = e.target.parentElement;
+      let option = selected.querySelector("ul");
+      if (!option) {
+        option = selected;
+      }
+      if (option.classList.contains("hide")) {
+        option.classList.remove("hide");
+        option.classList.add("show");
+        selected.querySelector(".selected-option").className =
+          "selected-option-active";
+      } else {
+        option.classList.add("hide");
+        option.classList.remove("show");
+        selected.querySelector(".selected-option-active").className =
+          "selected-option";
+      }
+      selectOpt();
+    }
+
+    /* 옵션선택 */
+    function selectOpt() {
+      const opts = selected.querySelectorAll("li");
+      opts.forEach((opt) => {
+        const innerValue = opt.innerHTML;
+
+        function changeValue() {
+          const values = selected.querySelector(`[date-value="optValue"]`);
+          values.innerHTML = innerValue;
+        }
+        opt.addEventListener("click", changeValue);
+      });
+    }
+
+    /* 렌더링 시 옵션의 첫번째 항목 기본 선택 */
+    function selectFirst(_select) {
+      const opts = _select.querySelectorAll("li");
+      const firstValue = opts[0].innerHTML;
+      const values = _select.querySelector(`[date-value="optValue"]`);
+      values.innerHTML = `${firstValue}`;
+    }
+
+    /* 옵션밖의 영역(=바디) 클릭 시 옵션 숨김 */
+    function hideSelect() {
+      if (option.classList.contains("show")) {
+        option.classList.add("hide");
+        option.classList.remove("show");
+      }
+    }
+
+    _selects.forEach((_select) => {
+      // selected = _select;
+      selectFirst(_select);
+      _select.addEventListener("click", selects);
+    });
+  </script>
+</body>
+
+</html>
